@@ -1,0 +1,211 @@
+.training-cards-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fefefe;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #3182ce;
+  background: white;
+  color: #3182ce;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background: #3182ce;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #3182ce;
+  color: white;
+}
+
+/* Training Cards Grid */
+.training-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.training-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  height: 100%;
+  position: relative;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.course-badge {
+  background: #e53e3e;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.course-duration {
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-content {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-title {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-features {
+  margin: 1.5rem 0;
+}
+
+.course-features h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.course-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-features li {
+  color: #4a5568;
+  padding: 0.25rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.course-features li:before {
+  content: "✓";
+  color: #38a169;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.demo-btn {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.demo-btn:hover {
+  background-color: #2c5aa0;
+  transform: translateY(-2px);
+}
+
+.no-courses {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-size: 1.2rem;
+}
+
+/* Animation for card entrance */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.training-card {
+  animation: cardEntrance 0.6s ease-out;
+}
+
+.training-card:nth-child(1) { animation-delay: 0.1s; }
+.training-card:nth-child(2) { animation-delay: 0.2s; }
+.training-card:nth-child(3) { animation-delay: 0.3s; }
+.training-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .training-cards-section {
+    padding: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .training-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-filter {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
