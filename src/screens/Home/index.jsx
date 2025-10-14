@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.css';
 import TrainingCards from '../../components/TrainingCards';
+import ReviewCard from '../../components/ReviewCard';
+import Slider from '../../components/Slider'
+import Map from '../../components/Map'
 
 const Home = () => {
     return (
@@ -222,7 +225,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/* Review Cards Section */}
+            <section className="review-section">
+                <div className="container">
 
+                    <Slider />
+                </div>
+            </section>
+            {/* <section className="Map-section">
+                <div className="container">
+
+                    <Map />
+                </div>
+            </section> */}
 
         </div>
     );

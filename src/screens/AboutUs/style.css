@@ -1,0 +1,453 @@
+/* =====================================
+ * 1. CSS VARIABLES (Custom Properties)
+ * ===================================== */
+:root {
+    /* Colors */
+    --color-primary: #008080; /* Teal/Cyan - Main Accent */
+    --color-secondary: #004d4d; /* Darker Teal - Hover State */
+    --color-text-dark: #2c3e50; /* Primary Dark Text */
+    --color-text-light: #616e7a; /* Secondary Gray Text */
+    --color-background-light: #ffffff; /* White background */
+    --color-background-soft: #f4f8f9; /* Light Gray/Blue background */
+    --color-highlight-pill: #e0f2f2; /* Light accent for pill */
+
+    /* Typography */
+    --font-family-primary: 'Arial', sans-serif;
+    --font-size-base: 1rem;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 15px;
+    --spacing-md: 30px;
+    --spacing-lg: 60px;
+
+    /* Border Radius & Shadow */
+    --border-radius: 8px;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================
+ * 2. GLOBAL & UTILITY STYLES
+ * ===================================== */
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-light);
+}
+
+h1, h2 {
+    color: var(--color-text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* --- Button Mixins --- */
+.btn {
+    padding: 12px 25px;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary, .btn-get-in-touch {
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+    box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+.btn-primary:hover, .btn-get-in-touch:hover {
+    background-color: var(--color-secondary);
+    box-shadow: 0 6px 15px rgba(0, 128, 128, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+}
+
+
+/* =====================================
+ * 3. EXISTING SECTION STYLES (Refined)
+ * ===================================== */
+
+/* --- Hero Section (Placeholder structure, focus on layout) --- */
+.hero {
+    position: relative;
+    padding: 100px 0; /* Adjust as needed */
+    background-color: var(--color-background-soft);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.highlight {
+    color: var(--color-primary);
+}
+
+.hero-buttons > .btn {
+    margin-right: var(--spacing-sm);
+}
+
+/* --- Who We Are Section (Refined for better layout) --- */
+.who-we-are-section {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-background-light);
+}
+
+.about-container {
+    padding: var(--spacing-lg) 0;
+}
+
+.about-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.about-image {
+    flex: 1; /* Takes up 1/3 of the space */
+    position: relative;
+    align-self: stretch; /* Stretches the container */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+}
+
+.section-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.title-pill {
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--color-highlight-pill);
+    color: var(--color-primary);
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.intro-text {
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-button {
+    /* Using .btn styling defined globally */
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary);
+}
+
+
+/* =====================================
+ * 4. NEW MISSION SECTION (Styled with Variables)
+ * ===================================== */
+.mission-section {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-background-soft);
+}
+
+.mission-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    padding: 0 var(--spacing-sm);
+}
+
+.mission-image-wrapper {
+    flex: 1;
+    min-width: 40%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.mission-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.mission-content {
+    flex: 1.2;
+}
+
+.mission-pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--color-highlight-pill);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.mission-pill .icon {
+    margin-right: 5px;
+}
+
+.mission-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.mission-text {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Inheriting .btn-get-in-touch styles from .btn-primary */
+.btn-get-in-touch {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-get-in-touch .arrow-icon {
+    margin-left: 8px; /* Changed from margin-right to margin-left for better flow */
+    font-style: normal;
+    font-size: 1.2em;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-get-in-touch:hover .arrow-icon {
+    transform: translateX(3px);
+}
+
+
+.atc-advantage {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.advantage-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.advantage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.advantage-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.advantage-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .atc-advantage {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .advantage-card {
+    padding: 30px 20px;
+  }
+  
+  .advantage-icon {
+    font-size: 2.5rem;
+  }
+  
+  .advantage-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .advantage-card {
+    padding: 25px 15px;
+  }
+}
+
+
+
+
+
+/* =====================================
+ * 5. RESPONSIVE DESIGN
+ * ===================================== */
+
+@media (max-width: 992px) {
+    /* Apply to both Who We Are and Our Mission */
+    .about-content,
+    .mission-container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .about-text,
+    .about-image,
+    .mission-image-wrapper,
+    .mission-content {
+        flex: none; /* Disable flex growth/shrink */
+        width: 100%;
+        max-width: 600px; /* Constrain width on smaller screens */
+        text-align: center;
+    }
+
+    .about-content {
+        text-align: left; /* Keep text left-aligned for readability */
+    }
+
+    .about-image img {
+        height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 50px 0;
+    }
+    .mission-title {
+        font-size: 2rem;
+    }
+    .mission-section,
+    .who-we-are-section {
+        padding: var(--spacing-md) 0;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .hero-buttons > .btn {
+        margin-right: 0;
+    }
+}

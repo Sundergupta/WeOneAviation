@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import AboutUs from '../../screens/AboutUs';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,21 @@ const Navbar = () => {
           <h1>WE ONE AVIATORS </h1>
         </div>
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
-          <li className="navbar-item"><a href="#home" className="navbar-link" onClick={closeMenu}>Home</a></li>
-          <li className="navbar-item"><a href="#about" className="navbar-link" onClick={closeMenu}>About Us</a></li>
-          <li className="navbar-item"><a href="#training" className="navbar-link" onClick={closeMenu}>Training Programs</a></li>
-          <li className="navbar-item"><a href="#instructors" className="navbar-link" onClick={closeMenu}>Instructors</a></li>
-          <li className="navbar-item"><a href="#testimonials" className="navbar-link" onClick={closeMenu}>Testimonials</a></li>
-          <li className="navbar-item"><a href="#blog" className="navbar-link" onClick={closeMenu}>Blog</a></li>
-          <li className="navbar-item"><a href="#faq" className="navbar-link" onClick={closeMenu}>FAQ</a></li>
+          {/* <li className="navbar-item"><a href="#home" className="navbar-link" onClick={closeMenu}>Home</a></li> */}
+          <li className="navbar-item"><a href="AboutUs" className="navbar-link" onClick={closeMenu}>About Us</a>
+          </li>
+          <li className="navbar-item"><a href="#training" className="navbar-link" onClick={closeMenu}>Flying Country
+          </a></li>
+          <li className="navbar-item"><a href="#instructors" className="navbar-link" onClick={closeMenu}>How To Become a Pilot
+          </a></li>
+          <li className="navbar-item"><a href="#testimonials" className="navbar-link" onClick={closeMenu}>DGCA Exam Practice
+          </a></li>
+          <li className="navbar-item"><a href="#blog" className="navbar-link" onClick={closeMenu}>About Us
+          </a></li>
+          <li className="navbar-item"><a href="#faq" className="navbar-link" onClick={closeMenu}>Contact Us
+          </a></li>
+          <li className="navbar-item"><a href="#faq" className="navbar-link" onClick={closeMenu}>Blogs
+          </a></li>
         </ul>
 
         <div className={`navbar-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>

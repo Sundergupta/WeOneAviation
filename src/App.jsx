@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import RootLayout from './components/RootLayout'
 import Home from './screens/Home'
 import TrainingCards from './components/TrainingCards';
+import AboutUs from './screens/AboutUs';
 
 // import SignIn from './screens/SignIn' // placeholder path — create if missing
 // import SignUp from './screens/SignUp' // placeholder path — create if missing
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
       {
         path: "training-cards",
         element: <TrainingCards />,
-      }
+      },
+      {
+        path: "AboutUs",
+        element: <AboutUs />,
+      },
 
     ],
   },
