@@ -28,7 +28,7 @@ import indigoLogo from '../../assets/indigo.png';
 import spicejet from '../../assets/SpiceJet-Logo.webp';
 
 import airIndiaLogo from '../../assets/air-india-logo.png';
-import airIndiaExpress from '../../assets/air-india-express-logo.png';
+import airIndiaExpress from '../../assets/Air-india-express-logo.png';
 
 
 // import vistaraLogo from '../../assets/logos/vistara.png';
