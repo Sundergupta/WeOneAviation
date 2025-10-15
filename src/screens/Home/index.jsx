@@ -6,6 +6,19 @@ import Slider from '../../components/Slider'
 import Map from '../../components/Map'
 
 const Home = () => {
+
+    const companies = [
+        { id: 1, name: 'Air India', image: '/About2.webp' },
+        { id: 2, name: 'Air Asia', image: '/air-asia-logo.png' },
+        { id: 3, name: 'IndiGo', image: '/indigo-logo.png' },
+        { id: 4, name: 'Spiegel', image: '/spiegel-logo.png' },
+        { id: 5, name: 'VistaRai', image: '/vistarai-logo.png' },
+        { id: 6, name: 'Programmierung', image: '/programmierung-logo.png' }
+    ];
+
+    // Duplicate for seamless loop
+    const duplicatedCompanies = [...companies, ...companies, ...companies];
+
     return (
         <div className="home">
             {/* Hero Section */}
@@ -31,6 +44,57 @@ const Home = () => {
                         <div className="flight-path-animation">
                             <div className="airplane"></div>
                             <div className="flight-path"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="graduates-hired-section">
+                <div className="section-container">
+                    <h2 className="section-title">Graduates Hired</h2>
+                    <p className="section-subtitle">Our alumni are working at top companies worldwide</p>
+
+                    <div className="slider-container">
+                        <div className="slider-track">
+                            {duplicatedCompanies.map((company, index) => (
+                                <div
+                                    key={`${company.id}-${index}`}
+                                    className="company-card"
+                                >
+                                    {company.image ? (
+                                        <img
+                                            src={company.image}
+                                            alt={company.name}
+                                            className="company-logo"
+                                            onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                e.target.nextSibling.style.display = 'block';
+                                            }}
+                                        />
+                                    ) : null}
+                                    <span
+                                        className="company-name"
+                                        style={{ display: company.image ? 'none' : 'block' }}
+                                    >
+                                        {company.name}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="stats-container">
+                        <div className="stat-item">
+                            <div className="stat-number">200+</div>
+                            <div className="stat-label">Graduates</div>
+                        </div>
+                        <div className="stat-item">
+                            <div className="stat-number">50+</div>
+                            <div className="stat-label">Companies</div>
+                        </div>
+                        <div className="stat-item">
+                            <div className="stat-number">95%</div>
+                            <div className="stat-label">Placement Rate</div>
                         </div>
                     </div>
                 </div>
