@@ -1,20 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+// import React from 'react';
 import './style.css';
 import TrainingCards from '../../components/TrainingCards';
 import ReviewCard from '../../components/ReviewCard';
-import Slider from '../../components/Slider'
-import Map from '../../components/Map'
+import Slider from '../../components/Slider';
+import Map from '../../components/Map';
+import IndiGo from '../../assets/indigo.webp';
+import AirIndia from '../../assets/air-india-logo.png';
+
+import AirIndiaExpress from '../../assets/Air-india-express-logo.png';
+import Spicejet from '../../assets/Spicejet-Logo.webp';
+import StarAir from '../../assets/star-air-logo.webp';
+
+
+
 
 const Home = () => {
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     const companies = [
-        { id: 1, name: 'Air India', image: '/About2.webp' },
-        { id: 2, name: 'Air Asia', image: '/air-asia-logo.png' },
-        { id: 3, name: 'IndiGo', image: '/indigo-logo.png' },
-        { id: 4, name: 'Spiegel', image: '/spiegel-logo.png' },
-        { id: 5, name: 'VistaRai', image: '/vistarai-logo.png' },
-        { id: 6, name: 'Programmierung', image: '/programmierung-logo.png' }
+        { id: 1, name: 'AirIndiaExpress', image: AirIndiaExpress },
+        { id: 2, name: 'AirIndia', image: AirIndia },
+        { id: 3, name: 'IndiGo', image: IndiGo },
+        { id: 4, name: 'AirIndiaExpress', image: AirIndiaExpress },
+        { id: 5, name: 'Spicejet', image: Spicejet },
+        { id: 6, name: 'StarAir ', image: StarAir },
     ];
+
+
+    const slides = [
+        {
+            title: "Your Flight Path Starts Here",
+            subtitle: "Comprehensive DGCA Ground School, Type Rating Prep, and Pilot Career Services.",
+            // background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+            imager: AirIndia,
+            button1: "Start Your Journey",
+            button2: "Learn More"
+        },
+        {
+            title: "Advanced Pilot Training",
+            subtitle: "Master advanced aviation techniques with our expert instructors and state-of-the-art facilities.",
+            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            button1: "View Courses",
+            button2: "Meet Instructors"
+        },
+        {
+            title: "Career Ready Pilots",
+            subtitle: "Join thousands of successful pilots who launched their careers with our training programs.",
+            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            button1: "Success Stories",
+            button2: "Apply Now"
+        }
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000); // Change slide every 5 seconds
+
+        return () => clearInterval(interval);
+    }, [slides.length]);
+
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
+
+    const goToNext = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const goToPrev = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    };
 
     // Duplicate for seamless loop
     const duplicatedCompanies = [...companies, ...companies, ...companies];
@@ -22,30 +81,63 @@ const Home = () => {
     return (
         <div className="home">
             {/* Hero Section */}
-            <section className="hero">
-                <div className="hero-background">
-                    <div className="hero-overlay"></div>
+            <section className="hero-slider">
+                <div className="slides-container">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`slide ${index === currentSlide ? 'active' : ''}`}
+                            style={{ background: slide.background }}
+                        >
+                            <div className="slide-background">
+                                <div className="slide-overlay"></div>
+                            </div>
+
+                            <div className="slide-content">
+                                <div className="slide-text">
+                                    <h1 className="slide-title">
+                                        {slide.title.split(' ').map((word, i, arr) =>
+                                            i === arr.length - 1 ? (
+                                                <span key={i} className="highlight"> {word}</span>
+                                            ) : (
+                                                <span key={i}> {word}</span>
+                                            )
+                                        )}
+                                    </h1>
+                                    <p className="slide-subtitle">{slide.subtitle}</p>
+                                    <div className="slide-buttons">
+                                        <button className="btn btn-primary">{slide.button1}</button>
+                                        <button className="btn btn-secondary">{slide.button2}</button>
+                                    </div>
+                                </div>
+                                <div className="slide-visual">
+                                    <div className="flight-path-animation">
+                                        <div className="airplane"></div>
+                                        <div className="flight-path"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className="hero-content">
-                    <div className="hero-text">
-                        <h1 className="hero-title">
-                            Your Flight Path Starts
-                            <span className="highlight"> Here</span>
-                        </h1>
-                        <p className="hero-subtitle">
-                            Comprehensive DGCA Ground School, Type Rating Prep, and Pilot Career Services.
-                        </p>
-                        <div className="hero-buttons">
-                            <button className="btn btn-primary">Start Your Journey</button>
-                            <button className="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
-                    <div className="hero-visual">
-                        <div className="flight-path-animation">
-                            <div className="airplane"></div>
-                            <div className="flight-path"></div>
-                        </div>
-                    </div>
+
+                {/* Navigation Arrows */}
+                <button className="slider-arrow slider-arrow-prev" onClick={goToPrev}>
+                    ‹
+                </button>
+                <button className="slider-arrow slider-arrow-next" onClick={goToNext}>
+                    ›
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="slider-dots">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            className={`dot ${index === currentSlide ? 'active' : ''}`}
+                            onClick={() => goToSlide(index)}
+                        />
+                    ))}
                 </div>
             </section>
 

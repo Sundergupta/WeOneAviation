@@ -1,7 +1,7 @@
 /* Navbar Styles */
 .navbar {
   background-color: rgba(26, 54, 93, 1);  /* 100% solid before scroll */
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   margin: 0 auto;
   padding: 0 50px;
 }
-
+/* Navbar Logo Styles - Fixed */
 .navbar-logo {
   color: #fff;
   justify-self: start;
@@ -40,6 +40,16 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
+  height: 70px; /* Match navbar height */
+  padding: 5px 0; /* Add some padding */
+}
+
+.navbar-logo img {
+  height: 65px; /* Fixed height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Prevent overflow */
+  object-fit: contain; /* Ensure image fits properly */
+  display: block;
 }
 
 .navbar-logo:hover {
@@ -52,6 +62,42 @@
   letter-spacing: 1px;
   margin: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Update mobile responsive styles */
+@media screen and (max-width: 960px) {
+  .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    height: 50px;
+  }
+
+  .navbar-logo img {
+    height: 40px; /* Slightly smaller on mobile */
+    max-width: 120px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+  .navbar-logo {
+    left: 15px;
+  }
+  
+  .navbar-logo img {
+    height: 35px;
+    max-width: 100px;
+  }
 }
 
 .navbar-menu {
@@ -288,4 +334,126 @@
   .navbar-container {
     padding: 0 15px;
   }
+}
+
+
+
+
+/* Add these styles to your existing style.css */
+
+.dropdown-item-with-submenu {
+  position: relative;
+}
+
+.has-submenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 14px;
+  color: #2c3e50;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+  text-decoration: none;
+}
+
+.has-submenu:hover {
+  background-color: #f8f9fa;
+}
+
+.sub-dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1001;
+  border: 1px solid #e1e5e9;
+}
+
+.sub-dropdown-link {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+  font-size: 14px;
+}
+
+.sub-dropdown-link:hover {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.sub-dropdown-link:last-child {
+  border-bottom: none;
+}
+
+/* Ensure the main dropdown menu has enough width */
+.dropdown-menu {
+  min-width: 300px;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.dropdown-link:hover {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+/* Mobile responsiveness for nested dropdown */
+@media (max-width: 768px) {
+  .sub-dropdown-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid #2c3e50;
+    margin-left: 15px;
+    min-width: auto;
+  }
+  
+  .has-submenu::after {
+    content: "→";
+    margin-left: 8px;
+  }
+  
+  .dropdown-menu {
+    min-width: 250px;
+  }
+}
+
+/* For better visual hierarchy */
+.dropdown-parent {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 8px 0;
+  margin: 4px 0 0 0;
+  list-style: none;
+  z-index: 1000;
+  border: 1px solid #e1e5e9;
 }
