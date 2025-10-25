@@ -31,7 +31,7 @@ const Footer = () => {
                         <li>Home</li>
                         <li>About Us</li>
                         <li>Training Programs</li>
-                        <li>Instructors</li>
+                        <li>Map</li>
                         <li>Testimonials</li>
                         <li>Blog</li>
                         <li>FAQ</li>
@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
 
                 {/* Courses */}
-                <div className="footer-col">
+                {/* <div className="footer-col">
                     <h3>Our Courses</h3>
                     <ul>
                         <li>Air Navigation</li>
@@ -53,7 +53,7 @@ const Footer = () => {
                         <li>One-on-One Online Classes</li>
                         <li>Interview Preparation</li>
                     </ul>
-                </div>
+                </div> */}
 
                 {/* Contact */}
                 <div className="footer-col">

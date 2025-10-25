@@ -1,12 +1,12 @@
 /* PassResultsSlider.css */
 
 /* --- Slider/Container Styles --- */
-
 .pass-results-section {
     padding: 50px 0;
     background-color: #f8f8f8; 
     overflow: hidden; 
     position: relative;
+    width: 100%;
 }
 
 .results-header h1 {
@@ -15,20 +15,21 @@
     margin-left: 5%; 
     margin-bottom: 40px;
     color: #333;
+    text-align: left;
 }
 
 .slider-container {
-    /* Define the visible window for the slider */
     width: 90%; 
     margin: 0 auto;
     overflow: hidden; 
+    position: relative;
 }
 
 .cards-wrapper {
-    /* This container holds all the cards in a single row */
     display: flex;
     gap: 20px; 
-    transition: transform 0.5s ease-in-out; /* The sliding animation */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 
 /* --- Controls Styling --- */
@@ -39,6 +40,7 @@
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    z-index: 10;
 }
 
 .arrow-btn {
@@ -50,22 +52,25 @@
     font-size: 1.5em;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow-btn:hover {
-    background-color: #eee;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
 }
 
-/* --- Individual Card Styles (Merged from ReviewCard.css) --- */
-
+/* --- Individual Card Styles --- */
 .review-card {
-    /* Critical: Set the fixed width (matches CARD_WIDTH in JS) */
     min-width: 250px; 
     height: 350px; 
-    padding: 10px;
+    padding: 15px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
@@ -73,78 +78,199 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Circular Image Container for consistent face alignment */
 .card-image-container {
-    width: 100%;
-    height: 70%;
+    width: 160px;
+    height: 160px;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #f8f8f8;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    object-position: center top;
     display: block;
-    filter: brightness(1.05); 
+    transition: transform 0.3s ease;
 }
 
-.passed-courses {
+.review-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.pilot-name {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.airline-logo-container {
     display: flex;
     justify-content: center;
-    gap: 5px;
-    margin-bottom: 10px;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    width: 100%;
 }
 
-.course-tag {
-    font-size: 0.75em;
-    font-weight: 600;
-    color: #333;
-    padding: 2px 4px;
+.airline-logo-image {
+    max-width: 120px;
+    max-height: 40px;
+    object-fit: contain;
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
+}
+
+.review-card:hover .airline-logo-image {
+    filter: grayscale(0);
 }
 
 .badges-row {
     display: flex;
     justify-content: center;
     gap: 8px;
+    margin-top: 10px;
 }
 
 .badge-icon {
     font-size: 1.2em;
-    color: #4CAF50; 
+    color: #4CAF50;
+    transition: transform 0.3s ease;
 }
 
-
-/* Add these new styles to your existing style.css */
-
-.pilot-name {
-    /* Keep the pilot name styling */
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-bottom: 10px; /* Increase margin to separate name from logo */
-    color: #000;
+.review-card:hover .badge-icon {
+    transform: scale(1.2);
 }
 
-.airline-logo-container {
-    /* Container to center and control margin for the logo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Fixed height for consistency */
-    margin-bottom: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pass-results-section {
+        padding: 30px 0;
+    }
+    
+    .results-header h1 {
+        font-size: 2em;
+        margin-left: 5%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .slider-container {
+        width: 95%;
+    }
+    
+    .review-card {
+        min-width: 220px;
+        height: 320px;
+        padding: 12px;
+    }
+    
+    .card-image-container {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 15px;
+    }
+    
+    .pilot-name {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+    }
+    
+    .slider-controls {
+        bottom: 30px;
+    }
+    
+    .arrow-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
 }
 
-.airline-logo-image {
-    /* Set max dimensions for the logo */
-    max-width: 100px;  /* Adjust this width as needed */
-    max-height: 70px; /* Ensure logo fits vertically */
-    object-fit: contain; /* Ensures the entire logo is visible without cropping */
+@media (max-width: 480px) {
+    .results-header h1 {
+        font-size: 1.7em;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+    
+    .review-card {
+        min-width: 200px;
+        height: 300px;
+    }
+    
+    .card-image-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .pilot-name {
+        font-size: 1em;
+    }
+    
+    .airline-logo-container {
+        height: 40px;
+    }
+    
+    .airline-logo-image {
+        max-width: 100px;
+        max-height: 30px;
+    }
 }
 
-/* Optional: If you want to keep the checkmark, ensure this is styled well */
-.badges-row {
-    margin-top: 5px;
+/* Loading state for images */
+.card-image {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
 }
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.card-image[src] {
+    background: none;
+    animation: none;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.arrow-btn:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+.review-card:focus-within {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+

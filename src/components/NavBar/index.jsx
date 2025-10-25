@@ -24,6 +24,8 @@ const Navbar = () => {
       title: "Commercial Pilot License (CPL)",
       path: "/commercial-pilot-license",
       submenu: [
+        { name: "Commercial pilot license", path: "/CommercialPilotLicense" },
+        { name: "DGCA CPL ground classes", path: "/dgca-ground-classes-in-india" },
         { name: "Air Navigation", path: "/air-navigation" },
         { name: "Aviation Meteorology", path: "/aviation-meteorology" },
         { name: "Air Regulations", path: "/air-regulations" },
@@ -75,7 +77,9 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src={logo} alt="Company Logo" />
+          <Link to="/">
+            <img src={logo} alt="Company Logo" />
+          </Link>
         </div>
 
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
@@ -151,7 +155,7 @@ const Navbar = () => {
             onMouseLeave={() => setPilotOpen(false)}
           >
             <span className="navbar-link dropdown-btn">
-              How To Become a Pilot ▼
+              How To Become Pilot ▼
             </span>
 
             {pilotOpen && (
@@ -188,8 +192,8 @@ const Navbar = () => {
           </li>
 
           <li className="navbar-item">
-            <Link to="/about" className="navbar-link" onClick={closeMenu}>
-              About Us
+            <Link to="/FAQ" className="navbar-link" onClick={closeMenu}>
+              FAQ
             </Link>
           </li>
 

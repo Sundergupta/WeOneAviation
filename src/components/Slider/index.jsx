@@ -38,22 +38,22 @@ import airIndiaExpress from '../../assets/Air-india-express-logo.png';
 // --- Dummy Data with Logo Imports ---
 const reviewsData = [
     // 💡 Data structure updated: 'airline' field now holds the imported logo image variable.
-    { id: 1, name: 'Pilot Alpha', imageSrc: pilot1, airlineLogo: airIndiaLogo },
-    { id: 2, name: 'Pilot Bravo', imageSrc: pilot2, airlineLogo: indigoLogo },
-    { id: 3, name: 'Pilot Charlie', imageSrc: pilot3, airlineLogo: airIndiaExpress },
-    { id: 4, name: 'Pilot Delta', imageSrc: pilot4, airlineLogo: airIndiaExpress },
-    { id: 5, name: 'Pilot Echo', imageSrc: pilot5, airlineLogo: indigoLogo },
-    { id: 6, name: 'Pilot Foxtrot', imageSrc: pilot6, airlineLogo: airIndiaExpress },
-    { id: 7, name: 'Pilot Golf', imageSrc: pilot7, airlineLogo: airIndiaLogo },
-    { id: 8, name: 'Pilot Hotel', imageSrc: pilot8, airlineLogo: airIndiaExpress },
-    { id: 9, name: 'Pilot India', imageSrc: pilot9, airlineLogo: spicejet },
-    { id: 10, name: 'Pilot Juliet', imageSrc: pilot10, airlineLogo: airIndiaLogo },
-    { id: 11, name: 'Pilot Kilo', imageSrc: pilot11, airlineLogo: spicejet },
-    { id: 12, name: 'Pilot Lima', imageSrc: pilot12, airlineLogo: indigoLogo },
-    { id: 13, name: 'Pilot Mike', imageSrc: pilot13, airlineLogo: indigoLogo },
-    { id: 14, name: 'Pilot November', imageSrc: pilot14, airlineLogo: spicejet },
-    { id: 15, name: 'Pilot Oscar', imageSrc: pilot15, airlineLogo: spicejet },
-    { id: 16, name: 'Pilot Papa', imageSrc: pilot16, airlineLogo: airIndiaExpress },
+    { id: 1, name: 'Capt.Akshay ', imageSrc: pilot1, airlineLogo: airIndiaLogo },
+    { id: 2, name: 'Capt.Pilot ', imageSrc: pilot2, airlineLogo: indigoLogo },
+    { id: 3, name: 'Capt.Akhila', imageSrc: pilot3, airlineLogo: airIndiaExpress },
+    { id: 4, name: 'Capt.Anish Kujur', imageSrc: pilot4, airlineLogo: airIndiaExpress },
+    { id: 5, name: 'Capt.Aashish ', imageSrc: pilot5, airlineLogo: indigoLogo },
+    { id: 6, name: 'Capt.Megha ', imageSrc: pilot6, airlineLogo: airIndiaExpress },
+    { id: 7, name: 'Capt.Keshna', imageSrc: pilot7, airlineLogo: airIndiaLogo },
+    { id: 8, name: 'Capt. Tanmay ', imageSrc: pilot8, airlineLogo: airIndiaExpress },
+    { id: 9, name: 'Capt. Neha  ', imageSrc: pilot9, airlineLogo: spicejet },
+    { id: 10, name: 'Capt. Esther', imageSrc: pilot10, airlineLogo: airIndiaLogo },
+    { id: 11, name: 'Capt. Akshat ', imageSrc: pilot11, airlineLogo: spicejet },
+    { id: 12, name: 'Capt. Ashik K  ', imageSrc: pilot12, airlineLogo: indigoLogo },
+    { id: 13, name: 'Capt. Eshan ', imageSrc: pilot13, airlineLogo: indigoLogo },
+    { id: 14, name: 'Capt. Namita ', imageSrc: pilot14, airlineLogo: spicejet },
+    { id: 15, name: 'Capt. Kunal ', imageSrc: pilot15, airlineLogo: spicejet },
+    { id: 16, name: 'Capt. Sahiba  ', imageSrc: pilot16, airlineLogo: airIndiaExpress },
 ];
 
 const CARD_WIDTH = 250;

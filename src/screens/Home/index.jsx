@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-// import React from 'react';
 import './style.css';
 import TrainingCards from '../../components/TrainingCards';
 import ReviewCard from '../../components/ReviewCard';
@@ -8,16 +6,17 @@ import Slider from '../../components/Slider';
 import Map from '../../components/Map';
 import IndiGo from '../../assets/indigo.webp';
 import AirIndia from '../../assets/air-india-logo.png';
-
 import AirIndiaExpress from '../../assets/Air-india-express-logo.png';
 import Spicejet from '../../assets/Spicejet-Logo.webp';
 import StarAir from '../../assets/star-air-logo.webp';
-
-
-
+import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
+import airplane2 from '../../assets/home page slider/generate a videos of airplane.jpg';
+import airplane3 from '../../assets/home page slider/generate image of airplane.jpg';
+import GroundSchool from '../../assets/GroundSchool.jpg';
+import RTR from '../../assets/RTR.jpeg';
+import TypeRatingPrep from '../../assets/TypeRatingPrep.jpeg';
 
 const Home = () => {
-
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const companies = [
@@ -29,27 +28,25 @@ const Home = () => {
         { id: 6, name: 'StarAir ', image: StarAir },
     ];
 
-
     const slides = [
         {
-            title: "Your Flight Path Starts Here",
-            subtitle: "Comprehensive DGCA Ground School, Type Rating Prep, and Pilot Career Services.",
-            // background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
-            imager: AirIndia,
-            button1: "Start Your Journey",
+            title: "BEST PILOT TRAINING IN INDIA",
+            subtitle: "Join Best Pilot Training Institute In India. Get world-class flight training, DGCA-approved courses, and expert guidance to kickstart your aviation career.",
+            image: airplane,
+            button1: "Contact Us",
             button2: "Learn More"
         },
         {
-            title: "Advanced Pilot Training",
-            subtitle: "Master advanced aviation techniques with our expert instructors and state-of-the-art facilities.",
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            title: "We Deliver 3000+ Pilots To India Since 2011",
+            subtitle: "Clear Your DGCA Exam In First Attempt With We One Aviation Academy",
+            image: airplane2,
             button1: "View Courses",
             button2: "Meet Instructors"
         },
         {
-            title: "Career Ready Pilots",
-            subtitle: "Join thousands of successful pilots who launched their careers with our training programs.",
-            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            title: "From Ground to Sky",
+            subtitle: "Premier DGCA Exam Coaching & Flight Training for Aspiring Pilots",
+            image: airplane3,
             button1: "Success Stories",
             button2: "Apply Now"
         }
@@ -58,24 +55,15 @@ const Home = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000); // Change slide every 5 seconds
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [slides.length]);
 
-    const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
+    const goToSlide = (index) => setCurrentSlide(index);
+    const goToNext = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+    const goToPrev = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
-    const goToNext = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-    };
-
-    const goToPrev = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    };
-
-    // Duplicate for seamless loop
     const duplicatedCompanies = [...companies, ...companies, ...companies];
 
     return (
@@ -87,12 +75,14 @@ const Home = () => {
                         <div
                             key={index}
                             className={`slide ${index === currentSlide ? 'active' : ''}`}
-                            style={{ background: slide.background }}
+                            style={{
+                                backgroundImage: `url(${slide.image})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                            }}
                         >
-                            <div className="slide-background">
-                                <div className="slide-overlay"></div>
-                            </div>
-
+                            <div className="slide-overlay"></div>
                             <div className="slide-content">
                                 <div className="slide-text">
                                     <h1 className="slide-title">
@@ -110,24 +100,14 @@ const Home = () => {
                                         <button className="btn btn-secondary">{slide.button2}</button>
                                     </div>
                                 </div>
-                                <div className="slide-visual">
-                                    <div className="flight-path-animation">
-                                        <div className="airplane"></div>
-                                        <div className="flight-path"></div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Navigation Arrows */}
-                <button className="slider-arrow slider-arrow-prev" onClick={goToPrev}>
-                    ‹
-                </button>
-                <button className="slider-arrow slider-arrow-next" onClick={goToNext}>
-                    ›
-                </button>
+                <button className="slider-arrow slider-arrow-prev" onClick={goToPrev}>‹</button>
+                <button className="slider-arrow slider-arrow-next" onClick={goToNext}>›</button>
 
                 {/* Dots Indicator */}
                 <div className="slider-dots">
@@ -141,10 +121,161 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Course Highlights Section */}
+            <section className="course-highlights">
+                <div className="container">
+                    <h2>Our Premier Pilot Training Programs</h2>
+                    <div className="highlights-grid">
+                        <div className="highlight-card">
+                            <div className="highlight-icon">✈️</div>
+                            <h3>Commercial Pilot License</h3>
+                            <p>Dreaming of Becoming a Commercial Pilot? Get DGCA-approved training, expert mentorship and hands-on flight experience.</p>
+                            <button className="highlight-btn">Learn More</button>
+                        </div>
+                        <div className="highlight-card">
+                            <div className="highlight-icon">📖</div>
+                            <h3>DGCA-CPL Ground Classes</h3>
+                            <p>Master Every DGCA Subject & Fly High! Our DGCA Ground Classes make learning easy & effective. Get trained by industry experts!</p>
+                            <button className="highlight-btn">Learn More</button>
+                        </div>
+                        <div className="highlight-card">
+                            <div className="highlight-icon">🎓</div>
+                            <h3>Enroll in Flying School</h3>
+                            <p>At Our Flying School, we train future pilots with state-of-the-art aircraft, expert instructors, and guaranteed career guidance.</p>
+                            <button className="highlight-btn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Course Details Section */}
+            <section className="course-details">
+                <div className="container">
+                    <h2>Course Duration, Fee & Schedule</h2>
+                    <p className="section-subtitle">Details of Pilot Courses, Fees and Schedule of Our Batches. We Generally Start 2 Batches in a Months For Aviation Students.</p>
+
+                    <div className="courses-grid">
+                        <div className="course-card">
+                            <h3>DGCA CPL Ground Classes</h3>
+                            <p>This is Main Pilot Course Which Exam is Conducted By DGCA. This course is only for theoretical preparation for the DGCA exams required to obtain a pilot's license.</p>
+                            <div className="course-info">
+                                <p><strong>Fees:</strong> 2.80 Lakh (25% Scholarship)</p>
+                                <p><strong>Duration:</strong> 6 Months</p>
+                                <p><strong>Mode:</strong> Offline/Online</p>
+                                <p><strong>Batch Start:</strong> Every Month's First & Third Week</p>
+                            </div>
+                        </div>
+
+                        <div className="course-card">
+                            <h3>CPL Flight Training (India/Abroad)</h3>
+                            <p>After Clear the DGCA Exam, You Have To do Flying From India And Abroad. 200 Hours of Flying is Must for Obtain Commercial Pilot Licence.</p>
+                            <div className="course-info">
+                                <p><strong>Flying Duration:</strong> 1 Year (Abroad) / 1.5 Years (India)</p>
+                                <p><strong>Fees:</strong> 40 to 50 Lakh (Depends on Country)</p>
+                                <p><strong>Registration:</strong> Every Month You Can Apply</p>
+                            </div>
+                        </div>
+
+                        <div className="course-card">
+                            <h3>Commercial Pilot Licence (CPL) Course</h3>
+                            <p>This Course is a full-fledged training program that includes both theoretical and practical flight training. We Are The Only Aviation Who provide All Solutions of Aviation Under One Roof</p>
+                            <div className="course-info">
+                                <p><strong>Full Duration:</strong> 2-3 Years (Depends on Country)</p>
+                                <p><strong>Full Fees:</strong> 50-55 Lakh (Depends on Country)</p>
+                                <p><strong>Batch Start:</strong> Every First and Third Week of Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* DGCA Subjects Section */}
+            <section className="dgca-subjects">
+                <div className="container">
+                    <h2>Master Yourself For DGCA Exam With All These Subjects</h2>
+                    <div className="subjects-grid">
+                        <div className="subject-card">
+                            <h3>1. Air Navigation</h3>
+                            <p>Air Navigation is the science of safely guiding an aircraft from one point to another using various navigational aids, instruments, and calculations.</p>
+                            <button className="subject-btn">Click to explore more! 🚀</button>
+                        </div>
+                        <div className="subject-card">
+                            <h3>2. Air Regulations</h3>
+                            <p>Air Regulations are the rules every pilot must follow to ensure safe and legal flying. These laws cover everything from airspace restrictions to communication protocols.</p>
+                            <button className="subject-btn">Click to find out more! ✈️</button>
+                        </div>
+                        <div className="subject-card">
+                            <h3>3. Aviation Meteorology</h3>
+                            <p>Aviation Meteorology helps pilots understand weather conditions that affect flight safety and performance.</p>
+                        </div>
+                        <div className="subject-card">
+                            <h3>4. Technical General (Aircraft & Engines)</h3>
+                            <p>This subject covers the fundamental workings of aircraft and their engines, helping pilots understand how their machines operate.</p>
+                        </div>
+                        <div className="subject-card">
+                            <h3>5. Radio Telephony (RTR)</h3>
+                            <p>Radio Telephony (RTR) is the backbone of pilot communication with Air Traffic Control (ATC).</p>
+                        </div>
+                        <div className="subject-card">
+                            <h3>6. Technical Specific (Type of Aircraft)</h3>
+                            <p>This subject focuses on the technical details of specific aircraft models, ensuring pilots understand their assigned aircraft inside and out.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Choose Us Section */}
+            <section className="why-choose-us">
+                <div className="container">
+                    <h2>Why Choose WeOne Aviation Academy</h2>
+                    <p className="section-subtitle">All Your Aviation Needs Under One Roof</p>
+
+                    <div className="benefits-grid">
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>DGCA-Approved Training Programs</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>Experienced Instructors & Mentors</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>State-of-the-Art Training Facilities</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>100% Placement Assistance</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>Comprehensive CPL & DGCA Ground Classes</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>Flexible Payment & Loan Options</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>Personalized Learning Approach</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>International Training Tie-Ups</span>
+                        </div>
+                        <div className="benefit-item">
+                            <span className="benefit-check">✅</span>
+                            <span>Proven Track Record of Success</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Graduates Hired Section */}
             <section className="graduates-hired-section">
                 <div className="section-container">
-                    <h2 className="section-title">Graduates Hired</h2>
-                    <p className="section-subtitle">Our alumni are working at top companies worldwide</p>
+                    <h2 className="section-title">We Deliver 3000+ Pilots To India Since 2011</h2>
+                    <p className="section-subtitle">Our alumni are working at top airlines worldwide</p>
 
                     <div className="slider-container">
                         <div className="slider-track">
@@ -177,16 +308,16 @@ const Home = () => {
 
                     <div className="stats-container">
                         <div className="stat-item">
-                            <div className="stat-number">200+</div>
-                            <div className="stat-label">Graduates</div>
+                            <div className="stat-number">3000+</div>
+                            <div className="stat-label">Pilots Trained</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">50+</div>
-                            <div className="stat-label">Companies</div>
+                            <div className="stat-number">20+</div>
+                            <div className="stat-label">Countries</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">95%</div>
-                            <div className="stat-label">Placement Rate</div>
+                            <div className="stat-number">100%</div>
+                            <div className="stat-label">DGCA Approved</div>
                         </div>
                     </div>
                 </div>
@@ -239,73 +370,51 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="services">
+            {/* Training Programs Section */}
+            <section className="training-programs">
                 <div className="container">
-                    <h2>Our Training Programs</h2>
-                    <div className="services-grid">
-                        <div className="service-card">
-                            <div className="service-icon">📚</div>
-                            <h4>DGCA Ground School</h4>
-                            <p>Complete theoretical knowledge training for CPL and ATPL examinations.</p>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-icon">🎯</div>
-                            <h4>Type Rating Preparation</h4>
-                            <p>Specialized training for various aircraft types with simulator practice.</p>
-                        </div>
-                        <div className="service-card">
-                            <div className="service-icon">🚀</div>
-                            <h4>Career Guidance</h4>
-                            <p>Personalized career counseling and airline preparation sessions.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Pathway Section */}
-            <section className="pathway-section">
-                <div className="container">
-                    <div className="pathway-header">
-                        <h2>Your Pathway to the Cockpit</h2>
-                        <p>Follow our structured roadmap from enrollment to becoming an airline-ready pilot, covering DGCA exams and essential skills.</p>
+                    <div className="programs-header">
+                        <h2>Our Core Training Programs</h2>
+                        <p>Expert-led online ground school and specialized preparation courses designed for your success in DGCA exams and beyond.</p>
                     </div>
 
-                    <div className="pathway-grid">
-                        <div className="pathway-card">
-                            <div className="card-number">01</div>
-                            <h3>Eligibility & Enrollment</h3>
-                            <p>Meet basic requirements and enroll in our comprehensive ground school program.</p>
+                    <div className="programs-divider"></div>
+
+                    <div className="programs-grid">
+                        <div className="program-card">
+                            <div
+                                className="program-image"
+                                style={{ backgroundImage: `url(${GroundSchool})` }}
+                            ></div>
+                            <div className="program-content">
+                                <h3>CPL & ATPL Ground School</h3>
+                                <p>Comprehensive online classes covering all DGCA subjects - Navigation, Meteorology, Regulations, and Technical.</p>
+                                <button className="learn-more-btn">Learn More</button>
+                            </div>
                         </div>
 
-                        <div className="pathway-card">
-                            <div className="card-number">02</div>
-                            <h3>DGCA Exams</h3>
-                            <p>Successfully pass all CPL/ATPL theoretical knowledge examinations.</p>
+                        <div className="program-card">
+                            <div
+                                className="program-image"
+                                style={{ backgroundImage: `url(${RTR})` }}
+                            ></div>
+                            <div className="program-content">
+                                <h3>RTR(A) Radio Telephony</h3>
+                                <p>Master aviation communication protocols and prepare for the Radio Telephony Restricted (Aeronautical) license exam.</p>
+                                <button className="learn-more-btn">Learn More</button>
+                            </div>
                         </div>
 
-                        <div className="pathway-card">
-                            <div className="card-number">03</div>
-                            <h3>Ground School Mastery</h3>
-                            <p>Complete our structured online classes covering all DGCA subjects.</p>
-                        </div>
-
-                        <div className="pathway-card">
-                            <div className="card-number">04</div>
-                            <h3>RTR(A) License</h3>
-                            <p>Obtain your Radio Telephony Restricted (Aeronautical) license.</p>
-                        </div>
-
-                        <div className="pathway-card">
-                            <div className="card-number">05</div>
-                            <h3>Type Rating Prep (Optional)</h3>
-                            <p>Prepare for A320/B737 Type Rating (if pursuing an airline career).</p>
-                        </div>
-
-                        <div className="pathway-card">
-                            <div className="card-number">05</div>
-                            <h3>Airline Interview Ready</h3>
-                            <p>Build confidence and skills for airline interviews.</p>
+                        <div className="program-card">
+                            <div
+                                className="program-image"
+                                style={{ backgroundImage: `url(${TypeRatingPrep})` }}
+                            ></div>
+                            <div className="program-content">
+                                <h3>Type Rating Prep</h3>
+                                <p>Affordable guidance for A320 & B737 pre/post type rating, covering questions for major airline exams.</p>
+                                <button className="learn-more-btn">Learn More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,66 +444,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Core Training Programs Section */}
-            <section className="training-programs">
-                <div className="container">
-                    <div className="programs-header">
-                        <h2>Our Core Training Programs</h2>
-                        <p>Expert-led online ground school and specialized preparation courses designed for your success in DGCA exams and beyond.</p>
-                    </div>
-
-                    <div className="programs-divider"></div>
-
-                    <div className="programs-grid">
-                        <div className="program-card">
-                            <div className="program-image">
-                                {/* Empty image container */}
-                            </div>
-                            <div className="program-content">
-                                <h3>CPL & ATPL Ground School</h3>
-                                <p>Comprehensive online classes covering all DGCA subjects - Navigation, Meteorology, Regulations, and Technical.</p>
-                                <button className="learn-more-btn">Learn More</button>
-                            </div>
-                        </div>
-
-                        <div className="program-card">
-                            <div className="program-image">
-                                {/* Empty image container */}
-                            </div>
-                            <div className="program-content">
-                                <h3>RTR(A) Radio Telephony</h3>
-                                <p>Master aviation communication protocols and prepare for the Radio Telephony Restricted (Aeronautical) license exam.</p>
-                                <button className="learn-more-btn">Learn More</button>
-                            </div>
-                        </div>
-
-                        <div className="program-card">
-                            <div className="program-image">
-                                {/* Empty image container */}
-                            </div>
-                            <div className="program-content">
-                                <h3>Type Rating Prep</h3>
-                                <p>Affordable guidance for A320 & B737 pre/post type rating, covering questions for major airline exams.</p>
-                                <button className="learn-more-btn">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             {/* Review Cards Section */}
             <section className="review-section">
                 <div className="container">
-
                     <Slider />
                 </div>
             </section>
-            {/* <section className="Map-section">
-                <div className="container">
-
-                    <Map />
-                </div>
-            </section> */}
-
         </div>
     );
 };

@@ -1,0 +1,893 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero-slider {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide:not(.active) {
+    transform: translateX(-100%);
+}
+
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slide-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.slide-text {
+    z-index: 2;
+}
+
+.slide-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.commercial-pilot-license {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #34495e;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Section Styling */
+section {
+  padding: 3rem 0;
+}
+
+section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section .subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Introduction Section */
+.introduction-section {
+  background-color: #fff;
+}
+
+/* Curriculum Grid */
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  /* margin-top: 2rem; */
+}
+
+.curriculum-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #3498db;
+}
+
+.curriculum-item h4 {
+  color: #2980b9;
+  margin-bottom: 0.5rem;
+}
+
+/* Training List */
+.training-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.training-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #27ae60;
+}
+
+.training-item h4 {
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+/* Eligibility Grid */
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.eligibility-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #e74c3c;
+}
+
+.eligibility-item h4 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+/* Fees Section */
+.fees-details {
+  margin-top: 2rem;
+}
+
+.fee-item {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.fee-item h4 {
+  color: #9b59b6;
+  margin-bottom: 1rem;
+}
+
+.medical-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.medical-details h5 {
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.medical-details ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.medical-details li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.medical-details li:last-child {
+  border-bottom: none;
+}
+
+.medical-fees {
+  background: #e8f4fd;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+/* Fees Table */
+.fees-table {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+
+.fees-table h4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+th {
+  background: #34495e;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.total-row {
+  background: #2ecc71 !important;
+  color: white;
+  font-weight: bold;
+}
+
+.total-row td {
+  border-bottom: none;
+  font-size: 1.1rem;
+}
+
+/* Academy Section */
+.academy-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.academy-section h3 {
+  color: white;
+}
+
+.academy-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 4px solid #f39c12;
+}
+
+.step h4 {
+  color: #f39c12;
+  margin-bottom: 1rem;
+}
+
+/* Exam Tips */
+.exam-tips {
+  background: #fff3cd;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin-top: 2rem;
+}
+
+.exam-tips h4 {
+  color: #856404;
+  margin-bottom: 1rem;
+}
+
+.exam-tips ul {
+  list-style: none;
+}
+
+.exam-tips li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ffeaa7;
+}
+
+.exam-tips li:last-child {
+  border-bottom: none;
+}
+
+/* Salary Section */
+.salary-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.salary-level {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.salary-level h4 {
+  color: #27ae60;
+  margin-bottom: 1rem;
+}
+
+.benefits {
+  background: #d4edda;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border-left: 4px solid #28a745;
+}
+
+.benefits h4 {
+  color: #155724;
+  margin-bottom: 1rem;
+}
+
+.benefits ul {
+  list-style: none;
+}
+
+.benefits li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #c3e6cb;
+}
+
+.benefits li:last-child {
+  border-bottom: none;
+}
+
+/* Career Options */
+.career-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.career-option {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-top: 4px solid #3498db;
+}
+
+.career-option h4 {
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.career-option p {
+  margin-bottom: 0.5rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  text-align: center;
+}
+
+.final-cta-section h3 {
+  color: white;
+}
+
+.final-cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+}
+
+.contact-section h3 {
+  color: white;
+}
+
+.contact-phone {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.scholarship {
+  color: #f39c12;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.submit-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  .hero-section {
+    padding: 3rem 0;
+  }
+
+  .curriculum-grid,
+  .eligibility-grid,
+  .process-steps,
+  .salary-levels,
+  .career-options {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-item,
+  .training-item,
+  .curriculum-item,
+  .eligibility-item,
+  .step,
+  .salary-level,
+  .career-option {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+
+
+/* Aircraft Cards Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.aircraft-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #2c3e50, #4a6491);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.card-header .type {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.usage {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #2c3e50;
+    border-left: 4px solid #3498db;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.benefits {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.benefits h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.benefits ul {
+    padding-left: 20px;
+    color: #555;
+}
+
+.benefits li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+.manu-container {
+    display: flex;
+    min-height: 600px;
+}
+
+.left-menu {
+    width: 280px;
+    /* background: #2c3e50; */
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.left-menu button {
+    background: transparent;
+    border: none;
+    color: #000000;
+    padding: 24px 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.left-menu button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #3498db;
+}
+
+.left-menu button.active {
+    background: #3498db;
+    color: white;
+    border-left-color: #1abc9c;
+}
+
+.content-box {
+    flex: 1;
+    padding: 10px 50px;
+    background: white;
+}
+
+.content-box h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.content-box img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.content-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.content-box p strong {
+    color: #2c3e50;
+}
+
+.content-box h3 {
+    color: #2c3e50;
+    margin: 25px 0 15px;
+    font-size: 22px;
+}
+
+.benefits {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+    color: #2c3e50;
+}

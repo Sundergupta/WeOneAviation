@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
 // Components
 import RootLayout from './components/RootLayout';
@@ -8,8 +7,11 @@ import Home from './screens/Home';
 import AboutUs from './screens/AboutUs';
 import DGCAComputerNumber from './screens/DGCA Computer Number';
 import TrainingCards from './components/TrainingCards';
+
 import DgcaMedical from './screens/DGCA-class-2-class-1-medical';
 import DgcaGroundClasses from './screens/dgca-ground-classes-in-india';
+import CommercialPilotLicense from './screens/CommercialPilotLicense';
+import MapPage from './screens/IndiaMap'; // ✅ newly added
 
 // Optional: Uncomment when you create these screens
 // import SignIn from './screens/SignIn';
@@ -26,7 +28,11 @@ const router = createBrowserRouter([
       { path: 'dgca-class-2-class-1-medical', element: <DgcaMedical /> },
       { path: 'DGCA-ground-classes-in-india', element: <DgcaGroundClasses /> },
       { path: 'DgcaGroundClasses', element: <DgcaGroundClasses /> },
-      // Add other nested routes if needed
+      { path: 'CommercialPilotLicense', element: <CommercialPilotLicense /> },
+
+
+      // ✅ New route for Pilot Training Cards and Map
+      { path: 'pilot-training', element: <MapPage /> },
     ],
   },
   // Optional public routes (like auth)
@@ -38,7 +44,7 @@ const router = createBrowserRouter([
     ],
   },
   // Redirect any unknown route (optional)
-  // { path: '*', element: <Navigate to="/sign-in" replace /> },
+  { path: '*', element: <Navigate to="/" replace /> },
 ]);
 
 function App() {
