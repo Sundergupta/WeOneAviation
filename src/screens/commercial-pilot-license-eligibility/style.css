@@ -1,0 +1,139 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #0b63d6;
+  --text: #0f1724;
+  --muted: #616770;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cpl-page {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.cpl-hero {
+  background: linear-gradient(180deg, rgba(11, 99, 214, 0.08), rgba(11, 99, 214, 0));
+  padding: 48px 16px;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.04);
+  text-align: center;
+}
+
+.cpl-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cpl-hero h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.cpl-lead {
+  color: var(--muted);
+}
+
+/* Layout: Side Menu + Content */
+.cpl-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Side Menu */
+.side-menu-column {
+  flex: 0 0 220px;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11, 99, 214, 0.05);
+  padding: 20px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.side-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 14px;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu-link:hover {
+  background: rgba(11, 99, 214, 0.08);
+  color: var(--accent);
+}
+
+.menu-link.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Main Content */
+.cpl-container {
+  flex: 1;
+}
+
+.cpl-section {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(11, 99, 214, 0.04);
+}
+
+.cpl-section h2 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.cpl-section ul {
+  margin-left: 20px;
+}
+
+.cpl-final {
+  background: linear-gradient(90deg, rgba(11, 99, 214, 0.03), transparent);
+}
+
+/* Footer */
+.cpl-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cpl-content-wrapper {
+    flex-direction: column;
+  }
+
+  .side-menu-column {
+    width: 100%;
+    position: static;
+  }
+}

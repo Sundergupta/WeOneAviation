@@ -1,105 +1,39 @@
 import React, { useState } from "react";
+import { Outlet, useNavigate, Link, useLocation } from "react-router-dom";
 import './style.css';
+import SideMenu from "../../components/SideManu";
+// import CplIntro from "../CplIntro/CplIntro";
+// import CplCourse from "../CplCourse/CplCourse";
+// import CplFees from "../CplFees/CplFees";
+import CplSalary from "../commercial-pilot-license-salary";
+
+
 import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
 
 const CommercialPilotLicense = () => {
-    const aircraftData = [
-        {
-            name: "Commercial Pilot License Salary – 2025",
-            type: "Pilot Career & Earnings",
-            usedFor: "Salary Information for CPL Holders",
-            description:
-                "Commercial Pilot License salary depends on airline type, experience, aircraft rating, and job location. International airlines pay significantly higher than domestic ones.",
-            benefits: `
-Entry-Level Salary in India:
-• First Officer: ₹1.5–3 Lakhs/month
 
-Experienced Pilot Salary:
-• Captain (Domestic): ₹6–10 Lakhs/month
-• International Airlines: ₹10–20 Lakhs/month or more
+    const [activeComponent, setActiveComponent] = useState("intro");
 
-Factors Influencing Salary:
-• Airline Type (Domestic vs International)
-• Aircraft Type (Wide-body earns higher)
-• Experience & Flight Hours
-• Location (Middle East & Europe pay highest)
-• Additional Roles add bonuses
-
-International Salaries:
-• New Pilots: $4,000 — $8,000 / month
-• Captains: $10,000 — $20,000+ / month
-
-Additional Benefits:
-• Free world travel for family
-• Housing allowance
-• Insurance + Retirement perks
-      `,
-            image:
-                "https://upload.wikimedia.org/wikipedia/commons/3/39/Boeing_737_cockpit.jpg",
-        },
-        {
-            name: "Commercial Pilot License (CPL) Eligibility",
-            type: "Pilot Training Requirement",
-            usedFor: "Admission Eligibility for CPL Course",
-            description:
-                "To enroll in CPL training, students must meet essential age, education, and medical fitness requirements defined by DGCA India.",
-            benefits: `
-Age Requirement:
-• Minimum 17 years to start CPL
-• License issued at 18 years+
-
-Education:
-• 10+2 with Physics & Mathematics
-• NIOS accepted if subjects missing
-
-Medical Fitness:
-• DGCA Class-1 & Class-2 medical test
-• Good eyesight & overall health
-
-Language:
-• English proficiency required (ELP test)
-
-Flying Hours Required:
-• Minimum 200 total flying hours
-
-Conclusion:
-• Meeting these requirements enables you to start your professional pilot journey through DGCA-approved flying schools.
-      `,
-            image:
-                "https://upload.wikimedia.org/wikipedia/commons/1/1a/Pilot_training_cockpit_view.jpg",
-        },
-        {
-            name: "Commercial Pilot License (CPL) Syllabus",
-            type: "DGCA Training Curriculum",
-            usedFor: "Ground & Flight Training",
-            description:
-                "CPL syllabus includes ground school subjects and flight training modules as per DGCA standards.",
-            benefits: `
-Ground Training Subjects:
-• Air Navigation
-• Aviation Meteorology
-• Air Regulation
-• Technical General & Technical Specific
-• Radio Telephony (RTR)
-
-Flight Training Modules:
-• Basic Maneuvers
-• Cross-Country Flying
-• Instrument Flying
-• Night Flying
-• Solo Flying
-
-Requirement:
-• 200+ Flying Hours
-
-Conclusion:
-• Ensures academic knowledge + real aviation skills for airline operations.
-      `,
-            image:
-                "https://upload.wikimedia.org/wikipedia/commons/6/63/Instrument_flight_training.jpg",
-        },
+    // ✅ Function to render selected component
+    const renderComponent = () => {
+        switch (activeComponent) {
+            // case "course":
+            //     return <CplCourse />;
+            // case "fees":
+            //     return <CplFees />;
+            case <CplSalary />:
+                return <CplSalary />;
+            // default:
+            //     return <CplIntro />;
+        }
+    };
+    const menuItems = [
+        { name: "Course Details", path: "/CommercialPilotLicense" },
+        { name: "Eligibility", path: "/CommercialPilotLicense/Eligibility" },
+        { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },
     ];
-    const [selectedAircraft, setSelectedAircraft] = useState(aircraftData[0]);
+
+
     return (
         <div className="commercial-pilot-license">
 
@@ -111,84 +45,56 @@ Conclusion:
                     <p className="subtitle">Course, Fees & Eligibility in India.</p>
                 </div>
             </section>
+            {/* <SideMenu data={aircraftData} />; */}
 
-            <section className="introduction-section">
-                <div className="container">
-                    <h3>What is Commercial Pilot License?</h3>
-                    <p>
-                        Hello Aviators, if your dream is to become a Commercial Pilot, then you are landing on the perfect page. A Commercial Pilot License (CPL) is a certification that allows pilots to fly aircraft professionally and get paid for their services. It is the gateway to becoming an airline pilot or pursuing a career in aviation. If you want to become a pilot, then a Commercial Pilot License is great for you. There are many licenses for pilots, and the Commercial Pilot License is one of them. There are some criteria for getting a Commercial Pilot License in India. On this page, you will know all the details about the Commercial Pilot License like eligibility, course details, course duration, course syllabus, course fees, CPL course fees, CPL admission process, commercial pilot license salary, and how to enroll in the Commercial Pilot License course. So relax and read this blog for all details of the Commercial Pilot License, and if you have any issues related to the Commercial Pilot License, you can contact us anytime
-                    </p>
-                </div>
-            </section>
 
-            <div className="manu-container">
-                <div className="left-menu">
-                    {aircraftData.map((aircraft, i) => (
-                        <button
-                            key={i}
-                            className={selectedAircraft.name === aircraft.name ? "active" : ""}
-                            onClick={() => setSelectedAircraft(aircraft)}
-                        >
-                            {aircraft.name}
-                        </button>
-                    ))}
-                </div>
+            <section className="intro-layout">
+                <div className="container two-column">
+                    {/* LEFT: Side Menu */}
+                    <div className="side-menu-column">
+                        <ul className="side-menu">
+                            {menuItems.map((item, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={item.path}
+                                        className={
+                                            location.pathname === item.path
+                                                ? "menu-link active"
+                                                : "menu-link"
+                                        }
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                <div className="content-box">
-                    <h2>{selectedAircraft.name}</h2>
-                    <img src={selectedAircraft.image} alt={selectedAircraft.name} />
-                    <p><strong>Type:</strong> {selectedAircraft.type}</p>
-                    <p><strong>Used For:</strong> {selectedAircraft.usedFor}</p>
-                    <p>{selectedAircraft.description}</p>
-
-                    <h3>Details & Benefits</h3>
-                    <pre className="benefits">{selectedAircraft.benefits}</pre>
-                </div>
-            </div>
-
-            {/* Course Details */}
-            <section className="course-details-section">
-                <div className="container">
-                    <h3>Commercial Pilot License Course Details</h3>
-                    <p>
-                        The Commercial Pilot Course includes both theoretical and practical flight hours, DGCA medical, etc.
-                        The Commercial Pilot License is offered by DGCA when you complete your entire process of becoming a pilot.
-                        The details of the course are given below, and the curriculum includes:
-                    </p>
-
-                    <div className="curriculum-grid">
-                        <div className="curriculum-item">
-                            <h4>Air Navigation</h4>
-                            <p>Covers principles of navigation, maps, charts, and airspace management.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Aviation Meteorology</h4>
-                            <p>Focuses on weather conditions, atmospheric science, and how they affect flight operations.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Air Regulations</h4>
-                            <p>Know About national and international aviation laws, air traffic control (ATC) procedures, and operational rules.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Radio Telephony</h4>
-                            <p>Trains pilots in aviation communication and phraseology used in ATC communication.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Aircraft and Engines (Technical General & Specific)</h4>
-                            <p>Provides an understanding of aircraft systems, aerodynamics, and engine functions.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Human Performance & Limitations</h4>
-                            <p>Covers psychological and physiological factors affecting pilots.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Flight Planning & Performance</h4>
-                            <p>Involves calculating fuel requirements, takeoff and landing performance, and flight route planning.</p>
-                        </div>
-                        <div className="curriculum-item">
-                            <h4>Technical General</h4>
-                            <p>Technical General is a crucial subject in CPL training that provides an in-depth understanding of aircraft systems, aerodynamics, and engine mechanics.</p>
-                        </div>
+                    {/* RIGHT: Dynamic Content */}
+                    <div className="content-column">
+                        {location.pathname === "/CommercialPilotLicense" ? (
+                            <>
+                                <h3>What is Commercial Pilot License?</h3>
+                                <p>
+                                    Hello Aviators, if your dream is to become a Commercial Pilot,
+                                    then you are landing on the perfect page. A Commercial Pilot
+                                    License (CPL) is a certification that allows pilots to fly
+                                    aircraft professionally and get paid for their services.
+                                </p>
+                                <p>
+                                    If you want to become a pilot, then a Commercial Pilot License
+                                    is great for you. There are many licenses for pilots, and the
+                                    Commercial Pilot License is one of them.
+                                </p>
+                                <p>
+                                    On this page, you will know all the details about the
+                                    Commercial Pilot License — like eligibility, course details,
+                                    syllabus, fees, admission process, and salary.
+                                </p>
+                            </>
+                        ) : (
+                            <Outlet />
+                        )}
                     </div>
                 </div>
             </section>
