@@ -1,134 +1,155 @@
-/* Root variables for theme colors */
 :root {
   --bg: #f7f8fb;
   --card: #ffffff;
   --accent: #0b63d6;
   --muted: #6b7280;
-}
-
-/* Basic reset and typography */
-* {
-  box-sizing: border-box;
+  --text: #1f2937;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
-  color: #111;
+  color: var(--text);
+  margin: 0;
 }
 
-/* Page container */
-.cbse-page .container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 1.25rem;
+/* ---------- Page Container ---------- */
+.dynamic-page {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
 }
 
-/* Hero section */
-.hero {
-  background: linear-gradient(90deg, #f0f7ff 0%, #ffffff 100%);
-  padding: 2rem 0;
-  border-bottom: 1px solid #e6eefc;
+/* ---------- Header ---------- */
+.dynamic-header {
+  background: linear-gradient(120deg, #e8f0ff, #ffffff);
   text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin: 0 0 0.25rem;
-  color: #0b63d6;
-}
-
-.hero .subtitle {
-  color: var(--muted);
-  margin: 0 0 0.5rem;
-}
-
-.hero .source {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.hero a {
+.dynamic-header h1 {
   color: var(--accent);
-  text-decoration: none;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero a:hover {
-  text-decoration: underline;
+.dynamic-header p {
+  color: var(--muted);
+  font-size: 1rem;
 }
 
-/* Card section */
+/* ---------- Section Card ---------- */
 .card {
   background: var(--card);
-  border-radius: 10px;
-  padding: 1.25rem;
-  margin: 1rem 0;
-  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.card h2 {
-  margin-top: 0;
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.dynamic-section h2 {
   color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Intro paragraph */
-.intro p {
+.section-desc {
   line-height: 1.6;
-  color: #222;
+  color: #374151;
+  margin-bottom: 1rem;
 }
 
-/* Lists */
-ul,
-ol {
-  margin: 0.5rem 0 0.5rem 1.25rem;
-  padding: 0;
+/* ---------- Subsection ---------- */
+.dynamic-subsection {
+  margin-top: 1.5rem;
 }
 
-/* Table styles */
-.grade-table {
+.dynamic-subsection h3 {
+  color: #2563eb;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- List ---------- */
+.styled-list {
+  list-style: none;
+  padding-left: 1.25rem;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.styled-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* ---------- Table ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.dynamic-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
-  background: #fff;
+  min-width: 500px;
+  background: white;
 }
 
-.grade-table th,
-.grade-table td {
-  border: 1px solid #e8eef8;
-  padding: 0.6rem;
+.dynamic-table th,
+.dynamic-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
   text-align: left;
 }
 
-.grade-table thead th {
-  background: #f3f8ff;
-  color: #0b63d6;
+.dynamic-table th {
+  background-color: #f3f8ff;
+  color: var(--accent);
   font-weight: 600;
 }
 
-/* Footer */
-footer,
-.footer {
-  margin: 2rem 0 4rem;
+.dynamic-table tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* ---------- Footer ---------- */
+.dynamic-footer {
   text-align: center;
-}
-
-.credit {
-  font-size: 0.9rem;
+  margin: 3rem 0 2rem;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-
-  .cbse-page .container {
-    padding: 1rem;
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .dynamic-header h1 {
+    font-size: 1.7rem;
   }
 
   .card {
-    padding: 1rem;
+    padding: 1.2rem;
+  }
+
+  .dynamic-table th,
+  .dynamic-table td {
+    padding: 0.5rem;
   }
 }

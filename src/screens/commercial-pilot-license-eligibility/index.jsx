@@ -1,32 +1,43 @@
 import React from "react";
-import { Outlet, useNavigate, Link, useLocation } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
+import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
+
 
 const CommercialPilotLicense = () => {
+    const location = useLocation();
 
     const menuItems = [
-        { name: "Introduction", onClick: () => setActiveComponent("intro") },
-        { name: "Course Details", onClick: () => setActiveComponent("course") },
-        { name: "Fees", onClick: () => setActiveComponent("fees") },
-        { name: "Commercial Pilot License Salary ", onClick: () => setActiveComponent("salary") },
+        { name: "Commercial Pilot License ", path: "../CommercialPilotLicense" },
+        { name: "Commercial Pilot License Eligibility", path: "../commercial-pilot-license-eligibility" },
+        { name: "Commercial Pilot License Syllabus ", path: "../commercial-pilot-license-syllabus" },
+        { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },
+        { name: "Commercial Pilot License Admission", path: "../commercial-pilot-license-admission-process" },
     ];
+
     return (
         <div className="commercial-pilot-license">
             {/* ---------------- HEADER ---------------- */}
-            <header className="cpl-header">
+            {/* Hero Section */}
+            <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
+                <div className="container">
+                    <h1>Commercial Pilot Course Detail</h1>
+                    <h2>Commercial Pilot License</h2>
+
+                </div>
+            </section>
+
+            {/* <header className="cpl-header">
                 <h1>Commercial Pilot License (CPL) Eligibility</h1>
                 <p>
                     A clear, step-by-step overview of the eligibility requirements to pursue a CPL in India.
                 </p>
-            </header>
+            </header> */}
 
-            <div className="cpl-container">
-                {/* ---------------- SIDE MENU ---------------- */}
+            {/* ---------------- MAIN LAYOUT ---------------- */}
+            <div className="cpl-content-wrapper">
+                {/* Side Menu (Left) */}
                 <div className="side-menu-column">
-
-                    <br />
-                    <br />
                     <ul className="side-menu">
                         {menuItems.map((item, index) => (
                             <li key={index}>
@@ -43,11 +54,13 @@ const CommercialPilotLicense = () => {
                             </li>
                         ))}
                     </ul>
+
                 </div>
 
-                {/* ---------------- MAIN CONTENT ---------------- */}
-                <main className="main-content">
-                    <section>
+                {/* Main Content (Right) */}
+                <div className="cpl-container">
+                    <section className="cpl-section">
+                        <h1>Commercial Pilot License (CPL) Eligibility</h1>
                         <p>
                             The first essential step for someone who dreams about aviation as a profession is to earn a
                             <strong> Commercial Pilot License (CPL)</strong>. The CPL enables professional aircraft operation
@@ -57,7 +70,7 @@ const CommercialPilotLicense = () => {
                         </p>
                     </section>
 
-                    <section>
+                    <section className="cpl-section">
                         <h2>Age Requirement</h2>
                         <p>
                             A candidate qualifying for a CPL in India needs to reach <strong>17 years</strong> old before
@@ -66,7 +79,7 @@ const CommercialPilotLicense = () => {
                         </p>
                     </section>
 
-                    <section>
+                    <section className="cpl-section">
                         <h2>Educational Qualification</h2>
                         <p>
                             A solid academic base forms the essential foundation required to turn into a professional pilot.
@@ -75,7 +88,7 @@ const CommercialPilotLicense = () => {
                         </p>
                     </section>
 
-                    <section>
+                    <section className="cpl-section">
                         <h2>Medical Fitness</h2>
                         <p>
                             Each pilot candidate needs to obtain a medical certification from an examiner approved by the DGCA.
@@ -87,7 +100,7 @@ const CommercialPilotLicense = () => {
                         </ul>
                     </section>
 
-                    <section>
+                    <section className="cpl-section">
                         <h2>Language Proficiency</h2>
                         <p>
                             English proficiency stands as a mandatory requirement because aviation communication and documentation
@@ -96,7 +109,7 @@ const CommercialPilotLicense = () => {
                         </p>
                     </section>
 
-                    <section>
+                    <section className="cpl-section">
                         <h2>Flying Hours</h2>
                         <p>
                             The CPL eligibility requires candidates to complete at least <strong>200 hours</strong> of flying:
@@ -109,14 +122,14 @@ const CommercialPilotLicense = () => {
                         </ul>
                     </section>
 
-                    <section className="final-section">
+                    <section className="cpl-section cpl-final">
                         <h2>Final Thoughts</h2>
                         <p>
                             Start a successful career in aviation with all the commercial pilot eligibility requirements.
                             Educational background, medical fitness, and language proficiency ensure high professional standards.
                         </p>
                     </section>
-                </main>
+                </div>
             </div>
         </div>
     );

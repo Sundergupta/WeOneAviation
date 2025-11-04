@@ -1,63 +1,192 @@
-.salary-page {
-  background: #f7f8fb;
-  padding: 20px 20px;
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #0b63d6;
+  --text: #0f1724;
+  --muted: #616770;
+}
+
+* {
+  box-sizing: border-box;
+}
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section .subtitle {
+        font-size: 1rem;
+    }
+}
+
+.commercial-pilot-license {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.cpl-header {
+  background: linear-gradient(180deg, rgba(11, 99, 214, 0.08), rgba(11, 99, 214, 0));
+  padding: 48px 16px;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.04);
+  text-align: center;
+}
+
+.cpl-header h1 {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.cpl-header p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Layout */
+.cpl-content-wrapper {
   display: flex;
   justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
 }
 
-.salary-container {
-  max-width: 900px;
-  background: #fff;
+/* Side Menu */
+/* Side Menu */
+.side-menu-column {
+  flex: 0 0 280px; /* Increased from 220px to 280px */
+  background: var(--card);
   border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  line-height: 1.7;
+  box-shadow: 0 6px 18px rgba(11, 99, 214, 0.05);
+  padding: 2px; /* Slightly increased padding for better spacing */
+  height: fit-content;
+  position: sticky;
+  top: 100px;
 }
 
-h1 {
-  color: #0b63d6;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.side-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-h2 {
-  margin-top: 2rem;
-  color: #222;
-}
-
-p {
-  color: #444;
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-
-ul {
-  margin: 1rem 0 1rem 2rem;
-  color: #444;
-}
-
-li {
-  margin-bottom: 0.6rem;
-}
-
-.join-btn {
-  background: #0b63d6;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
+.menu-link {
+  display: block;
+  padding: 12px 14px;
+  color: var(--text);
+  text-decoration: none;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 20px 0;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-.join-btn:hover {
-  background: #084eaa;
+.menu-link:hover {
+  background: rgba(11, 99, 214, 0.1);
+  color: var(--accent);
 }
 
-.final-text {
-  margin-top: 2rem;
-  color: #333;
-  font-weight: 500;
+.menu-link.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Content Area */
+.cpl-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cpl-section {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(11, 99, 214, 0.06);
+}
+
+.cpl-section h2 {
+  color: var(--accent);
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.cpl-section p {
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.cpl-section ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.cpl-final {
+  background: linear-gradient(90deg, rgba(11, 99, 214, 0.05), transparent);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cpl-content-wrapper {
+    flex-direction: column;
+  }
+
+  .side-menu-column {
+    width: 100%;
+    position: static;
+  }
 }

@@ -1,0 +1,124 @@
+.placement-page {
+  background-color: #ffffff;
+  color: #003366; /* dark blue */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.breadcrumb {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.enquire-btn {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-section {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.image-placeholder {
+  flex: 1;
+  background-color: #cce0ff;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003366;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.content-section h2 {
+  color: #003366;
+  margin-top: 25px;
+}
+
+.content-section ul {
+  list-style: square;
+  padding-left: 25px;
+}
+
+.related-section {
+  background-color: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.related-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #003366;
+  padding: 15px;
+  flex: 1 1 30%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #003366;
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: #ffcc00;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #003366;
+  border-radius: 5px;
+}
+
+.contact-section {
+  margin-top: 30px;
+  background-color: #003366;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-btn {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -1,0 +1,252 @@
+/* ---------- GLOBAL PAGE STYLING ---------- */
+.dynamic-page {
+  background-color: #ffffff;
+  color: #003366; /* deep blue for text */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  padding: 40px 10%;
+}
+
+/* ---------- HEADER SECTION ---------- */
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section h2 {
+  color: #003366;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header-section p {
+  color: #666;
+  font-size: 16px;
+}
+
+.header-section span {
+  color: #ffcc00; /* yellow accent */
+  font-weight: 600;
+}
+
+/* ---------- IMAGE SECTION ---------- */
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.image-section img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- CONTENT SECTION ---------- */
+.content-section {
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.1);
+}
+
+.content-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.content-section p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #003366;
+}
+
+.content-section ul {
+  margin: 20px 0;
+  padding-left: 25px;
+}
+
+.content-section ul li {
+  margin-bottom: 10px;
+  color: #003366;
+  list-style-type: disc;
+}
+
+.service-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.service-links li {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.service-links li:hover {
+  background-color: #ffcc00;
+  color: #003366;
+  transform: translateX(5px);
+}
+
+/* ---------- TAGS ---------- */
+.tags {
+  font-size: 14px;
+  color: #444;
+  background-color: #eaf2ff;
+  padding: 15px;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+/* ---------- RELATED SERVICES ---------- */
+.related-section {
+  margin-top: 60px;
+}
+
+.related-section h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.related-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.related-card {
+  background-color: #003366;
+  color: white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+  background-color: #002244;
+}
+
+.related-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.related-card p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.related-card button {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.related-card button:hover {
+  background-color: #ffffff;
+  color: #003366;
+}
+
+/* ---------- CHAT SECTION ---------- */
+.chat-section {
+  margin-top: 70px;
+  text-align: center;
+  background-color: #f5f9ff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.1);
+}
+
+.chat-section h3 {
+  color: #003366;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.chat-section input,
+.chat-section textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.chat-section input:focus,
+.chat-section textarea:focus {
+  border-color: #ffcc00;
+}
+
+.chat-section button {
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-section button:hover {
+  background-color: #ffcc00;
+  color: #003366;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 900px) {
+  .image-section img {
+    width: 100%;
+  }
+
+  .related-services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .related-card {
+    width: 90%;
+  }
+
+  .chat-section input,
+  .chat-section textarea {
+    width: 95%;
+  }
+}

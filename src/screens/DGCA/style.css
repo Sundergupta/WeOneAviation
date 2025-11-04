@@ -1,0 +1,68 @@
+.icse-page {
+  font-family: "Poppins", sans-serif;
+  background: #f7f8fb;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.icse-header {
+  background: linear-gradient(to right, #003b89, #003976);
+  color: rgb(255, 255, 255);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.icse-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.icse-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icse-section h2 {
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.icse-subsection h3 {
+  color:  #000000;
+  margin-top: 1rem;
+}
+
+.icse-subsection ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.icse-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.icse-table th,
+.icse-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.icse-table th {
+  background-color: #083b71;
+  color: white;
+}
+
+.icse-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #003b89;
+  color: white;
+  font-size: 0.9rem;
+}

@@ -6,6 +6,9 @@
   --muted: #616770;
 }
 
+* {
+  box-sizing: border-box;
+}
 .hero-section {
     position: relative;
     background-size: cover;
@@ -62,10 +65,6 @@
     .hero-section .subtitle {
         font-size: 1rem;
     }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .commercial-pilot-license {

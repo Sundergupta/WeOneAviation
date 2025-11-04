@@ -6,26 +6,29 @@
   padding: 2rem;
   background: #f9fafb;
   min-height: 40vh;
+  
 }
 
 /* Left Sidebar */
 .left-menu {
-  width: 250px;
+  width: 280px; /* increased width */
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: white;
+  background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  transition: width 0.3s ease; /* smooth resize */
 }
 
+/* Individual Menu Items */
 .menu-item {
   background: transparent;
   border: none;
   text-align: left;
   font-size: 16px;
-  padding: 12px 20px;
+  padding: 12px 22px;
   cursor: pointer;
   transition: all 0.3s ease;
   color: #333;
@@ -47,10 +50,10 @@
 /* Right Content Area */
 .content-box {
   flex: 1;
-  background: white;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .content-box h2 {
@@ -68,13 +71,22 @@
   .menu-layout {
     flex-direction: column;
   }
+
   .left-menu {
     width: 100%;
     flex-direction: row;
     overflow-x: auto;
   }
+
   .menu-item {
     flex: 1;
     text-align: center;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .menu-item.active {
+    border-bottom: 3px solid #1d9bf0;
+    border-radius: 0;
   }
 }

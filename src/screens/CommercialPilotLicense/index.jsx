@@ -27,12 +27,20 @@ const CommercialPilotLicense = () => {
             //     return <CplIntro />;
         }
     };
-    const menuItems = [
-        { name: "Course Details", path: "/CommercialPilotLicense" },
-        { name: "Eligibility", path: "/CommercialPilotLicense/Eligibility" },
-        { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },
-    ];
 
+    // const menuItems = [
+    //     { name: "commercial-pilot-license-admission", onClick: () => setActiveComponent("Admission") },
+    //     { name: "commercial-pilot-license-eligibility", onClick: () => setActiveComponent("eligibility") },
+    //     { name: "commercial-pilot-license-syllabus", onClick: () => setActiveComponent("syllabus") },
+    //     { name: "Commercial Pilot License Salary ", onClick: () => setActiveComponent("salary") },
+    // ];
+    const menuItems = [
+        { name: "Commercial Pilot License ", path: "../CommercialPilotLicense" },
+        { name: "Commercial Pilot License Eligibility", path: "../commercial-pilot-license-eligibility" },
+        { name: "Commercial Pilot License Syllabus ", path: "../commercial-pilot-license-syllabus" },
+        { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },
+        { name: "Commercial Pilot License Admission", path: "../commercial-pilot-license-admission-process" },
+    ];
 
     return (
         <div className="commercial-pilot-license">
@@ -40,64 +48,64 @@ const CommercialPilotLicense = () => {
             {/* Hero Section */}
             <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
                 <div className="container">
-                    <h1>Commercial Pilot Course in India</h1>
+                    <h1>Commercial Pilot Course Detail</h1>
                     <h2>Commercial Pilot License</h2>
-                    <p className="subtitle">Course, Fees & Eligibility in India.</p>
+
                 </div>
             </section>
             {/* <SideMenu data={aircraftData} />; */}
 
 
-            <section className="intro-layout">
-                <div className="container two-column">
-                    {/* LEFT: Side Menu */}
-                    <div className="side-menu-column">
-                        <ul className="side-menu">
-                            {menuItems.map((item, index) => (
-                                <li key={index}>
-                                    <Link
-                                        to={item.path}
-                                        className={
-                                            location.pathname === item.path
-                                                ? "menu-link active"
-                                                : "menu-link"
-                                        }
-                                    >
-                                        {item.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
 
-                    {/* RIGHT: Dynamic Content */}
-                    <div className="content-column">
-                        {location.pathname === "/CommercialPilotLicense" ? (
-                            <>
-                                <h3>What is Commercial Pilot License?</h3>
-                                <p>
-                                    Hello Aviators, if your dream is to become a Commercial Pilot,
-                                    then you are landing on the perfect page. A Commercial Pilot
-                                    License (CPL) is a certification that allows pilots to fly
-                                    aircraft professionally and get paid for their services.
-                                </p>
-                                <p>
-                                    If you want to become a pilot, then a Commercial Pilot License
-                                    is great for you. There are many licenses for pilots, and the
-                                    Commercial Pilot License is one of them.
-                                </p>
-                                <p>
-                                    On this page, you will know all the details about the
-                                    Commercial Pilot License — like eligibility, course details,
-                                    syllabus, fees, admission process, and salary.
-                                </p>
-                            </>
-                        ) : (
-                            <Outlet />
-                        )}
-                    </div>
+            <div className="container two-column">
+                {/* LEFT: Side Menu */}
+                <div className="side-menu-column">
+                    <ul className="side-menu">
+                        {menuItems.map((item, index) => (
+                            <li key={index}>
+                                <Link
+                                    to={item.path}
+                                    className={
+                                        location.pathname === item.path
+                                            ? "menu-link active"
+                                            : "menu-link"
+                                    }
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-            </section>
+
+                {/* RIGHT: Dynamic Content */}
+                <div className="content-column">
+                    {location.pathname === "/CommercialPilotLicense" ? (
+                        <>
+                            <h3>What is Commercial Pilot License?</h3>
+                            <p>
+                                Hello Aviators, if your dream is to become a Commercial Pilot,
+                                then you are landing on the perfect page. A Commercial Pilot
+                                License (CPL) is a certification that allows pilots to fly
+                                aircraft professionally and get paid for their services.
+                            </p>
+                            <p>
+                                If you want to become a pilot, then a Commercial Pilot License
+                                is great for you. There are many licenses for pilots, and the
+                                Commercial Pilot License is one of them.
+                            </p>
+                            <p>
+                                On this page, you will know all the details about the
+                                Commercial Pilot License — like eligibility, course details,
+                                syllabus, fees, admission process, and salary.
+                            </p>
+                        </>
+                    ) : (
+                        <Outlet />
+                    )}
+                </div>
+            </div>
+
 
             {/* Practical Flight Training */}
             <section className="flight-training-section">

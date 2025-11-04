@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './style.css';
 import logo from '../../assets/Logo-removebg-preview.png';
+import AircraftManagement from '../../screens/Services/AirCraftSalePurchase';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [pilotOpen, setPilotOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -58,6 +60,21 @@ const Navbar = () => {
       ]
     }
   ];
+
+  const servicesData = [
+    { name: "Pilot Training", path: "../../screens/Services/PilotTraining" },
+    { name: "Chartered Services", path: "/chartered-services" },
+    { name: "Aircraft Sale Purchase", path: "/aircraft-sale-purchase" },
+    { name: "Airport Ground Handling Service", path: "/airport-ground-handling-service" },
+    { name: "Aviation Placement Service", path: "/aviation-placement-service" },
+    { name: "Aircraft Management", path: "../../screens/Services/AirCraftSalePurchase" },
+    { name: "Aircraft Spare Parts", path: "/aircraft-spare-parts" },
+    { name: "MRO Services", path: "/mro-services" },
+    { name: "Sale and Purchase Airplanes", path: "/sale-and-purchase-airplanes" },
+    { name: "Chatters Services", path: "/chatters-services" },
+    { name: "Airplane Parts", path: "/airplane-parts" },
+  ];
+
 
   const handleSubmenuOpen = (index) => {
     setActiveSubmenu(index);
@@ -148,7 +165,7 @@ const Navbar = () => {
           </li>
           {/* COURSES DROPDOWN END */}
 
-          {/* DROPDOWN START */}
+          {/* HOW TO BECOME PILOT DROPDOWN START */}
           <li
             className="navbar-item dropdown-parent"
             onMouseEnter={() => setPilotOpen(true)}
@@ -183,7 +200,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          {/* DROPDOWN END */}
+          {/* HOW TO BECOME PILOT DROPDOWN END */}
 
           <li className="navbar-item">
             <a href="https://dgcaexam.com/" className="navbar-link" onClick={closeMenu}>
@@ -191,17 +208,33 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li className="navbar-item">
-            <Link to="/FAQ" className="navbar-link" onClick={closeMenu}>
-              FAQ
-            </Link>
-          </li>
+          {/* SERVICES DROPDOWN START */}
+          <li
+            className="navbar-item dropdown-parent"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <span className="navbar-link dropdown-btn">
+              Services ▼
+            </span>
 
-          <li className="navbar-item">
-            <Link to="/contact" className="navbar-link" onClick={closeMenu}>
-              Contact Us
-            </Link>
+            {servicesOpen && (
+              <ul className="dropdown-menu">
+                {servicesData.map((service, index) => (
+                  <li key={index}>
+                    <Link
+                      to={service.path}
+                      className="dropdown-link"
+                      onClick={closeMenu}
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
+          {/* SERVICES DROPDOWN END */}
 
           <li className="navbar-item">
             <Link to="/blogs" className="navbar-link" onClick={closeMenu}>

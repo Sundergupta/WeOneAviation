@@ -15,6 +15,28 @@ import Structure from './screens/full form';
 import ICSE from './screens/ICSE';
 import Eligibility from './screens/commercial-pilot-license-eligibility';
 import CBSE from './screens/CBSE';
+import Syllabus from './screens/commercial-pilot-license-syllabus';
+import Admission from './screens/commercial-pilot-license-admission-process';
+import DGCA from './screens/DGCA';
+import PPL from './screens/PPL';
+// import { fullFormOfCplCommercialPilotLicense } from "./screens/full-form-of-cpl-commercial-pilot-license";
+
+
+// services pages 
+
+import PilotTraining from "./screens/Services/PilotTraining";
+// import CharteredServices from "./screens/Services/chartered-services";
+import AircraftSalePurchase from "./screens/Services/AirCraftSalePurchase";
+// import AirportGroundHandlingService from "./screens/Services/airport-ground-handling-service";
+import AviationPlacementService from "./screens/Services/AviationPlacementService";
+import AircraftManagement from "./screens/Services/AircraftManagement";
+import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
+// import MroServices from "./screens/Services/mro-services";
+// import SaleAndPurchaseAirplanes from "./screens/Services/sale-and-purchase-airplanes";
+import ChattersServices from "./screens/Services/CharteredServices";
+import AirplaneParts from "./screens/Services/AirCraftSalePurchase";
+
+
 
 
 // ✅ Import nested CPL pages
@@ -38,23 +60,36 @@ const router = createBrowserRouter([
       { path: 'dgca-class-2-class-1-medical', element: <DgcaMedical /> },
       { path: 'DGCA-ground-classes-in-india', element: <DgcaGroundClasses /> },
       { path: 'DgcaGroundClasses', element: <DgcaGroundClasses /> },
+      // {  full form pages } 
       { path: 'Structur', element: <Structure /> },
-      { path: 'CBSE', element: <CBSE /> },
-
-      { path: 'ICSE', element: <ICSE /> },
+      { path: 'cbse-full-form', element: <CBSE /> },
+      { path: 'dgca-full-form', element: <DGCA /> },
+      { path: 'icse-full-form', element: <ICSE /> },
       { path: 'commercial-pilot-license-salary', element: <CplSalary /> },
-      { path: 'pilot-training', element: <MapPage /> },
+      { path: 'Map-training', element: <MapPage /> },
       { path: 'commercial-pilot-license-eligibility', element: <Eligibility /> },
-      // ✅ CPL Section with nested routes
+      { path: 'commercial-pilot-license-syllabus', element: <Syllabus /> }, ,
+      { path: 'commercial-pilot-license-admission-process', element: <Admission /> },
+      { path: 'ppl-full-form', elementm: <PPL /> },
+      // { path: 'fullformofcplcommercialpilotlicense', element: <fullFormOfCplCommercialPilotLicense /> },
+
+      { path: 'pilot-training', element: <PilotTraining /> },
+      // { path: 'chartered-services', element: <CharteredServices /> },
+      { path: 'aircraft-sale-purchase', element: <AircraftSalePurchase /> },
+      // { path: 'airport-ground-handling-service', element: <AirportGroundHandlingService /> },
+      { path: 'aviation-placement-service', element: <AviationPlacementService /> },
+      { path: 'aircraft-management', element: <AircraftManagement /> },
+      { path: 'aircraft-spare-parts', element: <AircraftSpareParts /> },
+      // { path: 'mro-services', element: <MroServices /> },
+      // { path: 'sale-and-purchase-airplanes', element: <SaleAndPurchaseAirplanes /> },
+      { path: 'chatters-services', element: <ChattersServices /> },
+      { path: 'airplane-parts', element: <AirplaneParts /> },
+
+
       {
         path: 'CommercialPilotLicense',
         element: <CommercialPilotLicense />,
-        children: [
-          { path: 'commercial-pilot-license-eligibility', element: <Eligibility /> },
-          // { path: 'course', element: <CplCourse /> },
-          // { path: 'fees', element: <CplFees /> },
-          { path: 'commercial-pilot-license-salary', element: <CplSalary /> },
-        ],
+
       },
     ],
   },
