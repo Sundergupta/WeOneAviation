@@ -7,7 +7,7 @@ import Home from './screens/Home';
 import AboutUs from './screens/AboutUs';
 import DGCAComputerNumber from './screens/DGCA Computer Number';
 import TrainingCards from './components/TrainingCards';
-import DgcaMedical from './screens/DGCA-class-2-class-1-medical';
+import DgcaMedical from './screens/dgca-class-2-class-1-medical';
 import DgcaGroundClasses from './screens/dgca-ground-classes-in-india';
 import CommercialPilotLicense from './screens/CommercialPilotLicense';
 import MapPage from './screens/IndiaMap';
