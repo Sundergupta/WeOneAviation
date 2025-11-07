@@ -7,7 +7,7 @@ import Map from '../../components/Map';
 import IndiGo from '../../assets/indigo.webp';
 import AirIndia from '../../assets/air-india-logo.png';
 import AirIndiaExpress from '../../assets/Air-india-express-logo.png';
-import Spicejet from '../../assets/Spicejet-Logo.webp';
+import Spicejet from '../../assets/SpiceJet-Logo.webp';
 import StarAir from '../../assets/star-air-logo.webp';
 import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
 import airplane2 from '../../assets/home page slider/generate a videos of airplane.jpg';
