@@ -20,14 +20,15 @@ import Admission from './screens/commercial-pilot-license-admission-process';
 import DGCA from './screens/DGCA';
 import PPL from './screens/PPL';
 // import { fullFormOfCplCommercialPilotLicense } from "./screens/full-form-of-cpl-commercial-pilot-license";
-
+import ContactUs from './components/ContactUs';
+// import AdminPanel from './components/AdminPanel';
 
 // services pages 
 
 import PilotTraining from "./screens/Services/PilotTraining";
-// import CharteredServices from "./screens/Services/chartered-services";
+
 import AircraftSalePurchase from "./screens/Services/AirCraftSalePurchase";
-// import AirportGroundHandlingService from "./screens/Services/airport-ground-handling-service";
+
 import AviationPlacementService from "./screens/Services/AviationPlacementService";
 import AircraftManagement from "./screens/Services/AircraftManagement";
 import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
@@ -35,8 +36,11 @@ import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
 // import SaleAndPurchaseAirplanes from "./screens/Services/sale-and-purchase-airplanes";
 import ChattersServices from "./screens/Services/CharteredServices";
 import AirplaneParts from "./screens/Services/AirCraftSalePurchase";
+import AirNavigation from './screens/AirNavigation';
 
-
+// states pages 
+import India from './screens/States/india';
+import StateStructure from './components/StateStructure'
 
 
 // ✅ Import nested CPL pages
@@ -70,13 +74,13 @@ const router = createBrowserRouter([
       { path: 'commercial-pilot-license-eligibility', element: <Eligibility /> },
       { path: 'commercial-pilot-license-syllabus', element: <Syllabus /> }, ,
       { path: 'commercial-pilot-license-admission-process', element: <Admission /> },
-      { path: 'ppl-full-form', elementm: <PPL /> },
+      { path: 'ppl-full-form', eleme: <PPL /> },
       // { path: 'fullformofcplcommercialpilotlicense', element: <fullFormOfCplCommercialPilotLicense /> },
 
       { path: 'pilot-training', element: <PilotTraining /> },
-      // { path: 'chartered-services', element: <CharteredServices /> },
+
       { path: 'aircraft-sale-purchase', element: <AircraftSalePurchase /> },
-      // { path: 'airport-ground-handling-service', element: <AirportGroundHandlingService /> },
+
       { path: 'aviation-placement-service', element: <AviationPlacementService /> },
       { path: 'aircraft-management', element: <AircraftManagement /> },
       { path: 'aircraft-spare-parts', element: <AircraftSpareParts /> },
@@ -84,7 +88,13 @@ const router = createBrowserRouter([
       // { path: 'sale-and-purchase-airplanes', element: <SaleAndPurchaseAirplanes /> },
       { path: 'chatters-services', element: <ChattersServices /> },
       { path: 'airplane-parts', element: <AirplaneParts /> },
+      { path: 'Contact-Us', element: <ContactUs /> },
+      // { path: 'admin-panel', element: <AdminPanel /> },
+      { path: 'AirNavigation', element: <AirNavigation /> },
 
+      // states routes
+      { path: 'pilot-training-in-india', element: <India /> },
+      { path: 'State-Structure', element: <StateStructure /> },
 
       {
         path: 'CommercialPilotLicense',

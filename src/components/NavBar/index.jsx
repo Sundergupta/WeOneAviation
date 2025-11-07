@@ -69,7 +69,7 @@ const Navbar = () => {
     { name: "Aviation Placement Service", path: "/aviation-placement-service" },
     { name: "Aircraft Management", path: "../../screens/Services/AirCraftSalePurchase" },
     { name: "Aircraft Spare Parts", path: "/aircraft-spare-parts" },
-    { name: "MRO Services", path: "/mro-services" },
+
     { name: "Sale and Purchase Airplanes", path: "/sale-and-purchase-airplanes" },
     { name: "Chatters Services", path: "/chatters-services" },
     { name: "Airplane Parts", path: "/airplane-parts" },

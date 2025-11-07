@@ -1,0 +1,111 @@
+.page-container {
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- TITLE ---------- */
+.page-title {
+  text-align: center;
+  color: #002b5b;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ---------- WRAPPER FOR BOTH SECTIONS ---------- */
+.content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ---------- TABLE SECTION ---------- */
+.table-section {
+  border: 2px solid #002b5b;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 380px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.table-section h3 {
+  text-align: center;
+  color: #002b5b;
+  margin-bottom: 15px;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-section th,
+.table-section td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-section th {
+  background: #e8f0fe;
+  font-weight: 600;
+}
+
+.table-section tr:hover {
+  background: #eef6ff;
+  cursor: pointer;
+}
+
+.visit-link {
+  color: #0078ff;
+  text-decoration: underline;
+}
+
+/* ---------- CONTENT SECTION ---------- */
+.content-section {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content-section h2 {
+  color: #002b5b;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.content-section p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .table-section {
+    width: 100%;
+  }
+
+  .content-section {
+    text-align: center;
+  }
+}
