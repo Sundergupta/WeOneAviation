@@ -199,13 +199,6 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          {/* HOW TO BECOME PILOT DROPDOWN END */}
-
-          <li className="navbar-item">
-            <a href="https://dgcaexam.com/" className="navbar-link" onClick={closeMenu}>
-              DGCA Exam Practice
-            </a>
-          </li>
 
           {/* SERVICES DROPDOWN START */}
           <li
@@ -233,6 +226,16 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
+          {/* HOW TO BECOME PILOT DROPDOWN END */}
+
+          <li className="navbar-item">
+            <a href="https://dgcaexam.com/" className="navbar-link" onClick={closeMenu}>
+              DGCA Exam Practice
+            </a>
+          </li>
+
+
           {/* SERVICES DROPDOWN END */}
 
           <li className="navbar-item">

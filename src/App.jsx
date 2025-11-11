@@ -9,7 +9,7 @@ import DGCAComputerNumber from './screens/DGCA Computer Number';
 import TrainingCards from './components/TrainingCards';
 import DgcaMedical from './screens/dgca-class-2-class-1-medical';
 import DgcaGroundClasses from './screens/dgca-ground-classes-in-india';
-import CommercialPilotLicense from './screens/CommercialPilotLicense';
+import CommercialPilotLicense from './screens/commercial-pilot-license';
 import MapPage from './screens/IndiaMap';
 import Structure from './screens/full form';
 import ICSE from './screens/ICSE';
@@ -22,6 +22,10 @@ import PPL from './screens/PPL';
 // import { fullFormOfCplCommercialPilotLicense } from "./screens/full-form-of-cpl-commercial-pilot-license";
 import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
+// states pages 
+import IndiaPage from './screens/States/india'
+
+
 
 // services pages 
 
@@ -32,8 +36,7 @@ import AircraftSalePurchase from "./screens/Services/AirCraftSalePurchase";
 import AviationPlacementService from "./screens/Services/AviationPlacementService";
 import AircraftManagement from "./screens/Services/AircraftManagement";
 import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
-// import MroServices from "./screens/Services/mro-services";
-// import SaleAndPurchaseAirplanes from "./screens/Services/sale-and-purchase-airplanes";
+
 import ChattersServices from "./screens/Services/CharteredServices";
 import AirplaneParts from "./screens/Services/AirCraftSalePurchase";
 import AirNavigation from './screens/AirNavigation';
@@ -95,6 +98,10 @@ const router = createBrowserRouter([
       // states routes
       { path: 'pilot-training-in-india', element: <India /> },
       { path: 'State-Structure', element: <StateStructure /> },
+      // states pages 
+      { path: 'IndiaPage', element: <IndiaPage /> },
+
+
 
       {
         path: 'CommercialPilotLicense',
