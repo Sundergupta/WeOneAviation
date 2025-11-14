@@ -1,111 +1,184 @@
+/* =========================
+   General Page Styling
+========================= */
 .page-container {
-  padding: 40px;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #0a0a0a;
+  background: #f4f7fb;
   box-sizing: border-box;
 }
 
-/* ---------- TITLE ---------- */
-.page-title {
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+  background: linear-gradient(120deg, #ffffff, #ffffff);
+  color: rgb(0, 0, 0);
   text-align: center;
-  color: #002b5b;
-  font-size: 28px;
+  padding: 70px 20px;
+  border-radius: 14px;
+  margin-bottom: 45px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+  font-size: 2.4rem;
   font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* =========================
+   Layout
+========================= */
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+/* =========================
+   Left Column (Menu Section)
+========================= */
+.menu-section {
+  flex: 1;
+  max-width: 320px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 25px;
+  height: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.menu-section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #004aad;
+  border-bottom: 3px solid #004aad;
+  padding-bottom: 6px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.menu-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menu-list::-webkit-scrollbar-thumb {
+  background: #004aad;
+  border-radius: 10px;
+}
+
+.menu-list li {
+  margin-bottom: 10px;
+}
+
+.menu-list a {
+  color: #002b5c;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.menu-list a:hover {
+  background: #e8f1ff;
+  color: #0077ff;
+  transform: translateX(4px);
+}
+
+/* =========================
+   Right Column (Content Section)
+========================= */
+.content-section {
+  flex: 3;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-block {
   margin-bottom: 40px;
 }
 
-/* ---------- WRAPPER FOR BOTH SECTIONS ---------- */
-.content-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-/* ---------- TABLE SECTION ---------- */
-.table-section {
-  border: 2px solid #002b5b;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  width: 380px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.table-section h3 {
-  text-align: center;
-  color: #002b5b;
+.section-block h2 {
+  font-size: 1.6rem;
+  color: #004aad;
   margin-bottom: 15px;
+  position: relative;
 }
 
-.table-section table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
+.section-block h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #0077ff;
+  border-radius: 2px;
 }
 
-.table-section th,
-.table-section td {
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-.table-section th {
-  background: #e8f0fe;
-  font-weight: 600;
-}
-
-.table-section tr:hover {
-  background: #eef6ff;
-  cursor: pointer;
-}
-
-.visit-link {
-  color: #0078ff;
-  text-decoration: underline;
-}
-
-/* ---------- CONTENT SECTION ---------- */
-.content-section {
-  flex: 1;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.content-section h2 {
-  color: #002b5b;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.content-section p {
-  color: #333;
-  font-size: 16px;
+.section-block p {
+  font-size: 1rem;
   line-height: 1.7;
-  max-width: 650px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-  .content-wrapper {
+.section-block ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.section-block li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 992px) {
+  .main-layout {
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
   }
 
-  .page-title {
-    font-size: 24px;
-  }
-
-  .table-section {
-    width: 100%;
+  .menu-section {
+    max-width: 100%;
+    position: static;
   }
 
   .content-section {
-    text-align: center;
+    margin-top: 20px;
   }
 }

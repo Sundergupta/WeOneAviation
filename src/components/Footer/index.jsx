@@ -53,12 +53,15 @@ const Footer = () => {
                         <li>One-on-One Online Classes</li>
                         <li>Interview Preparation</li>
                     </ul>
-                </div> */}
+                </div>
+                 */}
 
                 {/* Contact */}
                 <div className="footer-col">
                     <h3>Contact Us</h3>
                     <p>Delhi, India</p>
+                    <p>Address - </p>
+
                     <p>+91-9667370747</p>
                     <p>+91-9355566991</p>
                     <p>Weoneaviation8@gmail.com</p>

@@ -23,9 +23,23 @@ import PPL from './screens/PPL';
 import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
 // states pages 
-import IndiaPage from './screens/States/india'
-
-
+import IndiaPage from './screens/States/india';
+import HyderabadPage from './screens/States/Hyderabad';
+import MumbaiPage from './screens/States/Mumbai';
+import ChennaiPage from './screens/States/chennai';
+import BanglorePage from './screens/States/Banglore';
+import keralaPage from './screens/States/kerala';
+import DelhiPage from './screens/States/Delhi';
+import PunePage from './screens/States/Pune';
+import KolkataPage from './screens/States/kolkata';
+import CoimbatorePage from './screens/States/coimbatore';
+import GujaratPage from './screens/States/Gujarat';
+import GoaPage from './screens/States/Goa'
+import GurugramPage from './screens/States/Gurugram';
+// import tamilNaduPage from './screens/States/tamilNadu';
+// import RajasthanPage from './screens/States/Rajasthan';
+// import HaryanaPage from './screens/States/Haryana';
+// import PunjabPage from './screens/States/Punjab'
 
 // services pages 
 
@@ -100,8 +114,22 @@ const router = createBrowserRouter([
       { path: 'State-Structure', element: <StateStructure /> },
       // states pages 
       { path: 'IndiaPage', element: <IndiaPage /> },
-
-
+      { path: 'hyderabadPage', element: <HyderabadPage /> },
+      { path: 'MumbaiPage', element: <MumbaiPage /> },
+      { path: 'ChennaiPage', element: <ChennaiPage /> },
+      { path: 'banglorePage', element: <BanglorePage /> },
+      { path: 'keralaPage', element: <keralaPage /> },
+      { path: 'DelhiPage', element: <DelhiPage /> },
+      { path: 'PunePage', element: <PunePage /> },
+      { path: 'KolkataPage', element: <KolkataPage /> },
+      { path: 'CoimbatorePage', element: <CoimbatorePage /> },
+      { path: 'GujaratPage', element: <GujaratPage /> },
+      { path: 'GoaPage', element: <GoaPage /> },
+      { path: 'GurugramPage', element: <GurugramPage /> },
+      // { path: 'tamilNaduPage', element: <tamilNaduPage /> },
+      // { path: 'RajasthanPage', element: <RajasthanPage /> },
+      // { path: 'HaryanaPage', element: <HaryanaPage /> },
+      // { path: 'PunjabPage', element: <PunjabPage /> },
 
       {
         path: 'CommercialPilotLicense',
