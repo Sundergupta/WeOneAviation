@@ -1,71 +1,122 @@
 .footer {
   background: rgba(26, 54, 93, 1);
   color: #fff;
-  padding: 50px 80px 20px;
+  padding: 80px 50px 30px;
   font-family: Arial, sans-serif;
 }
 
 .footer-container {
   display: flex;
+  gap: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   justify-content: space-between;
-  gap: 40px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
+/* Columns */
 .footer-col {
   flex: 1;
-  min-width: 220px;
+  min-width: 250px;
+  max-width: 330px;
 }
 
-.footer-logo {
-  width: 200px;
-  margin-bottom: 20px;
-}
-
-.footer-text {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  max-width: 300px;
-}
-
-.footer-social i {
+/* ---- TITLES ---- */
+.footer-title {
   font-size: 20px;
-  margin-right: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.footer-social i:hover {
-  transform: scale(1.2);
-}
-
-.footer-col h3 {
+  font-weight: 700;              /* BOLDER HEADING */
   margin-bottom: 15px;
-  font-size: 18px;
-  border-bottom: 1px solid  rgba(26, 54, 93, 0.3); ;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.6);
   padding-bottom: 5px;
+  color: #ffffff;                /* PURE WHITE */
 }
 
-.footer-col ul {
+/* ---- DESCRIPTION TEXT ---- */
+.footer-desc {
+  line-height: 1.7;
+  margin-top: 10px;
+  color: #dbe7ff;                /* SOFT WHITE TEXT */
+  font-weight: 400;              /* NORMAL BODY TEXT */
+}
+
+/* ---- QUICK LINKS ---- */
+.footer-links li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col ul li {
   margin-bottom: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 500;              /* MEDIUM WEIGHT */
+  color: #e7efff;                /* LIGHT WHITE BLUE */
 }
 
-.footer-col ul li:hover {
+.footer-links li:hover {
   text-decoration: underline;
+  color: #ffffff;                /* Hover brighter */
+}
+
+/* ---- CONTACT SECTION ---- */
+.footer-contact li {
+  list-style: none;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-weight: 500;               /* MEDIUM WEIGHT */
+  color: #e0ecff;                 /* SOFT WHITE */
+}
+
+/* Inputs */
+.footer-input {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Subscribe Button */
+.footer-btn {
+  width: 100%;
+  padding: 12px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;               /* BUTTON WEIGHT */
+  font-size: 15px;
+}
+
+.footer-btn:hover {
+  opacity: 0.9;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 14px;
-  border-top: 1px solid  rgba(26, 54, 93, 0.3); 
-  padding-top: 15px;
+  font-weight: 500;                /* COPYRIGHT MEDIUM WEIGHT */
+  color: #cfe1ff;
+}
+.map-image {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-image:hover {
+  transform: scale(1.03);
+}
+
+.footer-col img {
+  width: 250px;      /* Smaller width */
+  height: auto;      /* Keeps perfect aspect ratio */
+  border-radius: 10px;
+  cursor: pointer;
 }

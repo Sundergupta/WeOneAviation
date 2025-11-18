@@ -26,9 +26,9 @@ const Navbar = () => {
       title: "Commercial Pilot License (CPL)",
       path: "/commercial-pilot-license",
       submenu: [
-        { name: "Commercial pilot license", path: "/CommercialPilotLicense" },
+        { name: "Commercial pilot license", path: "/commercial-pilot-license" },
         { name: "DGCA CPL ground classes", path: "/dgca-ground-classes-in-india" },
-        { name: "Air Navigation", path: "/air-navigation" },
+        { name: "Air Navigation", path: "/AirNavigation" },
         { name: "Aviation Meteorology", path: "/aviation-meteorology" },
         { name: "Air Regulations", path: "/air-regulations" },
         { name: "Technical General", path: "/technical-general" },
@@ -40,7 +40,7 @@ const Navbar = () => {
       title: "Cadet Pilot Program",
       path: "/cadet-pilot-program",
       submenu: [
-        { name: "Program Eligibility", path: "/cadet-eligibility" },
+        { name: "Program Eligibility", path: "/commercial-pilot-license-eligibility" },
         { name: "Training Structure", path: "/cadet-training-structure" },
         { name: "Career Pathways", path: "/cadet-career-pathways" },
         { name: "Application Process", path: "/cadet-application" },
@@ -62,17 +62,18 @@ const Navbar = () => {
   ];
 
   const servicesData = [
-    { name: "Pilot Training", path: "../../screens/Services/PilotTraining" },
+    { name: "Pilot Training", path: "/pilot-training" },
     { name: "Chartered Services", path: "/chartered-services" },
     { name: "Aircraft Sale Purchase", path: "/aircraft-sale-purchase" },
     { name: "Airport Ground Handling Service", path: "/airport-ground-handling-service" },
     { name: "Aviation Placement Service", path: "/aviation-placement-service" },
-    { name: "Aircraft Management", path: "../../screens/Services/AirCraftSalePurchase" },
+    { name: "Aircraft Management", path: "/aircraft-management" },
     { name: "Aircraft Spare Parts", path: "/aircraft-spare-parts" },
     { name: "Sale and Purchase Airplanes", path: "/sale-and-purchase-airplanes" },
     { name: "Chatters Services", path: "/chatters-services" },
     { name: "Airplane Parts", path: "/airplane-parts" },
   ];
+
 
 
   const handleSubmenuOpen = (index) => {

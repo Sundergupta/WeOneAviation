@@ -35,7 +35,7 @@ const CommercialPilotLicense = () => {
     //     { name: "Commercial Pilot License Salary ", onClick: () => setActiveComponent("salary") },
     // ];
     const menuItems = [
-        { name: "Commercial Pilot License ", path: "../CommercialPilotLicense" },
+        { name: "Commercial Pilot License ", path: "../Commercial-Pilot-License" },
         { name: "Commercial Pilot License Eligibility", path: "../commercial-pilot-license-eligibility" },
         { name: "Commercial Pilot License Syllabus ", path: "../commercial-pilot-license-syllabus" },
         { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },
@@ -80,6 +80,30 @@ const CommercialPilotLicense = () => {
 
                 {/* RIGHT: Dynamic Content */}
                 <div className="content-column">
+
+                    <section className="cpl-section">
+                        <h1>Commercial Pilot License (CPL) </h1>
+                        <p>
+                            The journey to becoming a professional aviator begins with obtaining a
+                            <strong> Commercial Pilot License (CPL)</strong>. This license authorizes an individual
+                            to operate aircraft commercially and opens doors to careers in airlines, charter
+                            services, cargo operations, and corporate aviation.
+                        </p>
+                        <p>
+                            Before enrolling in a pilot training program, it is essential for students to
+                            understand the basic eligibility criteria set by DGCA. These requirements ensure
+                            that every aspiring pilot meets the academic, medical, and skill standards needed
+                            to operate an aircraft safely and efficiently.
+                        </p>
+                        <p>
+                            Meeting the CPL eligibility criteria is the first checkpoint in your aviation
+                            journey. Once cleared, candidates can proceed with DGCA ground classes, medical
+                            examinations, and eventually, flight training to earn their wings.
+                        </p>
+                    </section>
+
+
+
                     {location.pathname === "/CommercialPilotLicense" ? (
                         <>
                             <h3>What is Commercial Pilot License?</h3>

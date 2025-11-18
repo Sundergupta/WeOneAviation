@@ -8,7 +8,7 @@ const CommercialPilotLicense = () => {
     const location = useLocation();
 
     const menuItems = [
-        { name: "Commercial Pilot License ", path: "../CommercialPilotLicense" },
+        { name: "Commercial Pilot License ", path: "../Commercial-Pilot-License" },
         { name: "Commercial Pilot License Eligibility", path: "../commercial-pilot-license-eligibility" },
         { name: "Commercial Pilot License Syllabus ", path: "../commercial-pilot-license-syllabus" },
         { name: "Commercial Pilot License Salary ", path: "../commercial-pilot-license-salary" },

@@ -107,7 +107,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            <section className="who-we-are-section">
+            {/* <section className="who-we-are-section">
                 <div className="about-bleed">
                     <div className="container about-container">
                         <div className="about-content">
@@ -162,7 +162,7 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* atc section */}
             <section className="atc-advantage">
@@ -186,7 +186,7 @@ const AboutUs = () => {
                 <div className="mission-container">
                     <div className="mission-image-wrapper">
                         {/* Replace MissionImage with the actual import path for your airplane image */}
-                        <img src={MissionImage} alt="Commercial airplane landing" className="mission-image" />
+                        <img src={About2} alt="Commercial airplane landing" className="mission-image" />
                     </div>
                     <div className="mission-content">
                         <div className="mission-pill">

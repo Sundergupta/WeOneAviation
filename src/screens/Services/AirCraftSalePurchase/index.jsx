@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const AirCraftSalePurchase = () => {
+const AircraftSalePurchase = () => {
     return (
         <div className="aircraft-page">
             <div className="breadcrumb">
@@ -146,4 +146,4 @@ const AirCraftSalePurchase = () => {
     );
 };
 
-export default AirCraftSalePurchase;
+export default AircraftSalePurchase;
