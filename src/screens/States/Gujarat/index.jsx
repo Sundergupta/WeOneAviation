@@ -5,5 +5,4 @@ import { gujaratData } from "../../../components/Data/states/gujaratData";
 const GujaratPage = () => {
     return <StructurePage data={gujaratData} />;
 };
-
 export default GujaratPage;

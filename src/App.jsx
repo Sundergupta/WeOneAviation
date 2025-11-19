@@ -39,7 +39,7 @@ import CoimbatorePage from './screens/States/coimbatore';
 import GujaratPage from './screens/States/Gujarat';
 import GoaPage from './screens/States/Goa';
 import GurugramPage from './screens/States/Gurugram';
-// import tamilNaduPage from './screens/States/tamilNadu';
+import tamilNaduPage from './screens/States/tamilNadu';
 // import RajasthanPage from './screens/States/Rajasthan';
 // import HaryanaPage from './screens/States/Haryana';
 // import PunjabPage from './screens/States/Punjab'
@@ -125,20 +125,20 @@ const router = createBrowserRouter([
       { path: 'pilot-training-in-india', element: <India /> },
       { path: 'State-Structure', element: <StateStructure /> },
       // states pages 
-      { path: 'IndiaPage', element: <IndiaPage /> },
-      { path: 'hyderabadPage', element: <HyderabadPage /> },
-      { path: 'MumbaiPage', element: <MumbaiPage /> },
-      { path: 'ChennaiPage', element: <ChennaiPage /> },
-      { path: 'banglorePage', element: <BanglorePage /> },
-      { path: 'keralaPage', element: <keralaPage /> },
-      { path: 'DelhiPage', element: <DelhiPage /> },
-      { path: 'PunePage', element: <PunePage /> },
-      { path: 'KolkataPage', element: <KolkataPage /> },
-      { path: 'CoimbatorePage', element: <CoimbatorePage /> },
-      { path: 'GujaratPage', element: <GujaratPage /> },
-      { path: 'GoaPage', element: <GoaPage /> },
-      { path: 'GurugramPage', element: <GurugramPage /> },
-      // { path: 'tamilNaduPage', element: <tamilNaduPage /> },
+      { path: 'pilot-training-in-india', element: <IndiaPage /> },
+      { path: 'pilot-training-in-hyderabad', element: <HyderabadPage /> },
+      { path: 'pilot-training-in-mumbai', element: <MumbaiPage /> },
+      { path: 'pilot-training-in-chennai', element: <ChennaiPage /> },
+      { path: 'pilot-training-in-bangalore', element: <BanglorePage /> },
+      { path: 'pilot-training-in-kerala', element: <keralaPage /> },
+      { path: 'pilot-training-in-delhi', element: <DelhiPage /> },
+      { path: 'pilot-training-in-pune', element: <PunePage /> },
+      { path: 'pilot-training-in-kolkata', element: <KolkataPage /> },
+      { path: 'pilot-training-in-coimbatore', element: <CoimbatorePage /> },
+      { path: 'pilot-training-in-gujarat', element: <GujaratPage /> },
+      { path: 'pilot-training-in-goa', element: <GoaPage /> },
+      { path: 'pilot-training-in-gurugram', element: <GurugramPage /> },
+      { path: 'tamilNaduPage', element: <tamilNaduPage /> },
       // { path: 'RajasthanPage', element: <RajasthanPage /> },
       // { path: 'HaryanaPage', element: <HaryanaPage /> },
       // { path: 'PunjabPage', element: <PunjabPage /> },

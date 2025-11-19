@@ -2,8 +2,8 @@ import React from "react";
 import StructurePage from "../../../components/StateStructure";
 import { coimbatoreData } from "../../../components/Data/states/coimbatoreData";
 
-const coimbatorePage = () => {
+const CoimbatorePage = () => {
     return <StructurePage data={coimbatoreData} />;
 };
 
-export default coimbatorePage;
+export default CoimbatorePage;
