@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@artcoded/strapi-plugin-github-projects": "^1.1.3",
     "bson": "^6.10.4",
     "cors": "^2.8.5",
     "debug": "^4.4.3",
