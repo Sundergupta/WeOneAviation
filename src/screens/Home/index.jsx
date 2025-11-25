@@ -18,6 +18,13 @@ import RTR from '../../assets/RTR.jpeg';
 import TypeRatingPrep from '../../assets/TypeRatingPrep.jpeg';
 
 
+<Helmet>
+    <title>We One Aviation</title>
+    <meta
+        name="description"
+        content="Train to become a licensed pilot with We One Aviation Academy. DGCA-ground classes, CPL courses, international flying schools & career support."
+    />
+</Helmet>
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -71,13 +78,6 @@ const Home = () => {
     return (
         <div className="home">
             {/* Hero Section */}
-            <Helmet>
-                <title>We One Aviation – DGCA Pilot Training & Pilot License</title>
-                <meta
-                    name="description"
-                    content="Train to become a licensed pilot with We One Aviation Academy. DGCA-ground classes, CPL courses, international flying schools & career support."
-                />
-            </Helmet>
             <section className="hero-slider">
                 <div className="slides-container">
                     {slides.map((slide, index) => (

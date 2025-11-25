@@ -3,6 +3,7 @@ import NavBar from "../NavBar";
 import Footer from "../Footer";
 import ContactUs from "../ContactUs";
 import FloatingButtons from "../FloatingButtons";
+import { ScrollRestoration } from "react-router-dom";
 
 const RootLayout = () => {
 
@@ -11,6 +12,7 @@ const RootLayout = () => {
         <Outlet />
         <ContactUs />
         <FloatingButtons />
+        <ScrollRestoration />
 
         <Footer />
     </>

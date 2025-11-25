@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
-
+import { ScrollRestoration } from "react-router-dom";
 
 // Components
 import RootLayout from './components/RootLayout';
@@ -22,6 +22,8 @@ import Admission from './screens/commercial-pilot-license-admission-process';
 import DGCA from './screens/DGCA';
 import PPL from './screens/PPL';
 import Cpl from './screens/Cpl';
+// import rtrPage from './screens/rtr-full-form-meaning-importance-and-complete-guide';
+import rtrPage from './screens/rtr-full-form-meaning-importance-and-complete-guide'
 // import { fullFormOfCplCommercialPilotLicense } from "./screens/full-form-of-cpl-commercial-pilot-license";
 import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
@@ -121,6 +123,7 @@ const router = createBrowserRouter([
       // { path: 'admin-panel', element: <AdminPanel /> },
       { path: 'AirNavigation', element: <AirNavigation /> },
       { path: 'dgca-full-form', element: <DGCA /> },
+      { path: 'rtr-full-form-meaning-importance-and-complete-guide', element: <rtrPage /> },
       // states routes
       { path: 'pilot-training-in-india', element: <India /> },
       { path: 'State-Structure', element: <StateStructure /> },
@@ -161,6 +164,7 @@ function App() {
   const user = useSelector((state) => state.user);
   console.log('Inside App', user);
 
+  <ScrollRestoration />
   return <RouterProvider router={router} />;
 }
 

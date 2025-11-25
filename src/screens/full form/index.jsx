@@ -5,6 +5,7 @@ const DynamicPage = ({ data }) => {
     return (
         <div className="dynamic-page">
             {/* ---------------- HEADER ---------------- */}
+            <br />
             {data.header && (
                 <header className="dynamic-header">
                     <div className="header-overlay">

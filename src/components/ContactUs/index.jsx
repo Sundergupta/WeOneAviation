@@ -9,6 +9,7 @@ const ContactUs = () => {
         message: "",
     });
     const [status, setStatus] = useState("");
+    const [closedAt, setClosedAt] = useState(null); // track last close time
 
     // Show popup when user scrolls 30%
     useEffect(() => {
@@ -16,22 +17,42 @@ const ContactUs = () => {
             const scrollPercent =
                 (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
-            if (scrollPercent > 30) {
+            if (scrollPercent > 30 && !closedAt) {
                 setVisible(true);
             }
         };
 
         window.addEventListener("scroll", handleScroll);
-
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [closedAt]);
 
-    // Show popup permanently at bottom
+    // Auto show popup after 3 seconds (only if not recently closed)
     useEffect(() => {
-        setTimeout(() => {
-            setVisible(true);
-        }, 3000);
-    }, []);
+        if (!closedAt) {
+            const timer = setTimeout(() => {
+                setVisible(true);
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [closedAt]);
+
+    // Re-open popup after 30 seconds of closing it manually
+    useEffect(() => {
+        if (closedAt) {
+            const timer = setTimeout(() => {
+                setClosedAt(null);
+                setVisible(true);
+            }, 20000); // 30 sec delay
+
+            return () => clearTimeout(timer);
+        }
+    }, [closedAt]);
+
+    const closePopup = () => {
+        setVisible(false);
+        setClosedAt(Date.now()); // store closing timestamp
+    };
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -65,7 +86,7 @@ const ContactUs = () => {
     return (
         <div className={`contact-popup ${visible ? "show" : ""}`}>
             <div className="contact-form-container">
-                <button className="close-btn" onClick={() => setVisible(false)}>×</button>
+                <button className="close-btn" onClick={closePopup}>×</button>
 
                 <h3>Contact Us</h3>
                 <form onSubmit={handleSubmit} className="contact-form">

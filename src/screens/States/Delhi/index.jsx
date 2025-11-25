@@ -1,9 +1,9 @@
 import React from "react";
 import StructurePage from "../../../components/StateStructure";
-import { mumbaiData } from "../../../components/Data/states/mumbaiData";
+import { delhiData } from "../../../components/Data/states/delhiData";
 
-const MumbaiPage = () => {
-    return <StructurePage data={mumbaiData} />;
+const DelhiPage = () => {
+    return <StructurePage data={delhiData} />;
 };
 
-export default MumbaiPage;
+export default DelhiPage;

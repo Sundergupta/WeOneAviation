@@ -4,7 +4,7 @@
   --accent: #0b63d6;
   --muted: #6b7280;
   --text: #1f2937;
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 /* ---------- Page Container ---------- */
 .dynamic-page {
-  max-width: 950px;
+  /* max-width: 950px; */
   margin: 2rem auto;
   padding: 0 1.25rem;
 }
@@ -25,7 +25,7 @@ body {
 .dynamic-header {
   background: linear-gradient(120deg, #e8f0ff, #ffffff);
   text-align: center;
-  padding: 3rem 1rem 2rem;
+  padding: 3rem ;
   border-radius: 12px;
   box-shadow: var(--shadow);
 }

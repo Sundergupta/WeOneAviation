@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Outlet, useNavigate, Link, useLocation } from "react-router-dom";
 import './style.css';
 import SideMenu from "../../components/SideManu";
+import { ScrollRestoration } from "react-router-dom";
 // import CplIntro from "../CplIntro/CplIntro";
 // import CplCourse from "../CplCourse/CplCourse";
 // import CplFees from "../CplFees/CplFees";
@@ -73,6 +74,7 @@ const CommercialPilotLicense = () => {
                                 >
                                     {item.name}
                                 </Link>
+                                <ScrollRestoration />
                             </li>
                         ))}
                     </ul>

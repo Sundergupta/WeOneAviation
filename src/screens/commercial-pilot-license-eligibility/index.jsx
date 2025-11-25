@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
-
+import { ScrollRestoration } from "react-router-dom";
 
 const CommercialPilotLicense = () => {
     const location = useLocation();
@@ -51,6 +51,7 @@ const CommercialPilotLicense = () => {
                                 >
                                     {item.name}
                                 </Link>
+                                <ScrollRestoration />
                             </li>
                         ))}
                     </ul>
