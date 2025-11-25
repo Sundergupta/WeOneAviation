@@ -1,5 +1,6 @@
 {
   "name": "backend",
+<<<<<<< HEAD
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -40,5 +41,24 @@
   "strapi": {
     "uuid": "63fbf77a-0ebf-4e9f-a5a3-b5a3ef1e43ce",
     "installId": "9ee46453117894c0d43106d4f77865016b5b4b2f9235a9451b8eb882dde94d9d"
+=======
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3"
+>>>>>>> f7ba43d57827801bde6f7d793f79e3f1caf6e05f
   }
 }
