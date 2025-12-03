@@ -101,7 +101,7 @@ const Navbar = () => {
 
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <Link to="/AboutUs" className="navbar-link" onClick={closeMenu}>
+            <Link to="/about-Us" className="navbar-link" onClick={closeMenu}>
               About Us
             </Link>
           </li>

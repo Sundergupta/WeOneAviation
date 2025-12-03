@@ -1,0 +1,100 @@
+/* Main container */
+.admin-container {
+  width: 100%;
+  padding: 40px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* Title */
+.admin-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.admin-tabs button {
+  padding: 10px 18px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.admin-tabs button:hover {
+  background: #cbd5e1;
+}
+
+.active-tab {
+  background: #0b63d6;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Top search + new button */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  width: 260px;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+}
+
+.search-input:focus {
+  border-color: #0b63d6;
+}
+
+.new-btn {
+  padding: 10px 18px;
+  background: #0b63d6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.new-btn:hover {
+  background: #074a9f;
+}
+
+/* Content box */
+.content-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.content-box textarea {
+  width: 100%;
+  height: 300px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f8fafc;
+}

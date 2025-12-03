@@ -1,6 +1,6 @@
 export const chennaiData = {
     hero: {
-        title: "Pilot Training Institute in Chennai - 2025",
+        title: "Pilot Training Institute in Chennai - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Chennai is your best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Captain Training. We provide all types of Pilot Training with experienced instructors and advanced technology.",
         background: "/images/pilot-training-chennai-bg.jpg",
@@ -163,7 +163,7 @@ export const chennaiData = {
                 { title: "Experienced Instructors", text: "Learn from aviation professionals and airline captains." },
                 { title: "Advanced Simulators", text: "Free 200 hours of simulator practice for all students." },
                 { title: "Library & Study Support", text: "Dedicated study space and learning materials for students." },
-                { title: "Limited Seats Available", text: "Enroll now to secure your spot for 2025 batch!" },
+                { title: "Limited Seats Available", text: "Enroll now to secure your spot for 2026 batch!" },
             ],
         },
 

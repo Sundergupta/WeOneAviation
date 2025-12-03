@@ -22,7 +22,7 @@ const Salary = () => {
             {/* Hero Section */}
             <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
                 <div className="container">
-                    <h1>Commercial Pilot Course Detail</h1>
+                    <h1>Commercial Pilot License Salary </h1>
                     <h2>Commercial Pilot License</h2>
 
                 </div>
@@ -55,7 +55,7 @@ const Salary = () => {
                 {/* Main Content (Right) */}
                 <div className="salary-container">
                     <section className="cpl-section">
-                        <h1>Commercial Pilot License (CPL) Salary - 2025</h1>
+                        <h1>Commercial Pilot License (CPL) Salary - 2026</h1>
                         <p>
                             Thousands of aspiring aviators wonder about the Commercial Pilot License (CPL)
                             salary levels in India compared to other countries. Earning a CPL brings not only

@@ -3,9 +3,7 @@ import { Outlet, useNavigate, Link, useLocation } from "react-router-dom";
 import './style.css';
 import SideMenu from "../../components/SideManu";
 import { ScrollRestoration } from "react-router-dom";
-// import CplIntro from "../CplIntro/CplIntro";
-// import CplCourse from "../CplCourse/CplCourse";
-// import CplFees from "../CplFees/CplFees";
+
 import CplSalary from "../commercial-pilot-license-salary";
 
 
@@ -49,7 +47,7 @@ const CommercialPilotLicense = () => {
             {/* Hero Section */}
             <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
                 <div className="container">
-                    <h1>Commercial Pilot Course Detail</h1>
+                    <h1>Commercial Pilot License Course Detail</h1>
                     <h2>Commercial Pilot License</h2>
 
                 </div>

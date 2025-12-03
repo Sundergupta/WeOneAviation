@@ -2,7 +2,7 @@ export const rtrData = {
     header: {
         title: "RTR Full Form – Radio Telephony Restricted",
         subtitle:
-            "Complete Guide to RTR (Aero & Maritime), Eligibility, Exam Pattern, Importance & Career Scope (2025)",
+            "Complete Guide to RTR (Aero & Maritime), Eligibility, Exam Pattern, Importance & Career Scope (2026)",
     },
 
     sections: [
@@ -192,6 +192,6 @@ export const rtrData = {
     ],
 
     footer: {
-        text: "© 2025 RTR Information | All Rights Reserved",
+        text: "© 2026 RTR Information | All Rights Reserved",
     },
 };

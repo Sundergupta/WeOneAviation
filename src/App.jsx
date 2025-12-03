@@ -23,28 +23,39 @@ import DGCA from './screens/DGCA';
 import PPL from './screens/PPL';
 import Cpl from './screens/Cpl';
 // import rtrPage from './screens/rtr-full-form-meaning-importance-and-complete-guide';
-import rtrPage from './screens/rtr-full-form-meaning-importance-and-complete-guide'
+import RtrPage from './screens/rtr-full-form-meaning-importance-and-complete-guide'
 // import { fullFormOfCplCommercialPilotLicense } from "./screens/full-form-of-cpl-commercial-pilot-license";
 import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
 // states pages 
 import IndiaPage from './screens/States/india';
-import HyderabadPage from './screens/States/Hyderabad';
-import MumbaiPage from './screens/States/Mumbai';
+import HyderabadPage from './screens/States/hyderabad';
+import MumbaiPage from './screens/States/mumbai';
 import ChennaiPage from './screens/States/chennai';
 import BanglorePage from './screens/States/Banglore';
 import keralaPage from './screens/States/kerala';
-import DelhiPage from './screens/States/Delhi';
-import PunePage from './screens/States/Pune';
+// import DelhiPage from './screens/States/Delhi';
+import PunePage from './screens/States/pune';
 import KolkataPage from './screens/States/kolkata';
 import CoimbatorePage from './screens/States/coimbatore';
 import GujaratPage from './screens/States/Gujarat';
 import GoaPage from './screens/States/Goa';
 import GurugramPage from './screens/States/Gurugram';
 import tamilNaduPage from './screens/States/tamilNadu';
-// import RajasthanPage from './screens/States/Rajasthan';
-// import HaryanaPage from './screens/States/Haryana';
-// import PunjabPage from './screens/States/Punjab'
+import RajasthanPage from './screens/States/rajasthan';
+import HaryanaPage from './screens/States/haryana';
+import PunjabPage from './screens/States/Punjab';
+import AndhraPradesh from './screens/States/andhrapradesh';
+import ArunachalPradeshPage from './screens/States/arunachalpradesh';
+import AssamPage from './screens/States/assam';
+import Bihar from './screens/States/Bihar';
+import ChhattisgarhPage from './screens/States/chhattisgarh';
+import HimachalPradeshPage from './screens/States/himachalPradeshData';
+import NoidaPage from './screens/States/noida';
+import GhaziabadPage from './screens/States/ghaziabad';
+import NagpurPage from './screens/States/nagpur';
+import MaharashtraPage from './screens/States/maharashtra';
+import JaipurPage from './screens/States/Jaipur';
 
 // services pages 
 import PilotTraining from "./screens/Services/PilotTraining";
@@ -77,13 +88,22 @@ import CplSalary from './screens/commercial-pilot-license-salary';
 // import SignIn from './screens/SignIn';
 // import SignUp from './screens/SignUp';
 
+import AdminPanel from './Admin Panel/Dashboard';
+import AddPage from './screens/AddPage';
+import Pages from './screens/Pages'
+
+
+
+
+
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     children: [
       { path: '/', element: <Home /> },
-      { path: 'AboutUs', element: <AboutUs /> },
+      { path: 'about-Us', element: <AboutUs /> },
       { path: 'dgca-computer-number', element: <DGCAComputerNumber /> },
       { path: 'dgca-class-2-class-1-medical', element: <DgcaMedical /> },
       { path: 'DGCA-ground-classes-in-india', element: <DgcaGroundClasses /> },
@@ -123,7 +143,7 @@ const router = createBrowserRouter([
       // { path: 'admin-panel', element: <AdminPanel /> },
       { path: 'AirNavigation', element: <AirNavigation /> },
       { path: 'dgca-full-form', element: <DGCA /> },
-      { path: 'rtr-full-form-meaning-importance-and-complete-guide', element: <rtrPage /> },
+      { path: 'rtr-full-form-meaning-importance-and-complete-guide', element: <RtrPage /> },
       // states routes
       { path: 'pilot-training-in-india', element: <India /> },
       { path: 'State-Structure', element: <StateStructure /> },
@@ -134,18 +154,34 @@ const router = createBrowserRouter([
       { path: 'pilot-training-in-chennai', element: <ChennaiPage /> },
       { path: 'pilot-training-in-bangalore', element: <BanglorePage /> },
       { path: 'pilot-training-in-kerala', element: <keralaPage /> },
-      { path: 'pilot-training-in-delhi', element: <DelhiPage /> },
+      // { path: 'pilot-training-in-delhi', element: <DelhiPage /> },
       { path: 'pilot-training-in-pune', element: <PunePage /> },
       { path: 'pilot-training-in-kolkata', element: <KolkataPage /> },
       { path: 'pilot-training-in-coimbatore', element: <CoimbatorePage /> },
       { path: 'pilot-training-in-gujarat', element: <GujaratPage /> },
       { path: 'pilot-training-in-goa', element: <GoaPage /> },
       { path: 'pilot-training-in-gurugram', element: <GurugramPage /> },
-      { path: 'tamilNaduPage', element: <tamilNaduPage /> },
-      // { path: 'RajasthanPage', element: <RajasthanPage /> },
-      // { path: 'HaryanaPage', element: <HaryanaPage /> },
-      // { path: 'PunjabPage', element: <PunjabPage /> },
+      { path: 'pilot-training-in-tamilNadu', element: <tamilNaduPage /> },
+      { path: 'pilot-training-in-rajasthan', element: <RajasthanPage /> },
+      { path: 'pilot-training-in-haryana', element: <HaryanaPage /> },
+      { path: 'pilot-training-in-punjab', element: <PunjabPage /> },
+      { path: 'pilot-training-in-andhra-pradesh', element: <AndhraPradesh /> },
+      { path: 'pilot-training-in-arunachal-pradesh', element: <ArunachalPradeshPage /> },
+      { path: 'pilot-training-in-assam', element: <AssamPage /> },
+      { path: 'pilot-training-in-bihar', element: <Bihar /> },
+      { path: 'pilot-training-in-chhattisgarh', element: <ChhattisgarhPage /> },
+      { path: 'pilot-training-in-himachal-pradesh', element: <HimachalPradeshPage /> },
+      { path: 'pilot-training-in-noida', element: <NoidaPage /> },
+      { path: 'pilot-training-in-ghaziabad', element: <GhaziabadPage /> },
+      { path: 'pilot-training-in-nagpur', element: <NagpurPage /> },
+      { path: 'pilot-training-in-maharashtra', element: <MaharashtraPage /> },
+      { path: 'pilot-training-in-jaipur', element: <JaipurPage /> },
+
       { path: "floating-button", element: <FloatingButton /> },
+
+
+
+
 
 
       {
@@ -154,6 +190,16 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+
+
+
+  { path: 'admin-panel', element: <AdminPanel /> },
+  { path: 'add-page', element: <AddPage /> },
+  { path: 'pages', element: <Pages /> },
+
+
+
   {
     path: '*',
     element: <Navigate to="/" replace />,

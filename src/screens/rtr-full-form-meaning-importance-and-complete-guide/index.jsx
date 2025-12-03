@@ -1,7 +1,7 @@
 import React from "react";
-import { rtrData } from "../../components/Data/rtrData";
 import DynamicPage from "../full form";
+import { rtrData } from "../../components/Data/rtrData";
 
-const rtrPage = () => <DynamicPage data={rtrData} />;
+const RtrPage = () => <DynamicPage data={rtrData} />;
 
-export default rtrPage;
+export default RtrPage;

@@ -1,6 +1,6 @@
 export const pplData = {
     header: {
-        title: "PPL Full Form – What is PPL in Aviation, Chat, Business and More (2025)?",
+        title: "PPL Full Form – What is PPL in Aviation, Chat, Business and More (2026)?",
         subtitle:
             "Explore the multiple meanings of PPL across Aviation, Education, Music, Business, Internet Slang, and more fields.",
     },
@@ -283,6 +283,6 @@ export const pplData = {
     ],
 
     footer: {
-        text: "© 2025 PPL Information | All Rights Reserved",
+        text: "© 2026 PPL Information | All Rights Reserved",
     },
 };

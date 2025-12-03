@@ -1,6 +1,6 @@
 export const bangloreData = {
     hero: {
-        title: "Pilot Training Institute in Bangalore - 2025",
+        title: "Pilot Training Institute in Bangalore - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Bangalore is the best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Captain certification. We provide all types of pilot training with experienced instructors and advanced aircraft.",
         background: "/images/pilot-training-bangalore-bg.jpg",
@@ -135,7 +135,7 @@ export const bangloreData = {
                 { title: "Flexible Fee Options", text: "Installment and scholarship options available." },
                 { title: "Free 200 Hours Simulator Training", text: "Get hands-on flying experience in simulators before real flights." },
                 { title: "Study Library & Mentorship", text: "Access to study resources and personalized mentorship for all students." },
-                { title: "Limited Seats Available", text: "Apply now and secure your seat for 2025 batches." },
+                { title: "Limited Seats Available", text: "Apply now and secure your seat for 2026 batches." },
             ],
         },
     ],

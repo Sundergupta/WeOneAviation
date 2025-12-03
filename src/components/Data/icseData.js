@@ -2,7 +2,7 @@ export const icseData = {
     header: {
         title: "ICSE Full Form – What is ICSE Board?",
         subtitle:
-            "Comparison with CBSE & Full Details (2025) | Indian Certificate of Secondary Education",
+            "Comparison with CBSE & Full Details (2026) | Indian Certificate of Secondary Education",
     },
 
     sections: [
@@ -113,6 +113,6 @@ export const icseData = {
     ],
 
     footer: {
-        text: "© 2025 ICSE Information | All Rights Reserved",
+        text: "© 2026 ICSE Information | All Rights Reserved",
     },
 };

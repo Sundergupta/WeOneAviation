@@ -14,18 +14,24 @@ body {
   margin: 0;
 }
 
-/* ---------- Page Container ---------- */
+/* ---------- Page Container (Less Left/Right Space) ---------- */
 .dynamic-page {
-  /* max-width: 950px; */
-  margin: 2rem auto;
-  padding: 0 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;      /* reduced from 2-3rem → smaller side space */
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------- Header ---------- */
 .dynamic-header {
   background: linear-gradient(120deg, #e8f0ff, #ffffff);
   text-align: center;
-  padding: 3rem ;
+  padding: 2.2rem 1rem;   /* reduced L/R padding */
   border-radius: 12px;
   box-shadow: var(--shadow);
 }
@@ -46,7 +52,7 @@ body {
   background: var(--card);
   border-radius: 12px;
   padding: 1.8rem;
-  margin: 2rem 0;
+  margin: 1.5rem 0;      /* reduced margin for tighter layout */
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -140,6 +146,10 @@ body {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  .dynamic-page {
+    padding: 0 0.8rem;  /* even less side padding for mobile */
+  }
+
   .dynamic-header h1 {
     font-size: 1.7rem;
   }

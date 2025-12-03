@@ -1,6 +1,6 @@
 export const haryanaData = {
     hero: {
-        title: "Pilot Training Institute in Haryana - 2025",
+        title: "Pilot Training Institute in Haryana - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Haryana is the best choice for aspiring pilots — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training. We offer all types of pilot training with certified instructors, advanced aircraft, and modern simulators.",
         background: "/images/pilot-training-haryana-bg.jpg",
@@ -15,7 +15,6 @@ export const haryanaData = {
     ],
 
     sections: [
-        // ---------------------- OVERVIEW ---------------------- //
         {
             title: "Why Choose Our Pilot Training Institute in Haryana?",
             paragraphs: [
@@ -28,7 +27,7 @@ export const haryanaData = {
                 },
                 {
                     title: "Experienced & Certified Instructors",
-                    text: "Learn from professional pilots with real flying experience in Indian aviation.",
+                    text: "Learn from professional pilots with years of real flying experience.",
                 },
                 {
                     title: "Advanced Training Aircraft & Simulators",
@@ -36,7 +35,7 @@ export const haryanaData = {
                 },
                 {
                     title: "Comprehensive Courses",
-                    text: "We offer CPL, PPL & ATPL training with complete DGCA preparation.",
+                    text: "We offer CPL, PPL, and ATPL training with full DGCA exam preparation.",
                 },
                 {
                     title: "Career Guidance & 100% Placement Assistance",
@@ -48,151 +47,149 @@ export const haryanaData = {
                 },
                 {
                     title: "Extra Guidance for Weak Students",
-                    text: "Special coaching sessions for weak students to ensure fast learning.",
+                    text: "Special coaching sessions and one-on-one support to strengthen weak areas.",
                 },
                 {
                     title: "Prime Location at an International Airport",
-                    text: "Real-world aviation environment with ATC exposure and airport operations.",
+                    text: "Hands-on exposure to aviation operations and real-time ATC interaction.",
                 },
                 {
                     title: "Accommodation & Student Support",
-                    text: "Comfortable accommodation near the airport for hassle-free training.",
+                    text: "Comfortable, affordable accommodation facilities near the airport.",
                 },
             ],
         },
 
-        // ---------------------- COURSES ---------------------- //
         {
             title: "Pilot Training Courses Offered at We One Aviation Academy (Haryana)",
             paragraphs: [
-                "We offer all major aviation training programs in Haryana designed to prepare you for a professional pilot career.",
+                "We offer a wide range of aviation training programs in Haryana designed to prepare students for a professional career in aviation.",
             ],
             list: [
                 {
                     title: "Commercial Pilot Training (CPL)",
-                    text: "Duration: 12–18 months | Aircraft: Cessna 172 Glass Cockpit | Includes 200+ flying hours, DGCA exam prep & soft skills training.",
+                    text: "Duration: 12–18 months | Aircraft: Cessna 172 Glass Cockpit | Includes 200+ flying hours, DGCA exam preparation, and soft skills training.",
                 },
                 {
                     title: "Private Pilot Training (PPL)",
-                    text: "Duration: 4–6 months | Includes minimum 40 hours of flight training — ideal for hobby flying.",
+                    text: "Duration: 4–6 months | Minimum 40 flight hours — ideal for hobby and personal flying.",
                 },
                 {
                     title: "DGCA Ground Classes",
-                    text: "Duration: 3–6 months | Subjects include Air Regulations, Aviation Meteorology, Navigation, Technical General, Technical Specific & RT.",
+                    text: "Duration: 3–6 months | Subjects: Air Regulations, Aviation Meteorology, Air Navigation, Technical General, Technical Specific, and Radio Telephony.",
                 },
                 {
                     title: "Type Rating & Multi-Engine Training",
-                    text: "Duration: 3–4 months | Includes advanced multi-engine flight training & low-visibility operations.",
+                    text: "Duration: 3–4 months | Professional multi-engine training and advanced flight operations.",
                 },
             ],
         },
 
-        // ---------------------- ELIGIBILITY ---------------------- //
         {
             title: "Eligibility Criteria for Pilot Training in Haryana",
             paragraphs: [
-                "Before admission, ensure that you meet the following basic eligibility requirements:",
+                "Before applying for admission, ensure you meet the essential eligibility requirements:",
             ],
             list: [
                 {
                     title: "Education",
-                    text: "10+2 with Physics & Mathematics (bridge courses available for students without these subjects).",
+                    text: "10+2 with Physics and Mathematics (bridge courses available for students who didn’t study these subjects).",
                 },
                 {
                     title: "Age",
-                    text: "Minimum age of 17 years required.",
+                    text: "Minimum age required is 17 years.",
                 },
                 {
                     title: "Medical Fitness",
-                    text: "Must clear DGCA Class 1 & Class 2 medical examinations.",
+                    text: "Must clear DGCA Class 1 and Class 2 medical examinations.",
                 },
                 {
                     title: "English Proficiency",
-                    text: "Must be able to read, write & communicate effectively in English.",
+                    text: "Ability to read, write, and communicate fluently in English.",
                 },
             ],
         },
 
-        // ---------------------- CAREER SCOPE ---------------------- //
         {
             title: "Scope of a Pilot Career in Haryana",
             paragraphs: [
-                "Haryana is a major aviation hub in India, offering excellent job opportunities after completing pilot training.",
+                "Haryana is emerging as a major aviation hub in India, offering diverse aviation career opportunities for trained pilots.",
             ],
             list: [
-                { title: "Commercial Pilot", text: "Fly for major airlines like IndiGo, Air India, Vistara & SpiceJet." },
-                { title: "Private Pilot", text: "Fly private aircraft for corporates or VIP clients." },
-                { title: "Cargo Pilot", text: "Work with cargo airlines such as Blue Dart, FedEx, etc." },
-                { title: "Flight Instructor", text: "Teach new pilots at flight schools and academies." },
-                { title: "Charter Pilot", text: "Fly charter aircraft for business and tourism travel." },
+                { title: "Commercial Pilot", text: "Work with major airlines such as IndiGo, Air India, Vistara, and SpiceJet." },
+                { title: "Private Pilot", text: "Fly private aircraft for corporates and high-profile clients." },
+                { title: "Cargo Pilot", text: "Join cargo airlines like Blue Dart, FedEx, and other logistics operators." },
+                { title: "Flight Instructor", text: "Train the next generation of pilots in flight schools." },
+                { title: "Charter Pilot", text: "Fly chartered aircraft for tourism, business, and VIP travel." },
             ],
         },
 
-        // ---------------------- CPL SYLLABUS ---------------------- //
         {
             title: "Commercial Pilot Syllabus in Haryana",
-            paragraphs: ["A simplified breakdown of the essential CPL syllabus:"],
+            paragraphs: [
+                "Below is a simplified breakdown of the DGCA-approved CPL syllabus:",
+            ],
             list: [
-                { title: "Air Regulations", text: "Rules of the sky, aviation law, and safe flight operations." },
-                { title: "Aviation Meteorology", text: "Understanding wind, storms, clouds & weather patterns." },
-                { title: "Air Navigation", text: "Route planning, flight instruments, and navigation systems." },
+                { title: "Air Regulations", text: "Rules of flight, aviation law, and safe flying practices." },
+                { title: "Aviation Meteorology", text: "Weather systems, wind patterns, storms, and atmospheric conditions." },
+                { title: "Air Navigation", text: "Flight planning, route charts, navigation instruments, and procedures." },
                 { title: "Technical General", text: "Aircraft engines, systems, structures, and aerodynamics." },
-                { title: "Technical Specific", text: "Detailed study of the aircraft type you will fly." },
-                { title: "Radio Telephony", text: "ATC communication, aviation terminology, and radio procedures." },
+                { title: "Technical Specific", text: "Detailed training on the specific aircraft model used in flying." },
+                { title: "Radio Telephony", text: "Communication with ATC, aviation terminology, and procedures." },
             ],
         },
 
-        // ---------------------- FEES ---------------------- //
         {
             title: "Fees for Commercial Pilot Training in Haryana",
             paragraphs: [
-                "Average pilot training fees in Haryana range between ₹40–50 lakhs. Here’s the fee breakup:",
+                "The average cost of pilot training in Haryana ranges between ₹40–50 lakhs. Here is a detailed fee breakdown:",
             ],
             list: [
-                { title: "Ground Classes", text: "₹2–5 lakhs — DGCA subjects & study material." },
-                { title: "Flying Hours", text: "₹35–45 lakhs — includes 200+ flying hours." },
-                { title: "Simulator Training", text: "₹3–5 lakhs — advanced simulator practice." },
-                { title: "Essentials", text: "₹1–2 lakhs — books, uniforms, medical tests & exams." },
+                { title: "Ground Classes", text: "₹2–5 lakhs — DGCA subjects, study material, and training." },
+                { title: "Flying Hours", text: "₹35–45 lakhs — Covers 200+ actual flying hours." },
+                { title: "Simulator Training", text: "₹3–5 lakhs — Advanced simulator training and flight practice." },
+                { title: "Essentials", text: "₹1–2 lakhs — Books, uniforms, medical exams, and miscellaneous charges." },
             ],
         },
 
-        // ---------------------- WHY FEES CHANGE ---------------------- //
         {
             title: "Why Fees Change for CPL Training in Haryana?",
+            paragraphs: [],
             list: [
-                { title: "Institute Reputation", text: "Top academies charge more due to higher training standards." },
-                { title: "City Expenses", text: "Training at major airports increases cost." },
-                { title: "Aircraft Type", text: "Advanced aircraft such as glass cockpit models increase fees." },
-                { title: "Add-on Training", text: "Night flying, multi-engine, and extra hours increase total cost." },
+                { title: "Institute Reputation", text: "Premium academies charge more due to superior training quality." },
+                { title: "City Expenses", text: "Training at major airports results in higher costs." },
+                { title: "Aircraft Type", text: "Glass cockpit and multi-engine aircraft increase overall fees." },
+                { title: "Add-on Training", text: "Night flying, multi-engine training, and extra hours add to total costs." },
             ],
         },
 
-        // ---------------------- HOW TO CHOOSE ---------------------- //
         {
             title: "How to Choose a Pilot Training Institute in Haryana?",
+            paragraphs: [],
             list: [
-                { title: "Institute Infrastructure", text: "Check facilities, aircraft, and simulator quality." },
-                { title: "Qualified Instructors", text: "Experienced teachers are essential for success." },
-                { title: "Flexible Payment", text: "Choose a training academy with a flexible fee structure." },
-                { title: "Scholarship Availability", text: "Look for scholarship and student loan support." },
+                { title: "Institute Infrastructure", text: "Check facilities, aircraft quality, and simulator standards." },
+                { title: "Qualified Instructors", text: "Experienced teachers ensure proper technique and safety." },
+                { title: "Flexible Payment", text: "Select an institute offering flexible and manageable fee options." },
+                { title: "Scholarship Availability", text: "Look for institutes providing scholarships or loan support." },
             ],
         },
 
-        // ---------------------- WHY WE ONE ---------------------- //
         {
             title: "Why Choose We One Aviation Academy for Pilot Training in Haryana?",
             paragraphs: [
-                "We One Aviation Academy is a top aviation institute in Haryana, successfully training 3000+ pilots till 2025.",
+                "We One Aviation Academy is among the top aviation institutes in Haryana, successfully training more than 3000+ pilots.",
             ],
             list: [
-                { title: "Scholarship for Students", text: "Financial assistance for deserving candidates." },
-                { title: "Flexible Fee Structure", text: "Convenient installment and payment options." },
-                { title: "Experienced Teachers", text: "Highly skilled aviation instructors & DGCA experts." },
-                { title: "Modern Infrastructure", text: "Classrooms, labs & world-class simulation setup." },
-                { title: "Free 200 Hours Simulator Training", text: "Enhance flying skills before real aircraft flying." },
-                { title: "Study Library", text: "Aviation books, notes, and learning resources." },
-                { title: "Limited Seats Available", text: "Apply now and secure your admission early!" },
+                { title: "Scholarship for Students", text: "Financial assistance and merit-based scholarships." },
+                { title: "Flexible Fee Structure", text: "Convenient installment plans and payment flexibility." },
+                { title: "Experienced Teachers", text: "Skilled aviation instructors with DGCA expertise." },
+                { title: "Modern Infrastructure", text: "Advanced classrooms, simulation labs, and training systems." },
+                { title: "Free 200 Hours Simulator Training", text: "Gain additional practice before real aircraft flying." },
+                { title: "Study Library", text: "Access to aviation notes, books, and learning resources." },
+                { title: "Limited Seats Available", text: "Enroll early to secure your seat in the next batch." },
             ],
         },
     ],
 };
+
+export default haryanaData;

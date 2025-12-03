@@ -2,7 +2,7 @@ export const dgcaData = {
     header: {
         title: "DGCA Full Form – What is DGCA in Aviation?",
         subtitle:
-            "Directorate General of Civil Aviation (DGCA) – Role, Importance & Functions in Indian Aviation (2025)",
+            "Directorate General of Civil Aviation (DGCA) – Role, Importance & Functions in Indian Aviation (2026)",
     },
 
     sections: [
@@ -130,6 +130,6 @@ export const dgcaData = {
     ],
 
     footer: {
-        text: "© 2025 DGCA Information | All Rights Reserved",
+        text: "© 2026 DGCA Information | All Rights Reserved",
     },
 };

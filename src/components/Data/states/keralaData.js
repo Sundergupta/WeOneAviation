@@ -1,6 +1,6 @@
 export const keralaData = {
     hero: {
-        title: "Pilot Training Institute in Kerala - 2025",
+        title: "Pilot Training Institute in Kerala - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Kerala is the best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We provide all types of pilot training with experienced instructors and the latest technology.",
         background: "/images/pilot-training-kerala-bg.jpg",

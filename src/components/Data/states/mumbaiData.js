@@ -1,6 +1,6 @@
 export const mumbaiData = {
     hero: {
-        title: "Pilot Training Institute in Mumbai - 2025",
+        title: "Pilot Training Institute in Mumbai - 2026",
         subtitle:
             "Dreaming of becoming a pilot? Our world-class Pilot Training Institute in Mumbai offers top-notch aviation education with modern aircraft, certified instructors, and DGCA-approved courses. Whether you aim for a Commercial, Private, or Airline Transport Pilot License, we’ve got you covered.",
         background: "/images/pilot-training-mumbai-bg.jpg",

@@ -3,35 +3,36 @@ import "./style.css";
 
 const StructurePage = ({ data }) => {
     const tableData = [
-        { name: "Pilot training in India", link: "https://www.weoneaviation.in/pilot-training-in-india" },
-        { name: "Pilot training in Hyderabad", link: "https://www.weoneaviation.in/pilot-training-in-hyderabad" },
-        { name: "Pilot training in Mumbai", link: "https://www.weoneaviation.in/pilot-training-in-mumbai" },
-        { name: "Pilot Training in Chennai", link: "https://www.weoneaviation.in/pilot-training-in-chennai" },
-        { name: "Pilot Training in Bangalore", link: "https://www.weoneaviation.in/pilot-training-in-bangalore" },
-        { name: "Pilot training in Kerala", link: "https://www.weoneaviation.in/pilot-training-in-kerala" },
-        { name: "Pilot training in Delhi", link: "https://www.weoneaviation.in/pilot-training-in-delhi" },
-        { name: "Pilot Training in Pune", link: "https://www.weoneaviation.in/pilot-training-in-pune" },
-        { name: "Pilot training institute in Kolkata", link: "https://www.weoneaviation.in/pilot-training-in-kolkata" },
-        { name: "Pilot training in Coimbatore", link: "https://www.weoneaviation.in/pilot-training-in-coimbatore" },
-        { name: "Pilot training in Gujarat", link: "https://www.weoneaviation.in/pilot-training-in-gujarat" },
-        { name: "Pilot training in Goa", link: "https://www.weoneaviation.in/pilot-training-in-goa" },
-        { name: "Pilot Training in Gurgaon", link: "https://www.weoneaviation.in/pilot-training-in-gurugram" },
-        { name: "Pilot training in Tamil Nadu", link: "https://www.weoneaviation.in/pilot-training-in-tamil-nadu" },
-        { name: "Pilot Training in Rajasthan", link: "https://www.weoneaviation.in/pilot-training-in-rajasthan" },
-        { name: "Pilot Training in Haryana", link: "https://www.weoneaviation.in/pilot-training-in-haryana" },
-        { name: "Pilot Training in Punjab", link: "https://www.weoneaviation.in/pilot-training-in-punjab" },
-        { name: "Pilot Training in Andhra Pradesh", link: "https://www.weoneaviation.in/pilot-training-in-andhra-pradesh" },
-        { name: "Pilot Training in Arunachal Pradesh", link: "https://www.weoneaviation.in/pilot-training-in-arunachal-pradesh" },
-        { name: "Pilot training in Assam", link: "https://www.weoneaviation.in/pilot-training-in-assam" },
-        { name: "Pilot Training in Bihar", link: "https://www.weoneaviation.in/pilot-training-in-bihar" },
-        { name: "Pilot Training in Chhattisgarh", link: "https://www.weoneaviation.in/pilot-training-in-chhattisgarh" },
-        { name: "Pilot Training in Himachal Pradesh", link: "https://www.weoneaviation.in/pilot-training-in-himachal-pradesh" },
-        { name: "Pilot Training in Noida", link: "https://www.weoneaviation.in/pilot-training-in-noida" },
-        { name: "Pilot Training in Ghaziabad", link: "https://www.weoneaviation.in/pilot-training-in-ghaziabad" },
-        { name: "Pilot Training in Nagpur", link: "https://www.weoneaviation.in/pilot-training-in-nagpur" },
-        { name: "Pilot Training in Maharashtra", link: "https://www.weoneaviation.in/pilot-training-in-maharashtra" },
-        { name: "Pilot Training in Jaipur", link: "https://www.weoneaviation.in/pilot-training-in-jaipur" },
+        { name: "Pilot training in India", link: "/pilot-training-in-india" },
+        { name: "Pilot training in Hyderabad", link: "/pilot-training-in-hyderabad" },
+        { name: "Pilot training in Mumbai", link: "/pilot-training-in-mumbai" },
+        { name: "Pilot Training in Chennai", link: "/pilot-training-in-chennai" },
+        { name: "Pilot Training in Bangalore", link: "/pilot-training-in-bangalore" },
+        { name: "Pilot training in Kerala", link: "/pilot-training-in-kerala" },
+        { name: "Pilot training in Delhi", link: "/pilot-training-in-delhi" },
+        { name: "Pilot Training in Pune", link: "/pilot-training-in-pune" },
+        { name: "Pilot training institute in Kolkata", link: "/pilot-training-in-kolkata" },
+        { name: "Pilot training in Coimbatore", link: "/pilot-training-in-coimbatore" },
+        { name: "Pilot training in Gujarat", link: "/pilot-training-in-gujarat" },
+        { name: "Pilot training in Goa", link: "/pilot-training-in-goa" },
+        { name: "Pilot Training in Gurugram", link: "/pilot-training-in-gurugram" },
+        { name: "Pilot training in Tamil Nadu", link: "/pilot-training-in-tamil-nadu" },
+        { name: "Pilot Training in Rajasthan", link: "/pilot-training-in-rajasthan" },
+        { name: "Pilot Training in Haryana", link: "/pilot-training-in-haryana" },
+        { name: "Pilot Training in Punjab", link: "/pilot-training-in-punjab" },
+        { name: "Pilot Training in Andhra Pradesh", link: "/pilot-training-in-andhra-pradesh" },
+        { name: "Pilot Training in Arunachal Pradesh", link: "/pilot-training-in-arunachal-pradesh" },
+        { name: "Pilot training in Assam", link: "/pilot-training-in-assam" },
+        { name: "Pilot Training in Bihar", link: "/pilot-training-in-bihar" },
+        { name: "Pilot Training in Chhattisgarh", link: "/pilot-training-in-chhattisgarh" },
+        { name: "Pilot Training in Himachal Pradesh", link: "/pilot-training-in-himachal-pradesh" },
+        { name: "Pilot Training in Noida", link: "/pilot-training-in-noida" },
+        { name: "Pilot Training in Ghaziabad", link: "/pilot-training-in-ghaziabad" },
+        { name: "Pilot Training in Nagpur", link: "/pilot-training-in-nagpur" },
+        { name: "Pilot Training in Maharashtra", link: "/pilot-training-in-maharashtra" },
+        { name: "Pilot Training in Jaipur", link: "/pilot-training-in-jaipur" },
     ];
+
 
     if (!data) {
         return <p style={{ textAlign: "center", padding: "2rem" }}>No data available</p>;
@@ -63,7 +64,7 @@ const StructurePage = ({ data }) => {
                     <ul className="menu-list">
                         {tableData.map((item, index) => (
                             <li key={index}>
-                                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                <a href={item.link} rel="noopener noreferrer">
                                     {item.name}
                                 </a>
                             </li>

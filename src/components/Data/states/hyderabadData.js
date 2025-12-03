@@ -1,6 +1,6 @@
 export const hyderabadData = {
     hero: {
-        title: "Pilot Training Institute in Hyderabad - 2025",
+        title: "Pilot Training Institute in Hyderabad - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Hyderabad is your best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We provide all types of Pilot Training with experienced instructors and advanced aircraft.",
         background: "/images/pilot-training-hyderabad-bg.jpg",

@@ -1,6 +1,6 @@
 export const tamilNaduData = {
     hero: {
-        title: "Pilot Training Institute in Tamil Nadu - 2025",
+        title: "Pilot Training Institute in Tamil Nadu - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Tamil Nadu is the best choice for aspiring pilots — whether you’re pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We offer all types of pilot training with certified instructors and modern aviation technology.",
         background: "/images/pilot-training-tamilnadu-bg.jpg",
@@ -81,5 +81,20 @@ export const tamilNaduData = {
                 { title: "Charter Pilot", text: "Fly charter aircraft for business or special flights." },
             ],
         },
+
+        {
+            title: "Fees for Pilot Training in Tamil Nadu",
+            paragraphs: [
+                "Pilot training fees in Tamil Nadu depend on multiple factors including aircraft type, simulator training, and academy facilities.",
+            ],
+            list: [
+                { title: "Ground Classes", text: "₹2–5 lakhs — Includes DGCA subjects and study materials." },
+                { title: "Flying Hours", text: "₹35–45 lakhs — Covers 200+ flying hours using modern aircraft." },
+                { title: "Simulator Training", text: "₹3–5 lakhs — High-end simulator practice for advanced flight operations." },
+                { title: "Additional Expenses", text: "₹1–2 lakhs — Books, medicals, uniforms, and miscellaneous charges." },
+            ],
+        },
     ],
 };
+
+export default tamilNaduData;

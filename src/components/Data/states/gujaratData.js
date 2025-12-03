@@ -1,6 +1,6 @@
 export const gujaratData = {
     hero: {
-        title: "Pilot Training Institute in Gujarat - 2025",
+        title: "Pilot Training Institute in Gujarat - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Gujarat is the best choice for aspiring pilots — whether you’re pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We offer all types of pilot training with experienced instructors and the latest technology.",
         background: "/images/pilot-training-gujarat-bg.jpg",

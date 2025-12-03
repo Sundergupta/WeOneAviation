@@ -18,13 +18,6 @@ import RTR from '../../assets/RTR.jpeg';
 import TypeRatingPrep from '../../assets/TypeRatingPrep.jpeg';
 
 
-<Helmet>
-    <title>We One Aviation</title>
-    <meta
-        name="description"
-        content="Train to become a licensed pilot with We One Aviation Academy. DGCA-ground classes, CPL courses, international flying schools & career support."
-    />
-</Helmet>
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -77,6 +70,26 @@ const Home = () => {
 
     return (
         <div className="home">
+            <Helmet>
+                <title>We One Aviation</title>
+            </Helmet>
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Train to become a licensed pilot with We One Aviation Academy. DGCA-ground classes, CPL courses, international flying schools & career support."
+                />
+
+                <meta
+                    name="keywords"
+                    content="Pilot Training, Aviation Academy, DGCA, CPL, Commercial Pilot, Ground Classes, Flying School"
+                />
+                <meta name="robots" content="index, follow" />
+
+                <link
+                    rel="canonical"
+                    href="https://weoneaviation.com/"
+                />
+            </Helmet>
             {/* Hero Section */}
             <section className="hero-slider">
                 <div className="slides-container">

@@ -1,6 +1,6 @@
 export const coimbatoreData = {
     hero: {
-        title: "Pilot Training Institute in Coimbatore - 2025",
+        title: "Pilot Training Institute in Coimbatore - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Coimbatore is the best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We provide all types of pilot training with experienced instructors and the latest aviation technology.",
         background: "/images/pilot-training-coimbatore-bg.jpg",

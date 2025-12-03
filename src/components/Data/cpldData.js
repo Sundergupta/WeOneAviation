@@ -1,7 +1,7 @@
 export const cplData = {
     header: {
         title: "Commercial Pilot License (CPL) Eligibility",
-        subtitle: "Requirements, Training Steps, Medicals, Syllabus & Career Path (2025)",
+        subtitle: "Requirements, Training Steps, Medicals, Syllabus & Career Path (2026)",
     },
 
     sections: [
@@ -169,6 +169,6 @@ export const cplData = {
     ],
 
     footer: {
-        text: "© 2025 CPL Information | All Rights Reserved",
+        text: "© 2026 CPL Information | All Rights Reserved",
     },
 };

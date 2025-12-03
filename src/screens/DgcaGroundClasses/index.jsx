@@ -180,9 +180,9 @@ const DgcaGroundClasses = () => {
                     <h4>Our Latest Blogs</h4>
                     <ul>
                         <li>Flight Simulator Practice in pilot training Course</li>
-                        <li>Pilot Training in Delhi (Feb 13, 2025)</li>
-                        <li>Private Pilot License (PPL) Course Fees (Feb 10, 2025)</li>
-                        <li>Comprehensive Guide to DGCA Exam Subjects (Jan 21, 2025)</li>
+                        <li>Pilot Training in Delhi (Feb 13, 2026)</li>
+                        <li>Private Pilot License (PPL) Course Fees (Feb 10, 2026)</li>
+                        <li>Comprehensive Guide to DGCA Exam Subjects (Jan 21, 2026)</li>
                     </ul>
                 </div>
                 <div className="dgca-footer-right">

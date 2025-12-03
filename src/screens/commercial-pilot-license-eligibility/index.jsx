@@ -21,7 +21,7 @@ const CommercialPilotLicense = () => {
             {/* Hero Section */}
             <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
                 <div className="container">
-                    <h1>Commercial Pilot Course Detail</h1>
+                    <h1>Commercial Pilot License Eligibility  </h1>
                     <h2>Commercial Pilot License</h2>
 
                 </div>

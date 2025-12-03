@@ -1,6 +1,6 @@
 export const goaData = {
     hero: {
-        title: "Pilot Training Institute in Goa - 2025",
+        title: "Pilot Training Institute in Goa - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Goa is the best choice for aspiring pilots — whether you’re pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We offer all types of pilot training with certified instructors and modern aviation technology.",
         background: "/images/pilot-training-goa-bg.jpg",

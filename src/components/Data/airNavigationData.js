@@ -1,6 +1,6 @@
 export const airNavigationData = {
     hero: {
-        title: "Air Navigation — All Details 2025",
+        title: "Air Navigation — All Details 2026",
         subtitle: "Join Air Navigation Classes Now",
         background: "/assets/images/air-navigation.jpg",
         basePath: "/AirNavigation"

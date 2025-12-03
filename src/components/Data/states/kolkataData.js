@@ -1,6 +1,6 @@
 export const kolkataData = {
     hero: {
-        title: "Pilot Training Institute in Kolkata - 2025",
+        title: "Pilot Training Institute in Kolkata - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Kolkata is your best choice if you want to become a pilot — whether you’re pursuing Commercial Pilot Training, Private Pilot Training, or Airline Captain Training. We provide all types of Pilot Training with experienced instructors and advanced technology.",
         background: "/images/pilot-training-kolkata-bg.jpg",
@@ -151,7 +151,7 @@ export const kolkataData = {
                 { title: "Experienced Instructors", text: "Guidance from industry professionals and airline captains." },
                 { title: "Advanced Simulators", text: "Free 200-hour simulator training for every student." },
                 { title: "Library & Study Support", text: "Dedicated resources and learning material for every student." },
-                { title: "Limited Seats Available", text: "Enroll now to secure your spot for the 2025 batch!" },
+                { title: "Limited Seats Available", text: "Enroll now to secure your spot for the 2026 batch!" },
             ],
         },
 

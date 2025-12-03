@@ -1,5 +1,5 @@
 const delhiData = {
-    title: "Pilot Training in Delhi - 2025",
+    title: "Pilot Training in Delhi - 2026",
     background: "/images/states/delhi-bg.jpg", // replace with actual image path if available
 
     intro: `If you want to become a pilot, then pilot training is a must for you. There are many pilot training institutes in Delhi, all dedicated to producing skilled pilots in India and worldwide. 

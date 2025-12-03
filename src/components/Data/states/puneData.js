@@ -1,6 +1,6 @@
 export const puneData = {
     hero: {
-        title: "Pilot Training Institute in Pune - 2025",
+        title: "Pilot Training Institute in Pune - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Pune is the best choice if you want to become a pilot — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Captain Training. We provide all types of Pilot Training with experienced instructors and advanced technology.",
         background: "/images/pilot-training-pune-bg.jpg",
@@ -123,7 +123,7 @@ export const puneData = {
                 { title: "Expert Faculty", text: "Trainers with extensive airline and instructional experience." },
                 { title: "Advanced Simulators", text: "Free 200 hours of simulator practice for every student." },
                 { title: "Dedicated Library", text: "Access to books, DGCA materials, and study resources." },
-                { title: "Limited Seats Available", text: "Enroll now to secure your admission for the 2025 batch!" },
+                { title: "Limited Seats Available", text: "Enroll now to secure your admission for the 2026 batch!" },
             ],
         },
 

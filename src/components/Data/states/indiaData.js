@@ -1,6 +1,6 @@
 export const indiaData = {
   hero: {
-    title: "Pilot Training Institute in India - 2025",
+    title: "Pilot Training Institute in India - 2026",
     subtitle:
       "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in India is your best choice if you want to become a pilot — whether you're pursuing a Commercial Pilot License (CPL), Private Pilot License (PPL), or Airline Transport Pilot License (ATPL).",
     background: "/images/pilot-training-bg.jpg", // optional background image path

@@ -2,7 +2,7 @@ export const fullFormOfCplCommercialPilotLicense = {
     header: {
         title: "CPL Full Form – What is CPL in Aviation?",
         subtitle:
-            "CPL (Commercial Pilot License) – Eligibility, Duration, Fees & Career Scope in 2025",
+            "CPL (Commercial Pilot License) – Eligibility, Duration, Fees & Career Scope in 2026",
     },
 
     sections: [
@@ -161,11 +161,11 @@ export const fullFormOfCplCommercialPilotLicense = {
         {
             title: "Conclusion",
             description:
-                "CPL is your ticket to a rewarding aviation career. It transforms your passion for flying into a professional skill that allows you to work with top airlines and travel the world. With the aviation industry in India rapidly growing, a Commercial Pilot License in 2025 offers great scope and stability. Start your journey today by joining a reputed DGCA-approved flying school.",
+                "CPL is your ticket to a rewarding aviation career. It transforms your passion for flying into a professional skill that allows you to work with top airlines and travel the world. With the aviation industry in India rapidly growing, a Commercial Pilot License in 2026 offers great scope and stability. Start your journey today by joining a reputed DGCA-approved flying school.",
         },
     ],
 
     footer: {
-        text: "© 2025 WeOne Aviation | CPL Full Form – Commercial Pilot License | All Rights Reserved",
+        text: "© 2026 WeOne Aviation | CPL Full Form – Commercial Pilot License | All Rights Reserved",
     },
 };

@@ -1,6 +1,6 @@
 export const punjabData = {
     hero: {
-        title: "Pilot Training Institute in Punjab - 2025",
+        title: "Pilot Training Institute in Punjab - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Punjab is the best choice for aspiring pilots — whether you're pursuing Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training. We provide all types of pilot training with certified instructors and advanced aviation technology.",
         background: "/images/pilot-training-punjab-bg.jpg",
@@ -15,26 +15,53 @@ export const punjabData = {
     ],
 
     sections: [
-        // ------------------ OVERVIEW ----------------------
+        // ---------------------- OVERVIEW ---------------------- //
         {
             title: "Why Choose Our Pilot Training Institute in Punjab?",
             paragraphs: [
                 "We provide premium pilot training with 100% placement assistance. We have successfully trained 3000+ pilots across India.",
             ],
             list: [
-                { title: "Certified Training Program", text: "Our institute follows national aviation authority regulations to ensure standardized pilot training." },
-                { title: "Experienced & Certified Instructors", text: "Learn from pilots who have years of real aviation experience in India." },
-                { title: "Advanced Training Aircraft & Simulators", text: "Train on Cessna 172 Glass Cockpit aircraft and advanced flight simulators for realistic practice." },
-                { title: "Comprehensive Courses", text: "We offer CPL, PPL & ATPL training as per DGCA standards." },
-                { title: "Career Guidance & 100% Placement Assistance", text: "Strong industry connections help students secure airline and charter jobs easily." },
-                { title: "Full Scholarship Opportunities", text: "Flexible fee structure and scholarships for deserving candidates." },
-                { title: "Extra Guidance for Weak Students", text: "Additional classes and support to ensure fast learning and improvement." },
-                { title: "Prime Location at an International Airport", text: "Real-world exposure to air traffic control and aviation operations." },
-                { title: "Accommodation & Student Support", text: "Comfortable hostels near the airport for a smooth training experience." },
+                {
+                    title: "Certified Training Program",
+                    text: "Our institute follows national aviation authority regulations to ensure standardized pilot training.",
+                },
+                {
+                    title: "Experienced & Certified Instructors",
+                    text: "Learn from pilots who have years of real aviation experience in India.",
+                },
+                {
+                    title: "Advanced Training Aircraft & Simulators",
+                    text: "Train on Cessna 172 Glass Cockpit aircraft and advanced flight simulators for realistic practice.",
+                },
+                {
+                    title: "Comprehensive Courses",
+                    text: "We offer CPL, PPL, and ATPL training as per DGCA standards.",
+                },
+                {
+                    title: "Career Guidance & 100% Placement Assistance",
+                    text: "Strong industry connections help students secure airline and charter jobs easily.",
+                },
+                {
+                    title: "Full Scholarship Opportunities",
+                    text: "Flexible fee structure and scholarships for deserving candidates.",
+                },
+                {
+                    title: "Extra Guidance for Weak Students",
+                    text: "Additional classes and support to ensure fast learning and improvement.",
+                },
+                {
+                    title: "Prime Location at an International Airport",
+                    text: "Real-world exposure to air traffic control and aviation operations.",
+                },
+                {
+                    title: "Accommodation & Student Support",
+                    text: "Comfortable hostels near the airport for a smooth training experience.",
+                },
             ],
         },
 
-        // ------------------ COURSES ----------------------
+        // ---------------------- COURSES ---------------------- //
         {
             title: "Pilot Training Courses Offered at We One Aviation Academy (Punjab)",
             paragraphs: [
@@ -47,11 +74,11 @@ export const punjabData = {
                 },
                 {
                     title: "Private Pilot Training (PPL)",
-                    text: "Duration: 4–6 months | Aircraft: Cessna 172 | Minimum 40 flying hours. Ideal for hobby or personal flying.",
+                    text: "Duration: 4–6 months | Aircraft: Cessna 172 | Minimum 40 flying hours — ideal for hobby or personal flying.",
                 },
                 {
                     title: "DGCA Ground Classes",
-                    text: "Duration: 3–6 months | Subjects: Air Regulations, Aviation Meteorology, Air Navigation, Technical General, Technical Specific & RT.",
+                    text: "Duration: 3–6 months | Subjects: Air Regulations, Aviation Meteorology, Air Navigation, Technical General, Technical Specific & Radio Telephony.",
                 },
                 {
                     title: "Type Rating & Multi-Engine Training",
@@ -60,36 +87,48 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ ELIGIBILITY ----------------------
+        // ---------------------- ELIGIBILITY ---------------------- //
         {
             title: "Eligibility Criteria for Pilot Training in Punjab",
             paragraphs: [
                 "Before admission, ensure that you meet the following basic eligibility requirements:",
             ],
             list: [
-                { title: "Education", text: "10+2 with Physics & Mathematics (bridge courses available if required)." },
-                { title: "Age", text: "Minimum required age is 17 years." },
-                { title: "Medical Fitness", text: "Must clear DGCA Class 1 & Class 2 medical examinations." },
-                { title: "English Proficiency", text: "Must be able to speak, read, and write English fluently." },
+                {
+                    title: "Education",
+                    text: "10+2 with Physics & Mathematics (bridge courses available if required).",
+                },
+                {
+                    title: "Age",
+                    text: "Minimum required age is 17 years.",
+                },
+                {
+                    title: "Medical Fitness",
+                    text: "Must clear DGCA Class 1 & Class 2 medical examinations.",
+                },
+                {
+                    title: "English Proficiency",
+                    text: "Must be able to speak, read, and write English fluently.",
+                },
             ],
         },
 
-        // ------------------ SCOPE ----------------------
+        // ---------------------- SCOPE ---------------------- //
         {
             title: "Scope of a Pilot Career in Punjab",
             paragraphs: [
-                "Punjab, especially Chandigarh, is a leading aviation hub, offering multiple aviation career opportunities.",
+                "Punjab, especially Chandigarh, is a growing aviation hub offering multiple career opportunities for trained pilots.",
             ],
             list: [
-                { title: "Commercial Pilot", text: "Fly for major airlines like Air India, IndiGo, Vistara & SpiceJet." },
+                { title: "Commercial Pilot", text: "Fly for major airlines like Air India, IndiGo, Vistara, and SpiceJet." },
                 { title: "Private Pilot", text: "Fly corporate or private-owned aircraft." },
-                { title: "Cargo Pilot", text: "Work with cargo airlines like Blue Dart, FedEx & more." },
+                { title: "Cargo Pilot", text: "Work with cargo airlines like Blue Dart, FedEx, and more." },
                 { title: "Flight Instructor", text: "Become a certified flight instructor at aviation academies." },
                 { title: "Charter Pilot", text: "Operate charter flights for business and leisure travel." },
             ],
         },
 
-        // ------------------ SYLLABUS ----------------------
+        // ---------------------- SYLLABUS ---------------------- //
         {
             title: "Commercial Pilot Syllabus in Punjab",
             paragraphs: [
@@ -105,7 +144,7 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ FEES ----------------------
+        // ---------------------- FEES ---------------------- //
         {
             title: "Fees for Commercial Pilot Training in Punjab",
             paragraphs: [
@@ -119,9 +158,10 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ WHY FEES CHANGE ----------------------
+        // ---------------------- WHY FEES CHANGE ---------------------- //
         {
             title: "Why Fees Change for CPL Training in Punjab?",
+            paragraphs: [],
             list: [
                 { title: "Institute Reputation", text: "Well-known academies usually charge higher fees." },
                 { title: "City Living Cost", text: "Training near major cities may cost more." },
@@ -130,9 +170,10 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ HOW TO CHOOSE INSTITUTE ----------------------
+        // ---------------------- HOW TO CHOOSE ---------------------- //
         {
             title: "How to Choose a Pilot Training Institute in Punjab?",
+            paragraphs: [],
             list: [
                 { title: "Institute Infrastructure", text: "Review the facilities, aircraft, environment and training setup." },
                 { title: "Experienced Instructors", text: "Good teachers are essential for pilot success." },
@@ -141,7 +182,7 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ WHY WE ONE ----------------------
+        // ---------------------- WHY WE ONE ---------------------- //
         {
             title: "Why Choose We One Aviation Academy for Pilot Training in Punjab?",
             paragraphs: [
@@ -158,7 +199,7 @@ export const punjabData = {
             ],
         },
 
-        // ------------------ USA TRAINING BENEFITS ----------------------
+        // ---------------------- USA TRAINING BENEFITS ---------------------- //
         {
             title: "Pilot Training in Punjab – Your Fastest Route to an Airline Career!",
             paragraphs: [
@@ -174,8 +215,10 @@ export const punjabData = {
             ],
         },
 
+        // ---------------------- WHY USA ---------------------- //
         {
             title: "Why Do Flight Training in the USA?",
+            paragraphs: [],
             list: [
                 { title: "Globally Recognized FAA License", text: "Get international flying eligibility." },
                 { title: "Modern Training Facilities", text: "Best aircraft, simulators & aviation technology." },
@@ -185,3 +228,5 @@ export const punjabData = {
         },
     ],
 };
+
+export default punjabData;

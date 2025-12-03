@@ -1,6 +1,6 @@
 export const gurugramData = {
     hero: {
-        title: "Pilot Training Institute in Gurugram - 2025",
+        title: "Pilot Training Institute in Gurugram - 2026",
         subtitle:
             "Are you dreaming of a career in aviation? Our world-class Pilot Training Institute in Gurugram is the best choice for aspiring pilots—whether you want Commercial Pilot Training, Private Pilot Training, or Airline Transport Pilot Training (ATPL). We provide all types of pilot training with certified instructors and advanced aviation technology.",
         background: "/images/pilot-training-gurugram-bg.jpg",

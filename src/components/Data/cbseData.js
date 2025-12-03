@@ -5,7 +5,7 @@ export const cbseData = {
     header: {
         title: "CBSE Full Form Explained",
         subtitle:
-            "Curriculum, Subjects, Board Overview, Importance & Career Relevance (2025)",
+            "Curriculum, Subjects, Board Overview, Importance & Career Relevance (2026)",
     },
 
     sections: [
@@ -197,12 +197,12 @@ export const cbseData = {
         },
 
         {
-            title: "CBSE Result 2025: Expected Dates & How to Check",
+            title: "CBSE Result 2026: Expected Dates & How to Check",
             subsections: [
                 {
                     list: [
-                        "Class 10: Expected between May 15–20, 2025",
-                        "Class 12: Expected in May 2025",
+                        "Class 10: Expected between May 15–20, 2026",
+                        "Class 12: Expected in May 2026",
                     ],
                 },
                 {
@@ -255,6 +255,6 @@ export const cbseData = {
     ],
 
     footer: {
-        text: "© 2025 CBSE Information | All Rights Reserved",
+        text: "© 2026 CBSE Information | All Rights Reserved",
     },
 };
