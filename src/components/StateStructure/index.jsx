@@ -33,7 +33,6 @@ const StructurePage = ({ data }) => {
         { name: "Pilot Training in Jaipur", link: "/pilot-training-in-jaipur" },
     ];
 
-
     if (!data) {
         return <p style={{ textAlign: "center", padding: "2rem" }}>No data available</p>;
     }
@@ -44,7 +43,7 @@ const StructurePage = ({ data }) => {
             <div
                 className="hero-section"
                 style={{
-                    backgroundImage: `url(${data.hero.background || ""})`,
+                    backgroundImage: `url(${data.hero?.background || ""})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     padding: "50px 20px",
@@ -52,8 +51,8 @@ const StructurePage = ({ data }) => {
                     textAlign: "center",
                 }}
             >
-                <h1 className="page-title">{data.hero.title}</h1>
-                <p className="page-subtitle">{data.hero.subtitle}</p>
+                <h1 className="page-title">{data.hero?.title}</h1>
+                <p className="page-subtitle">{data.hero?.subtitle}</p>
             </div>
 
             {/* Two-Column Layout */}
@@ -74,21 +73,21 @@ const StructurePage = ({ data }) => {
 
                 {/* Right Side (Main Data) */}
                 <div className="content-section">
-                    {data.sections.map((section, index) => (
+                    {data.sections?.map((section, index) => (
                         <div key={index} className="section-block">
                             <h2>{section.title}</h2>
-                            {section.paragraphs.map((p, i) => (
+                            {section.paragraphs?.map((p, i) => (
                                 <p key={i}>{p}</p>
                             ))}
                             <ul>
-                                {section.list.map((listItem, i) => (
+                                {section.list?.map((listItem, i) => (
                                     <li key={i}>
                                         <strong>{listItem.title}:</strong> {listItem.text}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                    ))}
+                    )) || <p>No sections available</p>}
                 </div>
             </div>
         </div>

@@ -36,8 +36,8 @@ import HyderabadPage from './screens/States/hyderabad';
 import MumbaiPage from './screens/States/mumbai';
 import ChennaiPage from './screens/States/chennai';
 import BanglorePage from './screens/States/Banglore';
-import keralaPage from './screens/States/kerala';
-// import DelhiPage from './screens/States/Delhi';
+import KeralaPage from './screens/States/kerala';
+import DelhiPage from './screens/States/Delhi';
 import PunePage from './screens/States/pune';
 import KolkataPage from './screens/States/kolkata';
 import CoimbatorePage from './screens/States/coimbatore';
@@ -59,7 +59,7 @@ import GhaziabadPage from './screens/States/ghaziabad';
 import NagpurPage from './screens/States/nagpur';
 import MaharashtraPage from './screens/States/maharashtra';
 import JaipurPage from './screens/States/Jaipur';
-
+import TamilNaduPage from './screens/States/tamilNadu';
 // services pages 
 import PilotTraining from "./screens/Services/PilotTraining";
 import CharteredServices from "./screens/Services/CharteredServices";
@@ -158,8 +158,8 @@ const router = createBrowserRouter([
       { path: 'pilot-training-in-mumbai', element: <MumbaiPage /> },
       { path: 'pilot-training-in-chennai', element: <ChennaiPage /> },
       { path: 'pilot-training-in-bangalore', element: <BanglorePage /> },
-      { path: 'pilot-training-in-kerala', element: <keralaPage /> },
-      // { path: 'pilot-training-in-delhi', element: <DelhiPage /> },
+      { path: 'pilot-training-in-kerala', element: <KeralaPage /> },
+      { path: 'pilot-training-in-delhi', element: <DelhiPage /> },
       { path: 'pilot-training-in-pune', element: <PunePage /> },
       { path: 'pilot-training-in-kolkata', element: <KolkataPage /> },
       { path: 'pilot-training-in-coimbatore', element: <CoimbatorePage /> },
@@ -181,12 +181,8 @@ const router = createBrowserRouter([
       { path: 'pilot-training-in-nagpur', element: <NagpurPage /> },
       { path: 'pilot-training-in-maharashtra', element: <MaharashtraPage /> },
       { path: 'pilot-training-in-jaipur', element: <JaipurPage /> },
-
+      { path: 'pilot-training-in-tamil-nadu', element: <TamilNaduPage /> },
       { path: "floating-button", element: <FloatingButton /> },
-
-
-
-
 
 
       {
@@ -195,6 +191,8 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+
 
 
 
