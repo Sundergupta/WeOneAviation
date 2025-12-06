@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 
+
 // Components
 import RootLayout from './components/RootLayout';
 import Home from './screens/Home';
@@ -16,7 +17,9 @@ import MapPage from './screens/IndiaMap';
 import Structure from './screens/full form';
 import ICSE from './screens/ICSE';
 import Eligibility from './screens/commercial-pilot-license-eligibility';
+
 import CBSE from './screens/CBSE';
+
 import Syllabus from './screens/commercial-pilot-license-syllabus';
 import Admission from './screens/commercial-pilot-license-admission-process';
 import DGCA from './screens/DGCA';
@@ -110,7 +113,9 @@ const router = createBrowserRouter([
       { path: 'DgcaGroundClasses', element: <DgcaGroundClasses /> },
       // {  full form pages } 
       { path: 'Structur', element: <Structure /> },
+
       { path: 'cbse-full-form', element: <CBSE /> },
+
       { path: 'dgca-full-form', element: <DGCA /> },
       { path: 'icse-full-form', element: <ICSE /> },
       { path: 'commercial-pilot-license-salary', element: <CplSalary /> },

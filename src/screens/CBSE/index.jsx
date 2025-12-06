@@ -1,6 +1,6 @@
 // Example using React Helmet (requires installation: npm install react-helmet)
 import React from "react";
-import { Helmet } from 'react-helmet'; // Import Helmet
+import { Helmet } from 'react-helmet-async';// Import Helmet
 import { cbseData } from "../../components/Data/cbseData";
 import DynamicPage from "../full form";
 

@@ -1,5 +1,3 @@
-
-
 export const cbseData = {
 
     header: {
@@ -9,6 +7,12 @@ export const cbseData = {
     },
 
     sections: [
+        {
+            title: "Introduction",
+            description:
+                "CBSE is one of the most common and reputed education boards in India. If you have studied in India, you’ve definitely heard about CBSE — and many students complete their 10th and 12th from CBSE schools. I also completed my 10th and 12th from a CBSE school, so I’ll explain everything in detail. Among many boards like State Boards, ICSE, NIOS, and CBSE, CBSE is the most popular and its standard of education is considered better than most. So, let’s get started!",
+        },
+
         {
             title: "What is the Full Form of CBSE?",
             description:
@@ -24,7 +28,7 @@ export const cbseData = {
         {
             title: "What is the CBSE Board?",
             description:
-                "The CBSE Board is a national-level education board that governs public and private schools across India and abroad. It is managed by the Ministry of Education, Government of India. Schools must meet specific criteria for affiliation. Students can pursue Science, Commerce, or Arts from CBSE schools.",
+                "The CBSE Board is a national-level education board that governs public and private schools across India and abroad. It is managed by the Ministry of Education, Government of India. You can pursue Science, Commerce, or Arts from CBSE schools. Not all schools can be affiliated with CBSE. There is a criteria that schools must fulfill before affiliation, including infrastructure, documentation, and academic guidelines.",
         },
 
         {
@@ -34,10 +38,10 @@ export const cbseData = {
                     list: [
                         "Established in 1929 as the Board of High School and Intermediate Education",
                         "Renamed as CBSE in 1952",
-                        "Provides a common and standardized curriculum across India",
+                        "Aimed at providing a common and standardized curriculum across India",
                         "Headquartered in New Delhi",
                         "Affiliated Schools: Over 27,000+ in India and 240+ abroad",
-                        "Curriculum: Based on NCERT, focuses on conceptual learning and analytical thinking",
+                        "Curriculum: Based on NCERT with focus on conceptual learning, analytical thinking, and preparation for exams like JEE and NEET",
                     ],
                 },
             ],
@@ -46,7 +50,7 @@ export const cbseData = {
         {
             title: "Understand CBSE Curriculum and Education",
             description:
-                "The CBSE Curriculum runs from Class 1 to Class 12 and primarily follows NCERT books. It focuses on conceptual understanding, skill development, and preparation for national-level exams like JEE and NEET.",
+                "The CBSE Curriculum runs from Class 1 to Class 12 and primarily follows NCERT books. It focuses on conceptual understanding, skill development, activity-based learning, and preparation for national-level competitive exams such as JEE, NEET, and CUET.",
         },
 
         {
@@ -69,32 +73,32 @@ export const cbseData = {
                 {
                     heading: "1. Infrastructure & Facilities",
                     list: [
-                        "Adequate land and buildings as per CBSE by-laws",
+                        "Adequate land and proper school buildings",
                         "Safe drinking water and sanitation facilities",
-                        "Fire safety and medical room provisions",
+                        "Fire safety compliance and medical room availability",
                     ],
                 },
                 {
                     heading: "2. Faculty & Staff",
                     list: [
                         "Qualified teachers as per CBSE norms",
-                        "Non-teaching staff including counselors and special educators",
+                        "Required non-teaching staff such as counselors and special educators",
                     ],
                 },
                 {
                     heading: "3. Administrative Requirements",
                     list: [
-                        "Registered under a trust/society/non-profit",
-                        "Proper documentation (land ownership, NOC from state)",
-                        "School Management Committee (SMC) in place",
+                        "School must be registered under a trust/society/non-profit",
+                        "Proper documentation like NOC, land ownership",
+                        "School Management Committee (SMC) must exist",
                     ],
                 },
                 {
                     heading: "4. Academic Setup",
                     list: [
                         "Curriculum aligned with CBSE syllabus",
-                        "Minimum 220 working days in an academic year",
-                        "Mandatory subjects like English, Hindi, Mathematics, Science, Social Science, etc.",
+                        "Minimum 220 working days yearly",
+                        "Mandatory subjects: English, Hindi, Mathematics, Science, Social Science, etc.",
                     ],
                 },
             ],
@@ -122,9 +126,9 @@ export const cbseData = {
                         "Hindi",
                         "Mathematics",
                         "Science",
-                        "Social Science",
+                        "Social Science (History, Civics, Geography)",
                         "Sanskrit / Third Language",
-                        "Computer Science / AI (optional)",
+                        "Computer Science / Artificial Intelligence (optional)",
                         "Physical & Health Education",
                         "Art Education",
                         "Work Experience",
@@ -134,18 +138,18 @@ export const cbseData = {
                     heading: "Classes 9 and 10 – Secondary Stage",
                     list: [
                         "English Language & Literature",
-                        "Hindi Course A / B",
-                        "Mathematics (Standard / Basic)",
-                        "Science",
+                        "Hindi Course A / Course B",
+                        "Mathematics: Standard / Basic",
+                        "Science (Physics, Chemistry, Biology combined)",
                         "Social Science",
-                        "Optional: Sanskrit / Foreign Language / IT / Skill Subjects",
+                        "Optional: Sanskrit / French / IT / Skill Subjects",
                     ],
                 },
                 {
                     heading: "Classes 11 and 12 – Senior Secondary Stage",
                     list: [
-                        "Science Stream: Physics, Chemistry, Biology/CS, Math, English Core",
-                        "Commerce Stream: Accountancy, Business Studies, Economics, Math/CS, English Core",
+                        "Science Stream: Physics, Chemistry, Biology/Computer Science, Mathematics, English Core",
+                        "Commerce Stream: Accountancy, Business Studies, Economics, Mathematics/CS, English Core",
                         "Humanities Stream: History, Geography, Political Science, Sociology, Psychology, English Core",
                     ],
                 },
@@ -191,7 +195,7 @@ export const cbseData = {
                 {
                     heading: "How to Calculate CGPA (Class 10)",
                     description:
-                        "Formula: CGPA = (Sum of Grade Points in 5 subjects) ÷ 5. To convert CGPA into Percentage: Percentage = CGPA × 9.5.",
+                        "Formula: CGPA = (Sum of Grade Points in 5 subjects) ÷ 5. Percentage = CGPA × 9.5.",
                 },
             ],
         },
@@ -200,6 +204,7 @@ export const cbseData = {
             title: "CBSE Result 2026: Expected Dates & How to Check",
             subsections: [
                 {
+                    heading: "Expected Result Dates",
                     list: [
                         "Class 10: Expected between May 15–20, 2026",
                         "Class 12: Expected in May 2026",
@@ -223,10 +228,10 @@ export const cbseData = {
                     list: [
                         "Toll-Free: 1800-11-8002 (9:30 AM – 5:00 PM)",
                         "Head Office: 011-22509256, 22509257, 22509258, 22509259",
-                        "Email: info.cbse@gov.in",
+                        "Email (General): info.cbse@gov.in",
                         "Exam Queries: ds.exam.cbse@gmail.com",
-                        "Result Queries: result.cbse@nic.in",
-                        "Digital Certificates: support@digilocker.gov.in",
+                        "Results Queries: result.cbse@nic.in",
+                        "DigiLocker Help: support@digilocker.gov.in",
                         "Address: Shiksha Kendra, 2, Community Centre, Preet Vihar, Delhi – 110092",
                     ],
                 },
@@ -237,24 +242,36 @@ export const cbseData = {
             title: "Why CBSE is Better than Other Boards",
             subsections: [
                 {
+                    heading: "Reasons Why CBSE Stands Out",
                     list: [
-                        "Uniform syllabus across India – great for transferable jobs",
-                        "Best for competitive exams like JEE, NEET, CUET",
-                        "Uses NCERT textbooks – simple, updated, free online",
-                        "Focus on conceptual understanding, not rote learning",
-                        "Global recognition – 240+ CBSE schools abroad",
-                        "Large network – 27,000+ schools in India",
+                        "Uniform syllabus across India — best for students who relocate frequently",
+                        "Best-suited for competitive exams like JEE, NEET, CUET",
+                        "NCERT textbooks — concept-based, easy, and free online",
+                        "Focus on conceptual learning, not rote memorization",
+                        "Global recognition — 240+ CBSE schools abroad",
+                        "Large network of 27,000+ schools in India",
                         "Transparent evaluation and modern exam pattern",
-                        "Includes skill-based and vocational subjects",
-                        "Flexible subject choices in Classes 11 & 12",
-                        "Recognized by Indian and international universities",
+                        "Skill-based subjects like AI, Data Science, Entrepreneurship",
+                        "Flexibility in choosing subjects and streams",
+                        "Recognized by all Indian and international universities",
+                    ],
+                },
+            ],
+        },
+
+        {
+            title: "FAQ – CBSE Full Form",
+            subsections: [
+                {
+                    list: [
+                        "What is the full form of CBSE?",
+                        "Is CBSE a government board?",
+                        "How many schools are affiliated with CBSE?",
+                        "What curriculum does CBSE follow?",
+                        "Who conducts CBSE exams?",
                     ],
                 },
             ],
         },
     ],
-
-    footer: {
-        text: "© 2026 CBSE Information | All Rights Reserved",
-    },
 };

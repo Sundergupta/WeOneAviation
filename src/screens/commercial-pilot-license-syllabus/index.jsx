@@ -4,7 +4,7 @@ import "./style.css";
 import airplane from '../../assets/home page slider/generate a videos of airplane.jpg';
 import { ScrollRestoration } from "react-router-dom";
 
-const syllabus = () => {
+const Syllabus = () => {
     const location = useLocation();
 
     const menuItems = [
@@ -21,12 +21,10 @@ const syllabus = () => {
             {/* Hero Section */}
             <section className="hero-section" style={{ backgroundImage: `url(${airplane})` }}>
                 <div className="container">
-                    <h1>Commercial Pilot License Syllabus </h1>
+                    <h1>Commercial Pilot License Syllabus</h1>
                     <h2>Commercial Pilot License</h2>
                 </div>
             </section>
-
-
 
             {/* ---------------- MAIN LAYOUT ---------------- */}
             <div className="cpl-content-wrapper">
@@ -53,95 +51,102 @@ const syllabus = () => {
 
                 {/* Main Content (Right) */}
                 <div className="cpl-container">
+
                     <section className="cpl-section">
-                        <h1>Commercial Pilot License (CPL) Syllabus</h1>
+                        <h1>Commercial Pilot License Syllabus</h1>
                         <p>
-                            A commercial pilot license syllabus is designed to equip aspiring pilots with the essential
-                            theoretical knowledge and practical flying skills required for safe and proficient aircraft
-                            operation. This program meets the DGCA (Directorate General of Civil Aviation) standards by
-                            combining ground instruction with hands-on flight training. The sections below outline the
-                            detailed structure of the CPL syllabus in India.
+                            A commercial pilot license syllabus was designed to teach aspiring pilots the necessary skills which will
+                            enable them to carry out safe aircraft operations efficiently. The CPL syllabus meets DGCA (Directorate
+                            General of Civil Aviation) standards through a combination of ground instruction and flight training that
+                            produces fully prepared candidates for aviation success. The following sections provide you with an in-depth review of the learning subjects in Commercial Pilot License training programs within India.
                         </p>
                     </section>
 
                     <section className="cpl-section">
                         <h2>Ground Training Subjects</h2>
                         <p>
-                            Theoretical learning at ground school is the foundation of pilot training. The commercial pilot
-                            license syllabus includes the following ground school subjects:
+                            Theoretical learning at ground school serves as the essential starting point for becoming a pilot. The
+                            commercial pilot license syllabus for ground school teaches these necessary subjects:
                         </p>
                         <ul>
                             <li>
-                                <strong>Air Navigation:</strong> Covers flight planning, radio navigation, instrument flying,
-                                and GPS systems.
+                                <strong>Air Navigation:</strong> Flight planning together with radio navigation and instrument flying and global
+                                positioning systems make up the subject matter.
                             </li>
                             <li>
-                                <strong>Aviation Meteorology:</strong> Focuses on weather patterns, cloud formations, and wind
-                                systems that affect flight.
+                                <strong>Aviation Meteorology:</strong> The training provides knowledge about weather patterns together with
+                                cloud formations and wind systems and their effects on flight operations.
                             </li>
                             <li>
-                                <strong>Air Regulation:</strong> Provides understanding of DGCA and ICAO aviation laws and rules.
+                                <strong>Air Regulation:</strong> Students gain knowledge of the rules from DGCA besides ICAO regulations and
+                                general aviation laws.
                             </li>
                             <li>
-                                <strong>Technical General:</strong> Explains aircraft systems, engines, and instruments.
+                                <strong>Technical General:</strong> Focuses on the basic working of aircraft systems, engines, and instruments.
                             </li>
                             <li>
-                                <strong>Technical Specific:</strong> Training on the aircraft type used during flight education.
+                                <strong>Technical Specific:</strong> Training for the aircraft type that a candidate operates during their flight
+                                education period.
                             </li>
                             <li>
-                                <strong>Radio Telephony (RTR):</strong> Teaches aviation communication, standard phraseology,
-                                and emergency procedures.
+                                <strong>Radio Telephony (RTR):</strong> Trains students in aviation communication, standard phraseology, and
+                                emergency procedures.
                             </li>
                         </ul>
                         <p>
-                            Instructors use classroom sessions, online learning, and mock tests to help students prepare for
-                            DGCA examinations effectively.
+                            Instructors teach subjects through classroom sessions and online resources as well as conducting mock
+                            tests to ensure students pass their DGCA examinations.
                         </p>
                     </section>
 
                     <section className="cpl-section">
                         <h2>Flight Training Modules</h2>
                         <p>
-                            In addition to theory, students must complete hands-on flight training as part of the CPL syllabus:
+                            Students must complete flight training as a practical requirement for the commercial pilot license syllabus:
                         </p>
                         <ul>
                             <li>
-                                <strong>Basic Maneuvers:</strong> Take-off, landing, straight-and-level flight, turns, climbs,
-                                and descents.
+                                <strong>Basic Maneuvers:</strong> Take-off and landing procedures together with straight-and-level flight and
+                                turns and climbing and descending flights.
                             </li>
                             <li>
-                                <strong>Cross-Country Flights:</strong> Navigation exercises between various airfields.
+                                <strong>Cross-Country Flights:</strong> Navigation exercises between different airfields.
                             </li>
                             <li>
-                                <strong>Instrument Flying:</strong> Flying solely using instruments to simulate low-visibility
-                                situations.
+                                <strong>Instrument Flying:</strong> Training includes flying using instruments alone to duplicate low-visibility
+                                conditions.
                             </li>
                             <li>
-                                <strong>Night Flying:</strong> Training for flight operations during nighttime.
+                                <strong>Night Flying:</strong> Flight operations during night conditions.
                             </li>
                             <li>
-                                <strong>Solo Flying:</strong> Independent flight sessions to build confidence and control.
+                                <strong>Solo Flying:</strong> Independent flying operations help develop personal confidence as well as flying expertise.
                             </li>
                         </ul>
                         <p>
-                            Students must log a minimum of <strong>200 hours of flight training</strong>, which includes solo,
-                            cross-country, and instrument flight requirements.
+                            To earn a commercial pilot license students need at least 200 hours of flight schooling that must cover
+                            required hours for solo flights, cross-country flights and instrument flight tasks.
                         </p>
                     </section>
 
                     <section className="cpl-section cpl-final">
                         <h2>Final Thoughts</h2>
                         <p>
-                            The commercial pilot license syllabus is a comprehensive program crafted to produce skilled,
-                            competent, and confident pilots. With a strong balance between theory and flight practice, it
-                            ensures students are fully prepared for real-world aviation challenges, varied climatic
-                            conditions, and airline operations.
+                            The official commercial pilot license syllabus exists as a carefully designed program which prepares
+                            future pilots for actual aviation duties. Students receive both academic instruction and flight training at
+                            this facility which prepares them for professional pilot competence and confidence levels. Competence in
+                            ground and flight subjects creates pilots who are prepared to manage different climate situations and
+                            corporate rules as well as airline protocol.
+
+                            The syllabus stands as the essential prerequisite for aviation students interested in reaching cockpit
+                            positions.
                         </p>
                     </section>
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default syllabus;
+export default Syllabus;

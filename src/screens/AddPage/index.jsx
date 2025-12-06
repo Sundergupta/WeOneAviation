@@ -6,26 +6,46 @@ export default function AddPage() {
     const [slug, setSlug] = useState("");
     const [path, setPath] = useState("");
 
+    const generateSlug = (text) => {
+        return text
+            .toLowerCase()
+            .replace(/ /g, "-")
+            .replace(/[^a-z0-9-]/g, "");
+    };
+
+    const handleNameChange = (e) => {
+        const value = e.target.value;
+        setName(value);
+
+        const autoSlug = generateSlug(value);
+        setSlug(autoSlug);
+        setPath("/" + autoSlug);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (!name || !slug || !path) {
+            alert("Please enter a page name!");
+            return;
+        }
+
         try {
-            const response = await axios.post("http://localhost:5000/api/pages/add", {
+            const response = await axios.post("http://localhost:5000/api/pages", {
                 name,
                 slug,
                 path,
-                metaTitle: name + " | My Website",   // optional default
-                metaDescription: "Page about " + name, // optional default
-                content: "" // you can change later
+                metaTitle: name,
+                metaDescription: "Information about " + name,
+                content: ""
             });
 
-            console.log("Response:", response.data);
             alert("Page created successfully!");
 
-            // Reset inputs
             setName("");
             setSlug("");
             setPath("");
+
         } catch (error) {
             console.error("Error creating page:", error);
             alert("Something went wrong!");
@@ -33,29 +53,18 @@ export default function AddPage() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ padding: "20px" }}>
             <h2>Add New Page</h2>
 
             <input
                 type="text"
                 placeholder="Page Name"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
             />
 
-            <input
-                type="text"
-                placeholder="Slug"
-                value={slug}
-                onChange={(e) => setSlug(e.target.value)}
-            />
-
-            <input
-                type="text"
-                placeholder="Path"
-                value={path}
-                onChange={(e) => setPath(e.target.value)}
-            />
+            <input type="text" placeholder="Slug" value={slug} readOnly />
+            <input type="text" placeholder="Path" value={path} readOnly />
 
             <button type="submit">Create Page</button>
         </form>
