@@ -16,7 +16,7 @@ export const fetchPages = async () => {
 
 // 2. Add new page
 export const addPage = async (pageData) => {
-    const res = await fetch(API_URL, {
+    const res = await fetch(`${API_URL}/add`, {  // important: /add
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -32,8 +32,8 @@ export const addPage = async (pageData) => {
     return data;
 };
 
-// 3. Get single page by ID
-export const getPageById = async (id) => {
+// 3. Get page by ID
+export const fetchPageById = async (id) => {
     const res = await fetch(`${API_URL}/${id}`);
 
     const data = await res.json();
@@ -44,7 +44,19 @@ export const getPageById = async (id) => {
     return data.page;
 };
 
-// 4. Update page
+// ⭐ 4. Get page by SLUG (for Dynamic Pages)
+export const fetchPageBySlug = async (slug) => {
+    const res = await fetch(`${API_URL}/slug/${slug}`);
+
+    const data = await res.json();
+    if (!res.ok) {
+        throw new Error(data.message || "Page not found");
+    }
+
+    return data.page;
+};
+
+// 5. Update page
 export const updatePage = async (id, pageData) => {
     const res = await fetch(`${API_URL}/${id}`, {
         method: "PUT",
@@ -62,7 +74,7 @@ export const updatePage = async (id, pageData) => {
     return data.page;
 };
 
-// 5. Delete page
+// 6. Delete page
 export const deletePage = async (id) => {
     const res = await fetch(`${API_URL}/${id}`, {
         method: "DELETE",

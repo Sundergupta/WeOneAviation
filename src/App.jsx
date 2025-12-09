@@ -4,7 +4,15 @@ import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 
 
+
+
+// 
+import Page from './pages/Page.jsx'
+
+// 
+
 // Components
+import PageList from './screens/PageList';
 import RootLayout from './components/RootLayout';
 import Home from './screens/Home';
 import AboutUs from './screens/AboutUs';
@@ -113,6 +121,13 @@ const router = createBrowserRouter([
       { path: 'DgcaGroundClasses', element: <DgcaGroundClasses /> },
       // {  full form pages } 
       { path: 'Structur', element: <Structure /> },
+      // Admin Panel
+      //SEO PAGES 
+      {
+
+        path: "/:slug", element: <Page />
+      },
+
 
       { path: 'cbse-full-form', element: <CBSE /> },
 
@@ -184,7 +199,6 @@ const router = createBrowserRouter([
       { path: 'pilot-training-in-tamil-nadu', element: <TamilNaduPage /> },
       { path: "floating-button", element: <FloatingButton /> },
 
-
       {
         path: 'commercial-pilot-license',
         element: <CommercialPilotLicense />,
@@ -201,7 +215,7 @@ const router = createBrowserRouter([
   { path: 'add-page', element: <AddPage /> },
   { path: 'pages', element: <Pages /> },
 
-
+  { path: 'page-list', element: <PageList /> },
 
   {
     path: '*',

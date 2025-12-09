@@ -1,7 +1,7 @@
 export const cbseData = {
 
     header: {
-        title: "CBSE Full Form Explained",
+        title: "CBSE Full Form – What is CBSE? Meaning, Overview & Details",
         subtitle:
             "Curriculum, Subjects, Board Overview, Importance & Career Relevance (2026)",
     },

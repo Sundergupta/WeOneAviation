@@ -1,16 +1,18 @@
 // src/pages/DynamicPage.jsx
 
 import { useEffect, useState } from "react";
-import { fetchPageById } from "../api/pageApi";
+import { useParams } from "react-router-dom";
+import { fetchPageBySlug } from "../api/pageApi";
 
-export default function DynamicPage({ pageId }) {
+export default function DynamicPage() {
+    const { slug } = useParams();   // IMPORTANT: Get slug from URL
     const [page, setPage] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadPage() {
             try {
-                const data = await fetchPageById(pageId);
+                const data = await fetchPageBySlug(slug);
                 setPage(data);
             } catch (err) {
                 console.error("Error loading page:", err);
@@ -20,7 +22,7 @@ export default function DynamicPage({ pageId }) {
         }
 
         loadPage();
-    }, [pageId]);
+    }, [slug]);
 
     if (loading) {
         return <h2 style={{ padding: "20px" }}>Loading...</h2>;
@@ -33,13 +35,9 @@ export default function DynamicPage({ pageId }) {
     return (
         <div style={{ padding: "20px" }}>
             <h1>{page.name}</h1>
-            <p><strong>Slug:</strong> {page.slug}</p>
-            <p><strong>Path:</strong> {page.path}</p>
 
-            {/* Optional if you store content */}
             {page.content && (
                 <div style={{ marginTop: "20px" }}>
-                    <h3>Content:</h3>
                     <div dangerouslySetInnerHTML={{ __html: page.content }} />
                 </div>
             )}

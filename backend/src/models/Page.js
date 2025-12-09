@@ -15,6 +15,34 @@ const PageSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+
+        // ✅ SEO FIELDS TO ADD
+        metaTitle: {
+            type: String,
+            default: "",
+        },
+        metaDescription: {
+            type: String,
+            default: "",
+        },
+        metaKeywords: {
+            type: String,
+            default: "",
+        },
+
+        // OPTIONAL (but good for social media SEO)
+        ogTitle: {
+            type: String,
+            default: "",
+        },
+        ogDescription: {
+            type: String,
+            default: "",
+        },
+        ogImage: {
+            type: String,
+            default: "",
+        },
     },
     { timestamps: true }
 );

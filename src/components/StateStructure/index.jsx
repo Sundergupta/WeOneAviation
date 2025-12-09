@@ -11,7 +11,7 @@ const StructurePage = ({ data }) => {
         { name: "Pilot training in Kerala", link: "/pilot-training-in-kerala" },
         { name: "Pilot training in Delhi", link: "/pilot-training-in-delhi" },
         { name: "Pilot Training in Pune", link: "/pilot-training-in-pune" },
-        { name: "Pilot training institute in Kolkata", link: "/pilot-training-in-kolkata" },
+        { name: "Pilot training in Kolkata", link: "/pilot-training-in-kolkata" },
         { name: "Pilot training in Coimbatore", link: "/pilot-training-in-coimbatore" },
         { name: "Pilot training in Gujarat", link: "/pilot-training-in-gujarat" },
         { name: "Pilot training in Goa", link: "/pilot-training-in-goa" },

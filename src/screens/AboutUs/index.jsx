@@ -1,49 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 import './style.css';
 import TrainingCards from '../../components/TrainingCards';
 import About2 from '../../assets/About2.webp';
-// Assume you'll place the airplane image in your assets folder
 import MissionImage from '../../components/TrainingCards';
-
 
 const AboutUs = () => {
 
-    const advantages = [
-        {
-            icon: '🎯',
-            title: 'Personalized Coaching',
-            description: 'Tailored guidance matching your learning style for optimal understanding.'
-        },
-        {
-            icon: '👨‍🏫',
-            title: 'Expert Faculty',
-            description: 'Learn crucial concepts from experienced, airline-rated instructors.'
-        },
-        {
-            icon: '⏰',
-            title: 'Flexible Scheduling',
-            description: 'Study at your own pace with adaptable online class timings.'
-        },
-        {
-            icon: '💰',
-            title: 'Affordable Courses',
-            description: 'Receive premium ground school education at competitive prices.'
-        },
-        {
-            icon: '❓',
-            title: '24/7 Doubt-Clearing',
-            description: 'Never get stuck – access round-the-clock support from experts.'
-        },
-        {
-            icon: '🤝',
-            title: 'Dedicated Support',
-            description: 'We are fully committed to your success, every step of the way.'
-        }
-    ];
+    // ⭐ Fetch SEO Meta Data From Backend
+    const [seo, setSeo] = useState(null);
 
+    useEffect(() => {
+        fetch("https://weoneaviation-backend.onrender.com/api/pages/slug/about-us")
+
+
+            .then(res => res.json())
+            .then(data => setSeo(data.page))
+            .catch(err => console.log("SEO Fetch Error:", err));
+    }, []);
+
+    const advantages = [
+        { icon: '🎯', title: 'Personalized Coaching', description: 'Tailored guidance matching your learning style for optimal understanding.' },
+        { icon: '👨‍🏫', title: 'Expert Faculty', description: 'Learn crucial concepts from experienced, airline-rated instructors.' },
+        { icon: '⏰', title: 'Flexible Scheduling', description: 'Study at your own pace with adaptable online class timings.' },
+        { icon: '💰', title: 'Affordable Courses', description: 'Receive premium ground school education at competitive prices.' },
+        { icon: '❓', title: '24/7 Doubt-Clearing', description: 'Never get stuck – access round-the-clock support from experts.' },
+        { icon: '🤝', title: 'Dedicated Support', description: 'We are fully committed to your success, every step of the way.' }
+    ];
 
     return (
         <div className="about-us">
+
+            {/* ⭐ Inject Backend Meta Tags Into React Page */}
+            {seo && (
+                <Helmet>
+                    <title>{seo.metaTitle}</title>
+                    <meta name="description" content={seo.metaDescription} />
+                    <meta name="keywords" content={seo.metaKeywords} />
+                    <meta property="og:title" content={seo.ogTitle} />
+                    <meta property="og:description" content={seo.ogDescription} />
+                    <meta property="og:image" content={seo.ogImage} />
+                </Helmet>
+            )}
+
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-background">
@@ -79,9 +78,9 @@ const AboutUs = () => {
                         <div className="about-content">
                             <div className="about-text">
                                 <div className="section-header">
-
                                     <h2 className="title-pill">Who We Are</h2>
                                 </div>
+
                                 <p className="intro-text">
                                     We One Aviation is a premier aviation organization offering pilot training, aviation
                                     consulting, aviation support services, and NSOP charter operations across India.
@@ -89,7 +88,6 @@ const AboutUs = () => {
                                     professional training, and reliable aviation solutions.
                                 </p>
 
-                                {/* ✅ NEW CONTENT ADDED HERE – NO LAYOUT CHANGES */}
                                 <p className="intro-text">
                                     <strong>Our Services:</strong> We offer comprehensive aviation solutions including Pilot Training, Aviation Consulting, CPL Pathway guidance, NSOP & Charter services, and end-to-end aviation support.
                                 </p>
@@ -113,7 +111,6 @@ const AboutUs = () => {
                                 <p className="intro-text">
                                     <strong>Visit Us:</strong> Experience our training environment, meet our experts, and get personalized counselling for your aviation journey at our centres across India.
                                 </p>
-                                {/* END NEW CONTENT */}
 
                                 <div className="cta-container">
                                     <button className="cta-button">Get in Touch</button>
@@ -128,14 +125,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* 
-            <p className="intro-text">
-                <h3 className="small-heading">Our Mission</h3>
-                To empower aviation aspirants and clients by delivering safe, affordable, and
-                excellence-driven services across aviation training and charter operations.
-            </p> */}
-
-            {/* atc section */}
+            {/* ATC Advantage */}
             <section className="atc-advantage">
                 <div className="container">
                     <h2 className="section-title">The ATC Advantage</h2>
@@ -151,6 +141,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
+            {/* About Us Section 2 */}
             <section className="who-we-are-section">
                 <div className="about-bleed">
                     <div className="container about-container">
@@ -164,6 +155,7 @@ const AboutUs = () => {
                                     <h3 className="small-heading">Our Vision</h3>
                                     To be India’s most trusted name in aviation education, aviation solutions, and charter travel.
                                 </p>
+
                                 <h3 className="small-heading">What Sets Us Apart</h3>
                                 <ul className="bullet-list">
                                     <li>Comprehensive CPL training pathway</li>
@@ -187,8 +179,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-
-            {/* Our Mission Section */}
+            {/* Mission Section */}
             <section className="mission-section">
                 <div className="mission-container">
                     <div className="mission-image-wrapper">
@@ -198,18 +189,21 @@ const AboutUs = () => {
                         <div className="mission-pill">
                             <span className="icon">✈️</span> Our Mission
                         </div>
+
                         <h2 className="mission-title">Our Mission</h2>
+
                         <p className="mission-text">
                             To empower aviation aspirants and clients by delivering safe, affordable, and
-                            excellence-driven services across aviation training and charter operations.                        </p>
+                            excellence-driven services across aviation training and charter operations.
+                        </p>
+
                         <button className="btn-get-in-touch">
                             <i className="arrow-icon">→</i> Get In Touch
                         </button>
                     </div>
                 </div>
             </section>
-
-        </div >
+        </div>
     );
 };
 
