@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
+    <!-- Dynamic SEO Meta (from DB) -->
     <title>
         <%= page.metaTitle %>
     </title>
@@ -13,13 +14,16 @@
     <meta property="og:title" content="<%= page.ogTitle %>">
     <meta property="og:description" content="<%= page.ogDescription %>">
     <meta property="og:image" content="<%= page.ogImage %>">
+
+    <!-- Load React build -->
+    <link rel="stylesheet" href="/dist/assets/index.css">
 </head>
 
 <body>
-    <h1>
-        <%= page.name %>
-    </h1>
-    <p>This page is rendered on server with real SEO meta tags.</p>
+    <div id="root"></div>
+
+    <!-- React JS -->
+    <script type="module" src="/dist/assets/index.js"></script>
 </body>
 
 </html>

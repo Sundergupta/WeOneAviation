@@ -22,22 +22,16 @@ router.get("/", getPages);
 // ⭐ NEW: Server-Side Render SEO Page
 // URL → /api/pages/render/about-us
 // ==============================
-router.get("/render/:slug", async (req, res) => {
-    try {
-        const slug = req.params.slug;
+router.get("/render-about-us", async (req, res) => {
+    const page = await Page.findOne({ slug: "about-us" });
 
-        const page = await Page.findOne({ slug });
+    if (!page) return res.status(404).send("Page Not Found");
 
-        if (!page) {
-            return res.status(404).send("<h1>Page Not Found</h1>");
-        }
-
-        // Render EJS template with meta values
-        res.render("page", { page });
-    } catch (error) {
-        res.status(500).send("Server Error");
-    }
+    res.render("page", { page });
 });
+
+
+// Render EJS template with meta values
 
 // IMPORTANT → SEO dynamic pages use slug (API JSON version)
 router.get("/slug/:slug", getPageBySlug);

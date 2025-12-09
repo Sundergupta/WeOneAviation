@@ -18,9 +18,12 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// ⭐ Correct EJS Setup (IMPORTANT FIX)
+// ⭐ Serve React build files
+app.use(express.static(path.join(__dirname, "../public")));
+
+// ⭐ Correct EJS Setup
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../views"));   // <-- FIXED
+app.set("views", path.join(__dirname, "../views"));
 
 // MongoDB Connect
 connectDB();
