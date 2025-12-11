@@ -42,34 +42,34 @@ import ContactUs from './components/ContactUs';
 // states pages 
 import IndiaPage from './screens/States/IndiaPage/index';
 
-import HyderabadPage from './screens/States/Hyderabad/index';
-import MumbaiPage from './screens/States/Mumbai/index';
+import HyderabadPage from './screens/States/HyderabadPage/index';
+import MumbaiPage from './screens/States/MumbaiPage/index';
 import ChennaiPage from './screens/States/ChennaiPage/index';
-import BanglorePage from './screens/States/Banglore/index';
+import BanglorePage from './screens/States/BanglorePage/index';
 import KeralaPage from './screens/States/KeralaPage/index';
-import DelhiPage from './screens/States/Delhi/index';
-import PunePage from './screens/States/Pune/index';
+import DelhiPage from './screens/States/DelhiPage/index';
+import PunePage from './screens/States/PunePage/index';
 import KolkataPage from './screens/States/KolkataPage/index';
-import CoimbatorePage from './screens/States/Coimbatore/index';
-import GujaratPage from './screens/States/Gujarat/index';
-import GoaPage from './screens/States/Goa/index';
-import GurugramPage from './screens/States/Gurugram/index';
+import CoimbatorePage from './screens/States/CoimbatorePage/index';
+import GujaratPage from './screens/States/GujaratPage/index';
+import GoaPage from './screens/States/GoaPage/index';
+import GurugramPage from './screens/States/GurugramPage/index';
 // REMOVED: import tamilNaduPage from './screens/States/TamilNadu/index';
-import RajasthanPage from './screens/States/Rajasthan/index';
-import HaryanaPage from './screens/States/Haryana/index';
-import PunjabPage from './screens/States/Punjab/index';
-import AndhraPradesh from './screens/States/Andhrapradesh/index';
-import ArunachalPradeshPage from './screens/States/Arunachalpradesh/index';
-import AssamPage from './screens/States/Assam/index';
-import Bihar from './screens/States/Bihar/index';
-import ChhattisgarhPage from './screens/States/Chhattisgarh/index';
-import HimachalPradeshPage from './screens/States/HimachalPradeshData/index';
-import NoidaPage from './screens/States/Noida/index';
-import GhaziabadPage from './screens/States/Ghaziabad/index';
-import NagpurPage from './screens/States/Nagpur/index';
-import MaharashtraPage from './screens/States/Maharashtra/index';
-import JaipurPage from './screens/States/Jaipur/index';
-import TamilNaduPage from './screens/States/TamilNadu/index'; // KEEPING THIS ONE
+import RajasthanPage from './screens/States/RajasthanPage/index';
+import HaryanaPage from './screens/States/HaryanaPage/index';
+import PunjabPage from './screens/States/PunjabPage/index';
+import AndhraPradesh from './screens/States/AndhrapradeshPage/index';
+import ArunachalPradeshPage from './screens/States/ArunachalpradeshPage/index';
+import AssamPage from './screens/States/AssamPage/index';
+import Bihar from './screens/States/BiharPage/index';
+import ChhattisgarhPage from './screens/States/ChhattisgarhPage/index';
+import HimachalPradeshPage from './screens/States/HimachalPradeshDataPage/index';
+import NoidaPage from './screens/States/NoidaPage/index';
+import GhaziabadPage from './screens/States/GhaziabadPage/index';
+import NagpurPage from './screens/States/NagpurPage/index';
+import MaharashtraPage from './screens/States/MaharashtraPage/index';
+import JaipurPage from './screens/States/JaipurPage/index';
+import TamilNaduPage from './screens/States/TamilNaduPage/index'; // KEEPING THIS ONE
 
 
 
