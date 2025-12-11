@@ -88,7 +88,7 @@ import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
 import AirNavigation from './screens/AirNavigation';
 
 // states pages 
-import India from './screens/States/India/index';
+// import India from './screens/States/India/index';
 import StateStructure from './components/StateStructure'
 
 
