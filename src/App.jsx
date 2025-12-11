@@ -40,7 +40,7 @@ import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
 // states pages 
 import IndiaPage from './screens/States/india/index';
-import HyderabadPage from './screens/States/hyderabad/index';
+// import HyderabadPage from './screens/States/hyderabad/index';
 import MumbaiPage from './screens/States/mumbai/index';
 import ChennaiPage from './screens/States/chennai/index';
 import BanglorePage from './screens/States/Banglore/index';
@@ -169,7 +169,7 @@ const router = createBrowserRouter([
       { path: 'State-Structure', element: <StateStructure /> },
       // states pages 
       { path: 'pilot-training-in-india', element: <IndiaPage /> },
-      { path: 'pilot-training-in-hyderabad', element: <HyderabadPage /> },
+      // { path: 'pilot-training-in-hyderabad', element: <HyderabadPage /> },
       { path: 'pilot-training-in-mumbai', element: <MumbaiPage /> },
       { path: 'pilot-training-in-chennai', element: <ChennaiPage /> },
       { path: 'pilot-training-in-bangalore', element: <BanglorePage /> },
