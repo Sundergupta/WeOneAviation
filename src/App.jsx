@@ -41,6 +41,7 @@ import ContactUs from './components/ContactUs';
 // states pages 
 // states pages 
 import IndiaPage from './screens/States/India/index';
+
 import HyderabadPage from './screens/States/Hyderabad/index';
 import MumbaiPage from './screens/States/Mumbai/index';
 import ChennaiPage from './screens/States/Chennai/index';
@@ -170,7 +171,7 @@ const router = createBrowserRouter([
       { path: 'dgca-full-form', element: <DGCA /> },
       { path: 'rtr-full-form-meaning-importance-and-complete-guide', element: <RtrPage /> },
       // states routes
-      { path: 'pilot-training-in-india', element: <India /> },
+      // { path: 'pilot-training-in-india', element: <India /> },
       { path: 'State-Structure', element: <StateStructure /> },
       // states pages 
       { path: 'pilot-training-in-india', element: <IndiaPage /> },
