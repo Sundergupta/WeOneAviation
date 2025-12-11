@@ -49,7 +49,7 @@ import BanglorePage from './screens/States/Banglore/index';
 import KeralaPage from './screens/States/KeralaPage/index';
 import DelhiPage from './screens/States/Delhi/index';
 import PunePage from './screens/States/Pune/index';
-import KolkataPage from './screens/States/Kolkata/index';
+import KolkataPage from './screens/States/KolkataPage/index';
 import CoimbatorePage from './screens/States/Coimbatore/index';
 import GujaratPage from './screens/States/Gujarat/index';
 import GoaPage from './screens/States/Goa/index';
