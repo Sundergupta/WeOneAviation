@@ -171,7 +171,7 @@ const router = createBrowserRouter([
       { path: 'dgca-full-form', element: <DGCA /> },
       { path: 'rtr-full-form-meaning-importance-and-complete-guide', element: <RtrPage /> },
       // states routes
-      // { path: 'pilot-training-in-india', element: <India /> },
+
       { path: 'State-Structure', element: <StateStructure /> },
       // states pages 
       { path: 'pilot-training-in-india', element: <IndiaPage /> },
