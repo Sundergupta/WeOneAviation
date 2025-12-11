@@ -39,33 +39,33 @@ import RtrPage from './screens/rtr-full-form-meaning-importance-and-complete-gui
 import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
 // states pages 
-import IndiaPage from './screens/States/India/index.jsx';
-import HyderabadPage from './screens/States/Hyderabad/index.jsx';
-import MumbaiPage from './screens/States/Mumbai/index.jsx';
-import ChennaiPage from './screens/States/Chennai/index.jsx';
+import IndiaPage from './screens/States/India';
+import HyderabadPage from './screens/States/Hyderabad';
+import MumbaiPage from './screens/States/Mumbai';
+import ChennaiPage from './screens/States/Chennai';
 import BanglorePage from './screens/States/Banglore';
-import KeralaPage from './screens/States/Kerala/index.jsx';
+import KeralaPage from './screens/States/Kerala';
 import DelhiPage from './screens/States/Delhi';
-import PunePage from './screens/States/Pune/index.jsx';
-import KolkataPage from './screens/States/Kolkata/index.jsx';
-import CoimbatorePage from './screens/States/Coimbatore/index.jsx';
+import PunePage from './screens/States/Pune';
+import KolkataPage from './screens/States/Kolkata';
+import CoimbatorePage from './screens/States/Coimbatore';
 import GujaratPage from './screens/States/Gujarat';
 import GoaPage from './screens/States/Goa';
 import GurugramPage from './screens/States/Gurugram';
 import tamilNaduPage from './screens/States/tamilNadu';
 import RajasthanPage from './screens/States/rajasthan';
-import HaryanaPage from './screens/States/Haryana/index.jsx';
+import HaryanaPage from './screens/States/Haryana';
 import PunjabPage from './screens/States/Punjab';
-import AndhraPradesh from './screens/States/Andhrapradesh/index.jsx';
-import ArunachalPradeshPage from './screens/States/Arunachalpradesh/index.jsx';
-import AssamPage from './screens/States/Assam/index.jsx';
+import AndhraPradesh from './screens/States/Andhrapradesh';
+import ArunachalPradeshPage from './screens/States/Arunachalpradesh';
+import AssamPage from './screens/States/Assam';
 import Bihar from './screens/States/Bihar';
-import ChhattisgarhPage from './screens/States/Chhattisgarh/index.jsx';
+import ChhattisgarhPage from './screens/States/Chhattisgarh';
 import HimachalPradeshPage from './screens/States/himachalPradeshData';
-import NoidaPage from './screens/States/Noida/index.jsx';
-import GhaziabadPage from './screens/States/Ghaziabad/index.jsx';
-import NagpurPage from './screens/States/Nagpur/index.jsx';
-import MaharashtraPage from './screens/States/Maharashtra/index.jsx';
+import NoidaPage from './screens/States/Noida';
+import GhaziabadPage from './screens/States/Ghaziabad';
+import NagpurPage from './screens/States/Nagpur';
+import MaharashtraPage from './screens/States/Maharashtra';
 import JaipurPage from './screens/States/Jaipur';
 import TamilNaduPage from './screens/States/tamilNadu';
 // services pages 
@@ -83,7 +83,7 @@ import AircraftSpareParts from "./screens/Services/AircraftSpareParts";
 import AirNavigation from './screens/AirNavigation';
 
 // states pages 
-import India from './screens/States/India/index.jsx';
+import India from './screens/States/India/';
 import StateStructure from './components/StateStructure'
 
 
