@@ -40,7 +40,7 @@ import ContactUs from './components/ContactUs';
 // import AdminPanel from './components/AdminPanel';
 // states pages 
 // states pages 
-import IndiaPage from './screens/States/India/index';
+import IndiaPage from './screens/States/IndiaPage/index';
 
 import HyderabadPage from './screens/States/Hyderabad/index';
 import MumbaiPage from './screens/States/Mumbai/index';
