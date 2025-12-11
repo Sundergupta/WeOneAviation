@@ -44,7 +44,7 @@ import IndiaPage from './screens/States/IndiaPage/index';
 
 import HyderabadPage from './screens/States/Hyderabad/index';
 import MumbaiPage from './screens/States/Mumbai/index';
-import ChennaiPage from './screens/States/Chennai/index';
+import ChennaiPage from './screens/States/ChennaiPage/index';
 import BanglorePage from './screens/States/Banglore/index';
 import KeralaPage from './screens/States/Kerala/index';
 import DelhiPage from './screens/States/Delhi/index';
