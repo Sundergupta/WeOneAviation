@@ -7,11 +7,11 @@ import { ScrollRestoration } from "react-router-dom";
 
 
 // 
-import Page from './pages/Page'
+import Page from './pages/Page';
 
 // 
 
-import FlyingSchoolsInUSA from './screens/Flying-schools-In-usa';
+import FlyingSchoolsInUSA from './screens/flying-schools-In-usa';
 
 // Components
 import PageList from './screens/PageList';
