@@ -7,188 +7,226 @@ const DgcaGroundClasses = () => {
         <main className="dgca-page">
             <header className="dgca-hero">
                 <div className="dgca-hero-inner">
-                    <h1>DGCA CPL GROUND CLASSES for DGCA EXAM</h1>
+                    <h1>
+                        <strong>
+                            DGCA Ground Classes – Complete Guide to CPL Ground Training in India
+                        </strong>
+                    </h1>
                     <p className="dgca-subtitle">
-                        India’s best DGCA ground classes, which deliver 100% results every year and have trained more than 3,000 pilots in India.
+                        Structured DGCA ground training designed to help aspiring pilots clear CPL theory exams and build strong aviation fundamentals.
                     </p>
                 </div>
-                <img src={heroImage} alt="DGCA Ground Classes" className="dgca-hero-image" />
+                <img
+                    src={heroImage}
+                    alt="DGCA Ground Classes"
+                    className="dgca-hero-image"
+                />
             </header>
 
             <section className="dgca-intro">
                 <p>
-                    DGCA Ground Classes are where students prepare for the DGCA exams. It’s similar to regular coaching institutes like IIT or MBBS coaching — the only difference is that here you’ll master all DGCA subjects required to obtain a Commercial Pilot License (CPL).
+                    Preparing for DGCA exams is the most crucial step in becoming a commercial pilot. DGCA ground classes provide structured theoretical knowledge required to clear DGCA written examinations and progress toward a Commercial Pilot License (CPL).
                 </p>
                 <p>
-                    DGCA Ground Classes are classes where students prepare themselves for the DGCA exam. It’s a normal coaching class, like IIT and MBBS coaching classes. The only difference is that after taking DGCA ground classes, you will master the DGCA exam, which is required to obtain a pilot license.
+                    Whether you are a beginner or already flying, enrolling in the right DGCA ground class can make a significant difference in your success.
                 </p>
             </section>
 
             <aside className="dgca-toc">
                 <h2>Contents</h2>
                 <ol>
-                    <li>What Is DGCA?</li>
-                    <li>What Does DGCA Do?</li>
-                    <li>Why Are DGCA Ground Classes Important?</li>
-                    <li>DGCA Ground Classes Subjects</li>
-                    <li>DGCA CPL Subjects & Syllabus</li>
-                    <li>Duration & Eligibility</li>
-                    <li>Why Choose We One Aviation Academy</li>
+                    <li>What Are DGCA Ground Classes?</li>
+                    <li>DGCA Ground Class Subjects (CPL)</li>
+                    <li>Why DGCA Ground Training Is Important</li>
+                    <li>Who Should Join DGCA Ground Classes?</li>
+                    <li>Online vs Offline DGCA Ground Classes</li>
+                    <li>DGCA Ground Classes Fees</li>
+                    <li>How to Choose the Best DGCA Ground Classes</li>
                 </ol>
             </aside>
 
             <section className="dgca-section">
-                <h2>What Is DGCA?</h2>
+                <h3>
+                    <strong>What Are DGCA Ground Classes?</strong>
+                </h3>
                 <p>
-                    The Directorate General of Civil Aviation (DGCA) is the main government body that controls and regulates all aviation-related activities in India. It makes rules for flying, conducts DGCA exams, and issues pilot licenses. To become a pilot, you must follow DGCA regulations and clear DGCA exams.
-                </p>
+                    DGCA ground classes are classroom or online training programs designed to help aspiring pilots clear DGCA CPL theory exams conducted by the Directorate General of Civil Aviation (DGCA), India.
+                    These ground classes for DGCA exams focus on building strong conceptual understanding, exam-oriented preparation, and aviation fundamentals.                </p>
 
-                <h2>What Does DGCA Do?</h2>
+                <h3>
+                    <strong>DGCA Ground Class Subjects (CPL)</strong>
+                </h3>
+
+                <p>All ground classes for CPL cover mandatory DGCA subjects, including:</p>
                 <ul>
-                    <li><strong>Issues Licenses:</strong> To pilots, aircraft engineers, and flight instructors.</li>
-                    <li><strong>Ensures Safety:</strong> Makes sure all aircraft, airports, and airlines follow safety standards.</li>
-                    <li><strong>Approves Flying Schools:</strong> Only DGCA-approved schools can train pilots in India.</li>
-                    <li><strong>Conducts Exams:</strong> Organizes theory exams (called DGCA Ground Exams) for student pilots.</li>
+                    <li>Air Navigation</li>
+                    <li>Aviation Meteorology</li>
+                    <li>Air Regulations</li>
+                    <li>Technical General</li>
+                    <li>Technical Specific</li>
+                    <li>Radio Telephony Restricted (RTR)</li>
+                </ul>
+                <p>Professional CPL ground classes are structured as per the latest DGCA syllabus and question patterns.</p>
+
+                <h3>
+                    <strong>Why DGCA Ground Training Is Important</strong>
+                </h3>
+                <p>
+                    Quality ground training is essential because DGCA exams are concept-based and require strong fundamentals.                </p>
+                <h3>
+                    <strong>DGCA Ground Classes</strong>
+                </h3>
+                <ul>
+                    <li>Higher DGCA exam pass rate</li>
+                    <li>Structured study plan</li>
+                    <li>Experienced instructors</li>
+                    <li>Real DGCA exam question practice</li>
+                    <li>Faster CPL completion</li>
                 </ul>
 
-                <h2>Why Are DGCA Ground Classes Important for Pilot Training?</h2>
-                <p>
-                    DGCA Ground Classes are the first step toward becoming a pilot. If your dream is to become a pilot, you must clear the DGCA exams — and to do that, these classes are essential.
-                </p>
-
-                <h3>Benefits of DGCA Ground Classes</h3>
-                <ul>
-                    <li>Easy-to-learn syllabus</li>
-                    <li>Doubt clearing in every class</li>
-                    <li>Learn directly from professional pilots and instructors</li>
-                    <li>Free access to books and notes</li>
-                    <li>Interaction with other aspiring aviators</li>
-                    <li>No paperwork burden — we help with computer number registration, DGCA medicals, exam forms, and visa processing</li>
-                </ul>
             </section>
 
             <section className="dgca-section">
-                <h2>DGCA Ground Classes Subjects For DGCA Exam</h2>
-                <p>There are mainly 6 subjects in DGCA Exam.</p>
+                <h3>
+                    <strong>Ground Classes for DGCA Exams – Who Should Join?</strong>
+                </h3>
+                <p>Ground classes for DGCA exams are ideal for:</p>
+                <ul>
+                    <li>10+2 students planning to pursue CPL</li>
+                    <li>Flying students preparing for DGCA papers</li>
+                    <li>Foreign license holders converting to DGCA CPL</li>
+                    <li>Working professionals pursuing pilot training</li>
+                </ul>
+                <p>Students often search for DGCA ground classes near me or ground classes for DGCA exams near me to find local institutes.</p>
+                <h3>
+                    <strong>Online vs Offline DGCA Ground Classes</strong>
+                </h3>
 
-                <h3>Air Navigation</h3>
-                <p>
-                    Learn to navigate aircraft using maps, coordinates, instruments, and GPS.
-                    <br /><strong>Book focus:</strong> Teaches how to calculate direction, distance, time, and fuel for safe and accurate flying.
-                </p>
+                <p><strong>DGCA Ground Classes Online</strong></p>
+                <ul>
+                    <li>Live and recorded lectures</li>
+                    <li>Flexible study schedule</li>
+                    <li>Access to digital study material</li>
+                </ul>
+                <p>Popular among students searching for DGCA ground classes online or online ground classes for CPL.</p>
 
-                <h3>Aviation Meteorology</h3>
-                <p>
-                    Study weather conditions and how they affect flying.
-                    <br /><strong>Book focus:</strong> Covers clouds, wind patterns, storms, pressure systems, and how to read weather charts for flight planning.
-                </p>
-
-                <h3>Air Regulations</h3>
-                <p>
-                    Understand the rules and laws of aviation in India and worldwide.
-                    <br /><strong>Book focus:</strong> Includes DGCA rules, ICAO guidelines, airspace classifications, and pilot responsibilities.
-                </p>
-
-                <h3>Technical General</h3>
-                <p>
-                    Learn how an aircraft works – its engine, systems, and parts.
-                    <br /><strong>Book focus:</strong> Explains engines, hydraulics, electrical systems, instruments, and basic aerodynamics.
-                </p>
-
-                <h3>Technical Specific</h3>
-                <p>
-                    Know the exact aircraft you’ll fly during training.
-                    <br /><strong>Book focus:</strong> Covers aircraft systems, performance, and checklists for the specific trainer aircraft (e.g., Cessna 172).
-                </p>
-
-                <h3>Radio Telephony (RTR)</h3>
-                <p>
-                    Learn how to communicate with ATC using aviation radio language.
-                    <br /><strong>Book focus:</strong> Includes standard phrases, procedures, emergency communication, and mock RT exercises.
-                </p>
+                <p><strong>Offline Ground Classes:</strong></p>
+                <ul>
+                    <li>Classroom interaction</li>
+                    <li>Discipline and routine</li>
+                    <li>Peer learning and instructor guidance</li>
+                </ul>
+                <p>Cities like Delhi are major hubs for offline training.</p>
             </section>
 
             <section className="dgca-section">
-                <h2>DGCA CPL Subjects, Syllabus and Topics (with Explanation)</h2>
-                <ol>
-                    <li>
-                        <strong>Air Navigation:</strong> Flight planning, map reading, compass errors, radio aids (VOR, NDB, DME), and airspace classifications.
-                    </li>
-                    <li>
-                        <strong>Aviation Meteorology:</strong> Atmospheric structure, weather systems, thunderstorms, icing, visibility, METAR/TAF interpretation.
-                    </li>
-                    <li>
-                        <strong>Air Regulation:</strong> Aviation laws, licensing requirements, CARs, rules of the air, flight time/duty limits.
-                    </li>
-                    <li>
-                        <strong>Technical General:</strong> Aerodynamics, engines, structures, electrical & hydraulic systems, instruments.
-                    </li>
-                    <li>
-                        <strong>Technical Specific:</strong> Systems, limitations, procedures, and emergency operations of the trainee aircraft.
-                    </li>
-                </ol>
-
-                <h2>Duration of DGCA Ground Classes</h2>
+                <h3>
+                    <strong>DGCA Ground Classes Fees</strong>
+                </h3>
                 <p>
-                    Duration varies between academies. At We One Aviation, our full DGCA syllabus is covered in 6 months. Classes may be extended for students who do not clear exams on their first attempt.
+                    DGCA ground classes fees depend on location, faculty, and training format.
+                </p>
+                <strong>Approximate Fee Range:</strong>
+                <ul>
+                    <li>Full CPL Ground Classes: ₹1.5 – 3.5 Lakhs</li>
+                    <li>Subject-wise enrollment available</li>
+                    <li>Online classes generally cost less</li>
+                </ul>
+                <p>Students comparing options often search ground classes for CPL fees, CPL ground classes fees, or ground classes for CPL near me.</p>
+
+                <h3>
+                    <strong>Best Ground Classes for DGCA Exams – How to Choos</strong>
+                </h3>
+                <p>When selecting the best ground classes for DGCA exams, consider these factors:</p>
+                <ul>
+                    <li>DGCA exam success rate</li>
+                    <li>Instructor flying and teaching experience</li>
+                    <li>Updated DGCA syllabus</li>
+                    <li>Mock tests and revision support</li>
+                    <li>Online and offline availability</li>
+                </ul>
+                <p>Top institutes offering DGCA CPL ground classes maintain strong academic discipline and consistent results.</p>
+            </section>
+            <section className="dgca-section">
+                <h3>
+                    <strong>Ground Classes for Pilots – What You Learn</strong>
+                </h3>
+                <p>
+                    Professional ground classes for pilots go beyond exam preparation.
                 </p>
 
-                <h2>Eligibility for DGCA Ground Classes</h2>
-                <p>To enroll and begin your journey toward becoming a Commercial Pilot you must meet:</p>
-
-                <h4>Educational Qualification</h4>
+                <p><strong>Skills Covered:</strong></p>
                 <ul>
-                    <li>Passed Class 12th (10+2) or equivalent from a recognized board.</li>
-                    <li>Physics and Mathematics are mandatory (students from Science stream preferred).</li>
-                    <li>If not studied in 12th, you can appear for these subjects through NIOS to become eligible.</li>
+                    <li>Aviation decision-making</li>
+                    <li>Weather interpretation</li>
+                    <li>Flight planning</li>
+                    <li>Aircraft systems understanding</li>
+                    <li>Airline interview preparation</li>
                 </ul>
 
-                <h4>Minimum Age</h4>
-                <p>At least 17 years to enroll; 18+ to apply for CPL.</p>
+                <p>
+                    This makes aviation ground classes valuable even after clearing DGCA exams.
+                </p>
 
-                <h4>Medical Fitness</h4>
-                <p>Obtain DGCA Class 2 Medical Certificate before starting ground classes; eventually Class 1 is required for CPL issuance. Certificates must be from DGCA-approved doctors.</p>
+                <h3>
+                    <strong>Ground Training for DGCA Exams for CPL</strong>
+                </h3>
+                <p>
+                    Structured ground training for DGCA exams for CPL helps students:
+                </p>
+                <ul>
+                    <li>Clear DGCA papers on first attempt</li>
+                    <li>Reduce overall CPL duration</li>
+                    <li>Save money on re-exams</li>
+                    <li>Improve flying performance</li>
+                </ul>
+                <p>
+                    Many students combine CPL ground classes online with offline doubt sessions.
+                </p>
 
-                <h4>English Proficiency</h4>
-                <p>Read, write and understand English fluently — aviation communication is in English.</p>
+                <h3>
+                    <strong>Searching for “DGCA Ground Classes Near Me”</strong>
+                </h3>
+                <p>
+                    Students across India frequently search:
+                </p>
+                <ul>
+                    <li>DGCA ground classes near me</li>
+                    <li>CPL ground classes near me</li>
+                    <li>ground classes for CPL in Delhi</li>
+                </ul>
+                <p>
+                    Reputed institutes now offer hybrid models to support students from all locations.
+                </p>
 
-                <h4>Passion & Dedication</h4>
-                <p>Interest in aviation, willingness to study technical subjects, and discipline are essential.</p>
+                <h3>
+                    <strong>Final Thoughts – Start Your Pilot Journey with the Right Ground Classes</strong>
+                </h3>
+                <p>
+                    Strong theoretical foundations are key to becoming a professional pilot. Enrolling in the right DGCA ground classes ensures you clear exams confidently and progress smoothly toward your CPL.
+                </p>
+                <p>
+                    Whether you choose DGCA ground classes online, offline training in Delhi, or a hybrid model, investing in quality ground classes is the smartest first step in your aviation career.
+                </p>
             </section>
 
-            <section className="dgca-section">
-                <h2>Why Choose We One Aviation Academy For DGCA Ground Classes</h2>
-                <ul>
-                    <li><strong>Verified Instructors</strong> — All instructors are experienced pilots who share real-life experience and right-roadmap guidance.</li>
-                    <li><strong>100% DGCA Exam Results</strong> — We One Aviation Academy claims top results; many students clear DGCA exam on the first attempt.</li>
-                    <li><strong>Latest Technology Classroom</strong> — Modern classrooms for comfortable learning.</li>
-                    <li><strong>25% Scholarship</strong> — Scholarship to support students.</li>
-                    <li><strong>Extra Classes</strong> — For students who need extra help.</li>
-                    <li><strong>Free Books & Notes</strong></li>
-                    <li><strong>100% Placement Support</strong> — Support until you become a pilot.</li>
-                    <li><strong>Free Classes Until You Clear</strong> — Free repeat classes until exam cleared.</li>
-                </ul>
+            {/* <section className="dgca-section">
+                <h3>
+                    <strong>
+                        Final Thoughts – Start Your Pilot Journey with the Right Ground Classes
+                    </strong>
+                </h3>
+                <p>
+                    Strong theoretical foundations are key to becoming a professional pilot. Choosing the right DGCA ground classes ensures confident exam performance and smooth progress toward your CPL.
+                </p>
 
                 <div className="dgca-cta">
                     <button className="dgca-btn">Book Your Seat Now</button>
-                    <p className="dgca-note">Join We One Aviation Academy – Delhi’s trusted name for DGCA Ground Classes and Pilot Training.</p>
+                    <p className="dgca-note">
+                        Begin your aviation journey with structured DGCA ground training.
+                    </p>
                 </div>
-            </section>
-
-            <footer className="dgca-footer">
-                <div>
-                    <h4>Our Latest Blogs</h4>
-                    <ul>
-                        <li>Flight Simulator Practice in pilot training Course</li>
-                        <li>Pilot Training in Delhi (Feb 13, 2026)</li>
-                        <li>Private Pilot License (PPL) Course Fees (Feb 10, 2026)</li>
-                        <li>Comprehensive Guide to DGCA Exam Subjects (Jan 21, 2026)</li>
-                    </ul>
-                </div>
-                <div className="dgca-footer-right">
-                    <p>Learn how to become a commercial pilot with our CPL-certified training programs.</p>
-                </div>
-            </footer>
+            </section> */}
         </main>
     );
 };

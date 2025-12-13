@@ -139,13 +139,13 @@ const router = createBrowserRouter([
 
       { path: 'dgca-full-form', element: <DGCA /> },
       { path: 'icse-full-form', element: <ICSE /> },
+      { path: 'cpl-full-form', element: <Cpl /> },
       { path: 'commercial-pilot-license-salary', element: <CplSalary /> },
       { path: 'Map-training', element: <MapPage /> },
       { path: 'commercial-pilot-license-eligibility', element: <Eligibility /> },
       { path: 'commercial-pilot-license-syllabus', element: <Syllabus /> }, ,
       { path: 'commercial-pilot-license-admission-process', element: <Admission /> },
       { path: 'ppl-full-form', element: <PPL /> },
-      { path: 'full-form-of-cpl-commercial-pilot-license', element: <Cpl /> },
       // { path: 'fullformofcplcommercialpilotlicense', element: <fullFormOfCplCommercialPilotLicense /> },
 
       // {services}
