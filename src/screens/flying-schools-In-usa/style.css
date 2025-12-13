@@ -1,0 +1,133 @@
+:root{
+  --primary:#0b5ed7;
+  --muted:#666;
+  --bg:#fbfbfd;
+  --card:#ffffff;
+}
+
+body {
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+.dgca-page {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 20px;
+}
+
+.dgca-hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(11,94,215,0.06), rgba(11,94,215,0.02));
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.dgca-hero-inner {
+  flex: 1;
+}
+
+.dgca-hero h1 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.dgca-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.dgca-hero-image {
+  width: 260px;
+  max-width: 35%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(16,24,40,0.08);
+}
+
+/* Intro and TOC */
+.dgca-intro {
+  margin: 20px 0;
+  padding: 14px;
+  background: var(--card);
+  border-radius: 8px;
+}
+
+.dgca-toc {
+  margin: 18px 0;
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.03);
+}
+
+.dgca-toc h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.dgca-section {
+  margin: 18px 0;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.03);
+}
+
+.dgca-section h2 { color: #0a58ca; margin-top: 0; }
+.dgca-section h3 { color: #0b6fd7; margin-bottom: 6px; }
+.dgca-section h4 { margin-bottom:6px; color: #333; }
+
+.dgca-section ul, .dgca-section ol {
+  margin-left: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* CTA */
+.dgca-cta {
+  margin-top: 12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.dgca-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight:600;
+  box-shadow: 0 6px 16px rgba(11,94,215,0.14);
+}
+
+.dgca-note { margin:0; color:var(--muted); font-size:0.95rem; }
+
+/* Footer */
+.dgca-footer {
+  margin-top: 20px;
+  display:flex;
+  gap:20px;
+  justify-content:space-between;
+  background:#fff;
+  padding:14px;
+  border-radius:8px;
+}
+
+.dgca-footer h4 { margin:0 0 8px 0; color:var(--primary); }
+.dgca-footer ul { margin:0; padding-left:18px; }
+
+@media (max-width:900px) {
+  .dgca-hero { flex-direction:column; text-align:center; }
+  .dgca-hero-image { width:100%; max-width:100%; }
+  .dgca-footer { flex-direction:column; }
+}

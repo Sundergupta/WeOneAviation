@@ -32,7 +32,7 @@ const DgcaGroundClasses = () => {
                 </p>
             </section>
 
-            <aside className="dgca-toc">
+            {/* <aside className="dgca-toc">
                 <h2>Contents</h2>
                 <ol>
                     <li>What Are DGCA Ground Classes?</li>
@@ -43,7 +43,7 @@ const DgcaGroundClasses = () => {
                     <li>DGCA Ground Classes Fees</li>
                     <li>How to Choose the Best DGCA Ground Classes</li>
                 </ol>
-            </aside>
+            </aside> */}
 
             <section className="dgca-section">
                 <h3>
