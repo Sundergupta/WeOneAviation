@@ -11,7 +11,7 @@ import Page from './pages/Page'
 
 // 
 
-import FlyingSchoolsInUSA from './screens/flying-schools-In-usa';
+import FlyingSchoolsInUSA from './screens/Flying-schools-In-usa';
 
 // Components
 import PageList from './screens/PageList';
@@ -161,7 +161,7 @@ const router = createBrowserRouter([
       // { path: 'sale-and-purchase-airplanes', element: <AirplaneSalePurchase /> },
       // { path: 'chatters-services', element: <ChattersServices /> },
       // { path: 'airplane-parts', element: <AirplaneParts /> },
-      { path: 'flying-schools-in-usa', element: <FlyingSchoolsInUSA /> },
+      { path: 'flying-schools-usa', element: <FlyingSchoolsInUSA /> },
 
       // { path: 'mro-services', element: <MroServices /> },
       // { path: 'sale-and-purchase-airplanes', element: <SaleAndPurchaseAirplanes /> },
