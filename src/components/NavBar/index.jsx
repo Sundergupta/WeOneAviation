@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'; // <-- Import useRef
+import React, { useState, useEffect, useRef } from 'react'; // Import useRef
 import { Link, useLocation } from "react-router-dom";
 import './style.css';
 import logo from '../../assets/Logo.webp';
 
 const Navbar = () => {
-  // Ref to track clicks outside the navbar element
-  const navRef = useRef(null);
+  // Reference to the entire navbar container for outside click detection
+  const navbarRef = useRef(null);
 
   // State for Mobile/Hamburger Menu
   const [isOpen, setIsOpen] = useState(false);
@@ -24,45 +24,48 @@ const Navbar = () => {
 
   // --- HANDLERS ---
 
-  // Closes all dropdown states and the mobile menu
-  const closeAll = () => {
-    setIsOpen(false);
+  // Mobile menu toggle
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    // Optionally close all dropdowns when the hamburger is clicked
+    closeAllDropdowns();
+  };
+
+  // Closes only the mobile/hamburger menu
+  const closeMenu = () => setIsOpen(false);
+
+  // Closes all dropdowns (Used when navigating/closing the main menu)
+  const closeAllDropdowns = () => {
     setPilotOpen(false);
     setCoursesOpen(false);
     setServicesOpen(false);
     setActiveSubmenuIndex(null);
   };
 
-  // Mobile menu toggle
-  const toggleMenu = () => {
-    // Toggle the mobile menu, and ensure all dropdowns are closed 
-    // if the mobile menu is closing
+  // Handles clicks on the main dropdown buttons (e.g., Pilot Training)
+  const toggleDropdown = (setter, currentState) => {
+    // Close all other dropdowns first
+    closeAllDropdowns();
+
+    // Toggle the current one
+    setter(!currentState);
+
+    // Ensure the mobile menu stays open if a dropdown is clicked inside it
     if (isOpen) {
-      closeAll();
-    } else {
       setIsOpen(true);
     }
   };
 
-  // Handles clicks on the main dropdown buttons (e.g., Pilot Training)
-  const toggleDropdown = (setter, currentState) => {
-    // Close all other dropdowns before toggling the current one
-    if (!currentState) {
-      closeAll(); // This also ensures the mobile menu is open if not already
-    }
-    setter(!currentState);
-    // Ensure mobile menu is open if a dropdown is clicked
-    setIsOpen(true);
-  };
-
-  // Handles clicks on a submenu item (applies to mobile/nested menus)
+  // Handles clicks on a submenu item (applies to both desktop and mobile now)
   const handleSubmenuClick = (index) => {
+    // Toggle the active submenu, close if already open
     setActiveSubmenuIndex(activeSubmenuIndex === index ? null : index);
   };
 
   // Handles clicks on final link destination
   const handleLinkClick = () => {
-    closeAll();
+    closeMenu();
+    closeAllDropdowns();
   };
 
   // --- EFFECTS ---
@@ -72,25 +75,29 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // EFFECT for closing dropdowns when clicking outside the navbar
+  // *NEW* Outside Click Listener Effect
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      // If the click is outside the navbar (and the menu is open)
-      if (navRef.current && !navRef.current.contains(event.target)) {
-        closeAll();
+    function handleClickOutside(event) {
+      // Check if the click occurred outside the navbar container
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        // Only close the dropdowns, not the mobile menu itself (unless you want that too)
+        if (!isOpen) { // Do not close dropdowns if the main mobile menu is open
+          closeAllDropdowns();
+        }
       }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      // Unbind the event listener on cleanup
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navRef]); // Re-run if navRef changes (which it won't, but good practice)
+  }, [isOpen]); // Re-run effect if mobile menu state changes
 
   // Helper to check if a link is active
   const isActive = (path) => location.pathname === path;
 
-  // --- DATA (Remains the same) ---
+  // --- DATA (Unchanged) ---
   const coursesData = [
     {
       title: "Commercial Pilot License (CPL)",
@@ -143,8 +150,7 @@ const Navbar = () => {
 
   // --- RENDER ---
   return (
-    // Attach ref to the main nav element
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} ref={navRef}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} ref={navbarRef}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" onClick={handleLinkClick}>
@@ -164,11 +170,8 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* 1. PILOT TRAINING DROPDOWN */}
-          <li
-            className="navbar-item dropdown-parent"
-          // REMOVED HOVER EVENTS. Keep the desktop submenu logic inside the dropdown menu component.
-          >
+          {/* 1. PILOT TRAINING DROPDOWN - HOVER REMOVED */}
+          <li className="navbar-item dropdown-parent">
             <span
               className="navbar-link dropdown-btn"
               onClick={() => toggleDropdown(setCoursesOpen, coursesOpen)}
@@ -180,23 +183,21 @@ const Navbar = () => {
               {coursesData.map((course, index) => (
                 <li
                   key={index}
-                  // DESKTOP HOVER: The nested submenu should still open on hover on desktop,
-                  // but the top-level list must be opened by click first.
-                  // MOBILE CLICK: Active class is needed to show submenu in mobile CSS.
+                  // The 'active' class on this li is now only toggled by click
                   className={`dropdown-item-with-submenu ${activeSubmenuIndex === index ? 'active' : ''}`}
                 >
                   {course.submenu ? (
                     <>
                       <span
                         className="dropdown-link has-submenu"
-                        // This click handles the mobile open/close of the submenu
+                        // CLICK: Toggle submenu open/close
                         onClick={() => handleSubmenuClick(index)}
                       >
                         {course.title} →
                       </span>
 
-                      {/* Nested Submenu */}
-                      <ul className={`sub-dropdown-menu`}>
+                      {/* Submenu uses the 'active' class to show/hide */}
+                      <ul className={`sub-dropdown-menu ${activeSubmenuIndex === index ? 'active' : ''}`}>
                         {course.submenu.map((subItem, subIndex) => (
                           <li key={subIndex}>
                             <Link
@@ -224,10 +225,8 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* 2. PILOT CAREER DROPDOWN */}
-          <li
-            className="navbar-item dropdown-parent"
-          >
+          {/* 2. PILOT CAREER DROPDOWN - HOVER REMOVED */}
+          <li className="navbar-item dropdown-parent">
             <span
               className="navbar-link dropdown-btn"
               onClick={() => toggleDropdown(setPilotOpen, pilotOpen)}
@@ -259,10 +258,8 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* 3. AVIATION SERVICES DROPDOWN */}
-          <li
-            className="navbar-item dropdown-parent"
-          >
+          {/* 3. AVIATION SERVICES DROPDOWN - HOVER REMOVED */}
+          <li className="navbar-item dropdown-parent">
             <span
               className="navbar-link dropdown-btn"
               onClick={() => toggleDropdown(setServicesOpen, servicesOpen)}

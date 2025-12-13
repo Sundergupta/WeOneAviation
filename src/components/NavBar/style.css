@@ -163,7 +163,7 @@
  
  /* CLICK LOGIC: Hidden by default, controlled by JS */
  display: none; 
- opacity: 0;
+  opacity: 0;
  transform: translateY(-10px);
  transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -171,7 +171,7 @@
 /* CLICK LOGIC: Shown when JS adds the 'active' class */
 .dropdown-menu.active {
  display: block; 
- opacity: 1;
+  opacity: 1;
  transform: translateY(0);
 }
 
@@ -196,7 +196,7 @@
 }
 
 
-/* --- Nested Submenu Styles (HOVER LOGIC for Desktop) --- */
+/* --- Nested Submenu Styles (CLICK LOGIC FOR DESKTOP NOW) --- */
 .dropdown-item-with-submenu {
  position: relative;
 }
@@ -233,20 +233,21 @@
  z-index: 1001;
  border: 1px solid #e1e5e9;
  
- /* HOVER LOGIC: Hidden by default */
+ /* CLICK LOGIC: Hidden by default */
  display: none; 
- opacity: 0;
+  opacity: 0;
  transform: translateX(10px);
  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* DESKTOP HOVER: Shown on hover of parent item */
-/* This only works if the main dropdown-menu is already visible via the JS 'active' class */
-.dropdown-item-with-submenu:hover > .sub-dropdown-menu {
+/* *UPDATED* CLICK LOGIC: Shown when JS adds the 'active' class to the parent LI or the menu itself */
+.dropdown-item-with-submenu.active > .sub-dropdown-menu,
+.sub-dropdown-menu.active {
  display: block; 
- opacity: 1;
+  opacity: 1;
  transform: translateX(0);
 }
+
 
 /* Sub Dropdown Links (Minimized padding/font) */
 .sub-dropdown-link {
@@ -397,7 +398,7 @@
   transform: none;
  }
  
- /* Show mobile dropdown when active class is present (on click of the main button) */
+ /* Show mobile dropdown when active class is present */
  .dropdown-menu.active {
   display: block;
  }
@@ -436,7 +437,7 @@
   transform: none;
  }
  
- /* Mobile Submenu: Open on parent click (when JS adds .active class) */
+ /* Mobile Submenu: Open on parent click (needs JS active class on .dropdown-item-with-submenu) */
  .dropdown-item-with-submenu.active > .sub-dropdown-menu {
   display: block;
  }
