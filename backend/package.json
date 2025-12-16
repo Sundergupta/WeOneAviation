@@ -8,14 +8,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/register": "^7.28.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
+    "ignore-styles": "^5.0.1",
     "ioredis": "^5.8.2",
     "mongodb": "^7.0.0",
     "mongoose": "^9.0.1",
-    "prerender-node": "^3.8.3"
+    "prerender-node": "^3.8.3",
+    "react-dom": "^19.2.3",
+    "react-helmet-async": "^2.0.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"

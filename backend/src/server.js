@@ -1,17 +1,20 @@
 import express from "express";
-import pageRoutes from "./routes/pageRoutes.js";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./config/db.js";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import prerender from "prerender-node";   // <-- ⭐ ADD THIS
+
+import connectDB from "./config/db.js";
+import pageRoutes from "./routes/pageRoutes.js";
+import { getSeoByUrl } from "./seo.js";
 
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-// Fix __dirname for ES Modules
+// Fix __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -19,31 +22,50 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// ⭐ PRERENDER MIDDLEWARE (must be BEFORE routes)
-app.use(
-    prerender.set("prerenderToken", "MkuCwme8QpJyYPjDqaXK")
-);
-
-// ⭐ Serve React build files
-app.use(express.static(path.join(__dirname, "../public")));
-
-// ⭐ Correct EJS Setup
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../views"));
-
-// MongoDB Connect
+// DB
 connectDB();
 
-// API Routes
+// API routes
 app.use("/api/pages", pageRoutes);
 
-// Default route
-app.get("/", (req, res) => {
-    res.send("Backend Server Running Successfully ✔");
+// Assets
+app.use(
+    "/assets",
+    express.static(path.resolve(__dirname, "../../dist/assets"))
+);
+
+// ✅ SSR middleware (Express 5 SAFE)
+app.use(async (req, res, next) => {
+    if (
+        req.originalUrl.startsWith("/api") ||
+        req.originalUrl.startsWith("/assets")
+    ) {
+        return next();
+    }
+
+    try {
+        const seo = await getSeoByUrl(req.originalUrl);
+
+        let html = fs.readFileSync(
+            path.resolve(__dirname, "../../dist/index.html"),
+            "utf-8"
+        );
+
+        html = html
+            .replace(/<title>.*<\/title>/, `<title>${seo.title}</title>`)
+            .replace(
+                "</head>",
+                `<meta name="description" content="${seo.description}" /></head>`
+            );
+
+        res.status(200).type("html").send(html);
+    } catch (err) {
+        console.error("SSR Error:", err);
+        res.status(500).send("Server Error");
+    }
 });
 
 // Start server
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`✅ SSR Server running on port ${PORT}`);
 });
