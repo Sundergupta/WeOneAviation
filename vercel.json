@@ -2,14 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "header",
-          "key": "User-Agent",
-          "value": ".*(bot|crawler|spider|googlebot|bingbot|yandex|duckduckbot).*"
-        }
-      ],
-      "destination": "https://service.prerender.io/https://weoneaviation.com/$1"
+      "destination": "/index.html"
     }
   ]
 }
