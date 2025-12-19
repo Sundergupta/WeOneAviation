@@ -9,32 +9,60 @@ import connectDB from "./config/db.js";
 import pageRoutes from "./routes/pageRoutes.js";
 import { getSeoByUrl } from "./seo.js";
 
-dotenv.config();
-
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Fix __dirname
+/* ===============================
+   FIX __dirname (ES Modules)
+================================ */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Middlewares
+/* ===============================
+   LOAD ENV MANUALLY (FIX)
+   .env is in /backend/.env
+================================ */
+dotenv.config({
+    path: path.resolve(__dirname, "../.env"),
+});
+
+/* ===============================
+   DEBUG (TEMPORARY – SAFE)
+   Remove later if you want
+================================ */
+console.log("MONGO_URI =", process.env.MONGO_URI);
+
+/* ===============================
+   APP INIT
+================================ */
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+/* ===============================
+   MIDDLEWARES
+================================ */
 app.use(cors());
 app.use(express.json());
 
-// DB
+/* ===============================
+   DATABASE
+================================ */
 connectDB();
 
-// API routes
+/* ===============================
+   API ROUTES
+================================ */
 app.use("/api/pages", pageRoutes);
 
-// Assets
+/* ===============================
+   STATIC ASSETS (VITE BUILD)
+   dist must be at project root
+================================ */
 app.use(
     "/assets",
     express.static(path.resolve(__dirname, "../../dist/assets"))
 );
 
-// ✅ SSR middleware (Express 5 SAFE)
+/* ===============================
+   SSR MIDDLEWARE
+================================ */
 app.use(async (req, res, next) => {
     if (
         req.originalUrl.startsWith("/api") ||
@@ -46,10 +74,12 @@ app.use(async (req, res, next) => {
     try {
         const seo = await getSeoByUrl(req.originalUrl);
 
-        let html = fs.readFileSync(
-            path.resolve(__dirname, "../../dist/index.html"),
-            "utf-8"
+        const indexPath = path.resolve(
+            __dirname,
+            "../../dist/index.html"
         );
+
+        let html = fs.readFileSync(indexPath, "utf-8");
 
         html = html
             .replace(/<title>.*<\/title>/, `<title>${seo.title}</title>`)
@@ -59,13 +89,15 @@ app.use(async (req, res, next) => {
             );
 
         res.status(200).type("html").send(html);
-    } catch (err) {
-        console.error("SSR Error:", err);
+    } catch (error) {
+        console.error("SSR Error:", error);
         res.status(500).send("Server Error");
     }
 });
 
-// Start server
+/* ===============================
+   START SERVER
+================================ */
 app.listen(PORT, () => {
     console.log(`✅ SSR Server running on port ${PORT}`);
 });
